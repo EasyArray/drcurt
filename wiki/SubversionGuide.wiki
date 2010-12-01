@@ -1,0 +1,29 @@
+#summary How to use Subversion to collaborate on Dr Curt
+#labels svn,guide
+
+= Checkout =
+
+1. In the command line, go to a directory that you'd like to use as your working directory for drcurt
+
+2. copy and paste the following command into your terminal
+
+svn checkout https://drcurt.googlecode.com/svn/trunk/ drcurt --username GOOGLEUSERNAME
+
+(change GOOGLEUSERNAME to your google account name)
+
+3. enter your googlecode password when prompted
+you can find this at
+
+https://code.google.com/hosting/settings
+
+= Make changes =
+
+Edit files on your own computer
+
+= Commit =
+
+Committing updates the repository with your changes. Do:
+
+svn commit -m "a description of what you changed" --username GOOGLEUSERNAME
+
+(again, change GOOGLEUSERNAME to your google account name)

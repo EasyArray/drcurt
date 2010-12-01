@@ -2,5 +2,5 @@
 
 = Pages =
 
-  * DiseaseNames
+  * DiseaseData
   * EnglishSentences

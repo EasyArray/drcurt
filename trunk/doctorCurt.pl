@@ -36,8 +36,11 @@ readings([]).
 
 curt:-
    format('~n Curt: Hello, I am Dr. Curt.',[]),
-   format('~n Curt: How are you feeling today?',[]),
+   format('~n Curt: What symptoms are you currently experiencing?',[]),
    format('~n~n',[]),
+	readLine(Input),
+	%User will list their symptoms. needs to be parsed.
+	diagnoseInit(Symptoms),
    curtTalk(run).
 
 /*========================================================================
@@ -47,11 +50,13 @@ curt:-
 curtTalk(quit).
 
 curtTalk(run):-
-   readLine(Input),
+	askAbout(X), %diagnosis logic gives X to ask user about
+   readLine(Input), % user replies with yes or no, is parsed, stored in trueOrFalse
+	tellDiagnosisEngine(X, TrueOrFalse);
    /* does readLine need to translate? */
-   curtUpdate(Input,CurtsMoves,State),
+   %curtUpdate(Input,CurtsMoves,State), will be replaced with diagnosis logic
    /* will want to update diagnosis info here */
-   curtOutput(CurtsMoves),
+   curtOutput(CurtsMoves), % curt gives a canned response depending on success
    curtTalk(State).
 
 /*========================================================================

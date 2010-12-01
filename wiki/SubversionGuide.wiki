@@ -18,7 +18,9 @@ https://code.google.com/hosting/settings
 
 = Make changes =
 
-Edit files on your own computer
+Edit files on your own computer. If you want to add a new file, create it in your working directory, then before committing, do:
+
+svn add fileName.pl
 
 = Commit =
 

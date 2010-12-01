@@ -4,3 +4,5 @@
 
   * DiseaseData
   * EnglishSentences
+  * ProjectDocumentation
+  * SubversionGuide

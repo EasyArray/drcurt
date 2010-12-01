@@ -77,8 +77,6 @@ realiseMove(unknown_answer,'I have no idea.').
 realiseMove(sensible_question,'This question makes sense!').
 realiseMove(answer(String),String).
 
-% trying out additional moves
-realszeMove(welcome, "Hello, I'm DoctorCurt").
 
 /*========================================================================
    Select Readings

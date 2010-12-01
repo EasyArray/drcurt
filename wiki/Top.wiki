@@ -1,0 +1,6 @@
+#summary Quick access to project files
+
+= Pages =
+
+  * DiseaseNames
+  * EnglishSentences

@@ -7,6 +7,8 @@ Dr. Curt is a program composed of three different modules.  There is the grammar
 == Diagnosis Logic ==
 == Discourse Engine ==
 
+Basically, the Discourse Engine team is the prime team that oversees that the other two components are working together to accomplish the goal of Dr. Curt.  In general, the Discourse Engine has an initial set up, which leads to the main flow of the project, and then following is the conclusion.  The initial set up starts with Dr. Curt introduces himself and then asking the user/patient for their symptoms.  After the user enters their symptoms, the Diagnosis Team takes the symptoms and works to make a diagnosis.  The main flow begins by asking the Diagnosis Team to give a symptom that will help find a diagnosis.
+
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists

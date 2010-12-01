@@ -5,8 +5,8 @@
 
 =Questions=
 
-  *What hurts?
-  *How are you feeling?
-  *How long have you been coughing
-  *When did you start coughing?
+  * What hurts?
+  * How are you feeling?
+  * How long have you been coughing
+  * When did you start coughing?
   

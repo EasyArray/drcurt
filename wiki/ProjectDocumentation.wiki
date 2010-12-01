@@ -1,9 +1,11 @@
 #summary Internal Project Documentation for Dr. Curt
 = Dr. Curt =
 
-Dr. Curt is a program composed of three different modules.  There is the grammar component, 
+Dr. Curt is a program composed of three different modules.  There is the grammar component, the diagnosis logic component, and the discourse engine component.  Each component has a team that is working on the different formulas to complete the Dr. Curt program.  Overall, the goal of Dr. Curt is to be able to dianose patients based on the sytmptoms that are presented to the program.
 
-= Details =
+== Grammar ==
+== Diagnosis Logic ==
+== Discourse Engine ==
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_

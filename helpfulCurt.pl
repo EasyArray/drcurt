@@ -69,8 +69,7 @@ models([]).
 ========================================================================*/
 
 curt:- 
-%  curtTalk(run).
-   curtTalk(start).
+   curtTalk(run).
 
 
 /*========================================================================
@@ -78,13 +77,6 @@ curt:-
 ========================================================================*/
 
 curtTalk(quit).
-
-curtTalk(start) :-
-   curtOutput([welcome]),
-   readLine(Input),
-   curtUpdate(Input,CurtMoves,State),
-   curtOutput(CurtMoves),
-   curtTalk(State).
 
 curtTalk(run):-
    readLine(Input),
@@ -98,9 +90,6 @@ curtTalk(run):-
 ========================================================================*/
 
 curtUpdate([],[clarify],run):- !.
-
-% new
-curtUpdate([welcome], [], run) :- !.
 
 curtUpdate([bye],[bye],quit):- !,
    updateReadings([]),

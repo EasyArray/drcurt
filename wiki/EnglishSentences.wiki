@@ -2,3 +2,11 @@
 
   * I have a fever.
   * I have a cough.
+
+=Questions=
+
+  *What hurts?
+  *How are you feeling?
+  *How long have you been coughing
+  *When did you start coughing?
+  

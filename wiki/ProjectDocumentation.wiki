@@ -1,0 +1,11 @@
+#summary Internal Project Documentation for Dr. Curt
+= Dr. Curt =
+
+Dr. Curt is a program composed of three different modules.  There is the grammar component, 
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages

@@ -5,11 +5,13 @@ Dr. Curt is a program composed of three different modules.  There is the grammar
 
 == Diagnosis Logic ==
 
-The Diagnosis Logic Team is essentially the backbone of Dr. Curt.  Based on what the user implies, the Diagnosis Team takes the logic of the underlying principles of the project and feeds it into the program.  After the Discourse Engine gives the input from the user to the Grammar Team, the Diagnosis Team takes the information and interprets the logic of what the user inputs using natural language.  The information is used to determine which symptoms occur most often, which leads to prompting the Grammar Team to ask the next question.  The prompts between the Diagnosis Team and the Grammar Team are handled by teh Discourse Engine Team.  In addition, the Diagnosis Team determines the likelihood of a patient having a disease by taking into account how many symptoms are present in the patient pertaining to a certain disease.  All in all, the Diagnosis Logic Team takes the semantics of the diseases and tells the Grammar Team what to output.  
+The Diagnosis Logic Team is essentially the backbone of Dr. Curt.  Based on what the user implies, the Diagnosis Team takes the logic of the underlying principles of the project and feeds it into the program.  After the Discourse Engine gives the input from the user to the Grammar Team, the Diagnosis Team takes the information and interprets the logic of what the user inputs using natural language.  The information is used to determine which symptoms occur most often, which leads to prompting the Grammar Team to ask the next question.  The prompts between the Diagnosis Team and the Grammar Team are handled by teh Discourse Engine Team.  In addition, the Diagnosis Team determines the likelihood of a patient having a disease by taking into account how many symptoms are present in the patient pertaining to a certain disease.  All in all, the Diagnosis Logic Team takes the semantics of the diseases and tells the Grammar Team what to output.
+Predicate to determine a disease based on symptoms  
 
 == Grammar ==
 
 The Grammar Team takes diseases and symptoms that are presented by the Diagnosis Team and develops a grammar, which seems to diagnose patients.  The diagnosis is based on the answers that the user gives.  The answers are disected so that the input is put into terms that the program can parse the sentence.  In essence, the Grammar Team composes Wh-Questions, Yes/No questions, and declarative statements.
+Predicate for converting Logic to English and a predicate to convert English to logic
 
 == Discourse Engine ==
 

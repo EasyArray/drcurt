@@ -8,5 +8,29 @@
   * What hurts?
   * How are you feeling?
   * How long have you been coughing
-  * When did you start coughing?
-  
+  * When did you start coughing?  
+  * Have you felt fatigue? 
+  * Do you malaise problem(appetite) 
+  * Does your head hurt? 
+  * Does your throat hurt? 
+  * Have you been coughing? 
+  * Have you been experiencing chills? 
+  * Do you feel nausea? 
+  * Does your stomach hurt? 
+  * Is your nose runny? 
+  * Have you been sneezing? 
+  * Has your ear been hurting? 
+  * Does you problem(urinary) 
+  * Do your ribs hurt? 
+  * Have you been vomiting? 
+  * Does your head hurt? 
+  * Does your throat hurt? 
+  * Have you been experiencing chills? 
+  * Does your stomach hurt? 
+  * Do you have an earache? 
+  * Do you know if there are spots on the back of your throat? 
+  * Do you have difficulty swallowing? 
+  * Do you have sores on your body? 
+  * Have you been experiencing paralysis? 
+  * Have you been beheaded? 
+  * Have you been experiencing urinary problems? 

@@ -2,3 +2,4 @@
 
   * A function to parse yes or no statements into a logical true or false
   * A function to parse an initial listing of symptoms into a Prolog list
+  * A function to ask user if they are experiencing X condition. I.E. "Do you have a cough?" Grammar should change depending on condition.

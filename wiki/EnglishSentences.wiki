@@ -1,7 +1,18 @@
-#summary List of English sentences
+=List of Diagnoses=
 
-  * I have a fever.
-  * I have a cough.
+  * You have a Mononucleosis/Mono
+  * You have a whooping Cough
+  * You have a swine Flu
+  * You are experiencing decapitation
+  * You have strep throat
+  * You have pulmonary tuberculosis
+  * You have diarrhea
+  * You have tonsillitis
+  * You have chickenpox
+  * You have acid Reflux Disease
+  * You have a common cold
+  * You have malaria
+  * You have yellow fever
 
 =Questions about Symptoms=
 

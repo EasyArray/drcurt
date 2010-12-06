@@ -18,7 +18,7 @@
 	* Are you coughing up blood?
 	* Do you experience abdominal cramps?
 	* Does your breath smell bad?
-        * POCKMARKS?
+        * Do you have pockmarks?
 	* Are you experiencing chills or sudden fits of coldness?
 	* Do you feel experience dizziness?
 	* Are you losing your appetite?

@@ -19,8 +19,7 @@
   * Does your stomach hurt? 
   * Is your nose runny? 
   * Have you been sneezing? 
-  * Has your ear been hurting? 
-  * Does you problem(urinary) 
+  * Has your ear been hurting?
   * Do your ribs hurt? 
   * Have you been vomiting? 
   * Does your head hurt? 
@@ -34,3 +33,9 @@
   * Have you been experiencing paralysis? 
   * Have you been beheaded? 
   * Have you been experiencing urinary problems? 
+  * Are you coughing up blood?
+  * Are you coughing up phlegm?
+  * Have you lost weight unexpectedly?
+  * Do you have wheezing?
+  * Do you have heartburn?
+  * Do you have pain on one side of your chest when you breathe or cough?

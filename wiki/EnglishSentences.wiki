@@ -42,3 +42,13 @@
   * Do you have heartburn?
   * Is your nose congested?
   * Do you have pain on one side of your chest when you breathe or cough?
+  * Do your joints hurt?
+  * Do you experience convulsions?
+  * Do your muscles ache?
+  * Are you under-eating? 
+  * Are you over-eating?
+  * Is it painful when you swallow?
+  * Is your neck stiff?
+  * Is your neck swollen?
+  * Are your tonsils red or swollen?
+  * Does your breath smell bad?

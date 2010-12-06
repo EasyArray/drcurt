@@ -51,8 +51,9 @@ curtTalk(quit).
 
 curtTalk(run):-
 	askAbout(X), %diagnosis logic gives X to ask user about
-   readLine(Input), % user replies with yes or no, is parsed, stored in trueOrFalse
-	tellDiagnosisEngine(X, TrueOrFalse);
+	readLine(Input), % user replies with yes or no, is parsed, stored in trueOrFalse
+	tellDiagnosisEngine(X, TrueOrFalse); /*store as a true or false atom to be sent to the
+	                                        daignosis engine*/
    /* does readLine need to translate? */
    %curtUpdate(Input,CurtsMoves,State), will be replaced with diagnosis logic
    /* will want to update diagnosis info here */
@@ -164,4 +165,62 @@ info:-
 ========================================================================*/
 
 :- info.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

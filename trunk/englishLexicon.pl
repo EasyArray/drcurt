@@ -16,7 +16,7 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with BB1; if not, write to the Free Software Foundation, Inc., 
+    along with BB1; if not, write to the Free Software Foundation, Inc.,
     59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 *************************************************************************/
@@ -30,194 +30,204 @@ lexEntry(det,[syntax:[a],mood:decl,type:indef]).
 lexEntry(det,[syntax:[the],mood:decl,type:def]).
 lexEntry(det,[syntax:[which],mood:int,type:wh]).
 
+lexEntry(det,[syntax:[my],mood:decl,type:uni]).
+lexEntry(det,[syntax:[your],mood:decl,type:uni]).
+lexEntry(det,[syntax:[her],mood:decl,type:uni]).
+lexEntry(det,[syntax:[his],mood:decl,type:uni]).
+lexEntry(det,[syntax:[our],mood:decl,type:uni]).
+lexEntry(det,[syntax:[their],mood:decl,type:uni]).
+
+
 
 /*========================================================================
    Nouns
 ========================================================================*/
 
-lexEntry(noun,[symbol:animal,syntax:[animal]]).
-lexEntry(noun,[symbol:beverage,syntax:[beverage]]).
-lexEntry(noun,[symbol:building,syntax:[building]]).
-lexEntry(noun,[symbol:cup,syntax:[cup]]).
-lexEntry(noun,[symbol:burger,syntax:[burger]]).
-lexEntry(noun,[symbol:boxer,syntax:[boxer]]).
-lexEntry(noun,[symbol:boss,syntax:[boss]]).
-lexEntry(noun,[symbol:car,syntax:[car]]).
-lexEntry(noun,[symbol:chainsaw,syntax:[chainsaw]]).
-lexEntry(noun,[symbol:criminal,syntax:[criminal]]).
-lexEntry(noun,[symbol:customer,syntax:[customer]]).
-lexEntry(noun,[symbol:drug,syntax:[drug]]).
-lexEntry(noun,[symbol:episode,syntax:[episode]]).
-lexEntry(noun,[symbol:fdshake,syntax:[five,dollar,shake]]).
-lexEntry(noun,[symbol:footmassage,syntax:[foot,massage]]).
-lexEntry(noun,[symbol:gimp,syntax:[gimp]]).
-lexEntry(noun,[symbol:glass,syntax:[glass]]).
-lexEntry(noun,[symbol:gun,syntax:[gun]]).
-lexEntry(noun,[symbol:hammer,syntax:[hammer]]).
-lexEntry(noun,[symbol:hashbar,syntax:[hash,bar]]).
-lexEntry(noun,[symbol:person,syntax:[person]]).
-lexEntry(noun,[symbol:husband,syntax:[husband]]).
-lexEntry(noun,[symbol:joke,syntax:[joke]]).
-lexEntry(noun,[symbol:man,syntax:[man]]).
-lexEntry(noun,[symbol:needle,syntax:[needle]]).
-lexEntry(noun,[symbol:owner,syntax:[owner]]).
-lexEntry(noun,[symbol:piercing,syntax:[piercing]]).
-lexEntry(noun,[symbol:plant,syntax:[plant]]).
-lexEntry(noun,[symbol:qpwc,syntax:[quarter,pounder,with,cheese]]).
-lexEntry(noun,[symbol:radio,syntax:[radio]]).
-lexEntry(noun,[symbol:restaurant,syntax:[restaurant]]).
-lexEntry(noun,[symbol:robber,syntax:[robber]]).
-lexEntry(noun,[symbol:suitcase,syntax:[suitcase]]).
-lexEntry(noun,[symbol:shotgun,syntax:[shotgun]]).
-lexEntry(noun,[symbol:sword,syntax:[sword]]).
-lexEntry(noun,[symbol:vehicle,syntax:[vehicle]]).
-lexEntry(noun,[symbol:weapon,syntax:[weapon]]).
-lexEntry(noun,[symbol:wife,syntax:[wife]]).
-lexEntry(noun,[symbol:woman,syntax:[woman]]).
+
+
+lexEntry(noun,[symbol:book,syntax:[book],num:sg,per:thr]).
+lexEntry(noun,[symbol:joke,syntax:[joke],num:sg,per:thr]).
+lexEntry(noun,[symbol:man,syntax:[man],num:sg,per:thr]).
+lexEntry(noun,[symbol:radio,syntax:[radio],num:sg,per:thr]).
+lexEntry(noun,[symbol:restaurant,syntax:[restaurant],num:sg,per:thr]).
+lexEntry(noun,[symbol:woman,syntax:[woman],num:sg,per:thr]).
+lexEntry(noun,[symbol:cat,syntax:[cat],num:sg,per:thr]).
+lexEntry(noun,[symbol:bread,syntax:[bread],num:sg,per:thr]).
+lexEntry(noun,[symbol:cup,syntax:[cup],num:sg,per:thr]).
+lexEntry(noun,[symbol:picture,syntax:[picture],num:sg,per:thr]).
+lexEntry(noun,[symbol:magazine,syntax:[magazine],num:sg,per:thr]).
+lexEntry(noun,[symbol:lamp,syntax:[lamp],num:sg,per:thr]).
+lexEntry(noun,[symbol:person,syntax:[person],num:sg,per:thr]).
+
+lexEntry(noun,[symbol:head,syntax:[head],num:sg,per:thr]).
+lexEntry(noun,[symbol:throat,syntax:[throat],num:sg,per:thr]).
+lexEntry(noun,[symbol:body,syntax:[body],num:sg,per:thr]).
+lexEntry(noun,[symbol:chest,syntax:[chest],num:sg,per:thr]).
+lexEntry(noun,[symbol:back,syntax:[back],num:sg,per:thr]).
+lexEntry(noun,[symbol:ear,syntax:[ear],num:sg,per:thr]).
+lexEntry(noun,[symbol:nose,syntax:[nose],num:sg,per:thr]).
+lexEntry(noun,[symbol:stomach,syntax:[stomach],num:sg,per:thr]).
+lexEntry(noun,[symbol:rib,syntax:[rib],num:sg,per:thr]).
+
+lexEntry(noun,[symbol:chills,syntax:[chills],num:pl,per:thr]).
+lexEntry(noun,[symbol:pain,syntax:[pain],num:sg,per:thr]).
+lexEntry(noun,[symbol:fever,syntax:[fever],num:sg,per:thr]).
+lexEntry(noun,[symbol:cough,syntax:[cough],num:sg,per:thr]).
+lexEntry(noun,[symbol:headache,syntax:[headache],num:sg,per:thr]).
+lexEntry(noun,[symbol:phlegm,syntax:[phlegm],num:sg,per:thr]).
+lexEntry(noun,[symbol:runnynose,syntax:[runny,nose],num:sg,per:thr]).
+lexEntry(noun,[symbol:cough,syntax:[cough],num:sg,per:thr]).
+
+lexEntry(noun,[symbol:mono,syntax:[mononucleosis],num:sg,per:thr]).
+lexEntry(noun,[symbol:pertussis,syntax:[whooping,cough],num:sg,per:thr]).
+lexEntry(noun,[symbol:swineflu,syntax:[swine,flu],num:sg,per:thr]).
+lexEntry(noun,[symbol:decapitation,syntax:[decapitation],num:sg,per:thr]).
+lexEntry(noun,[symbol:strep,syntax:[strep,throat],num:sg,per:thr]).
+lexEntry(noun,[symbol:pulmonarytb,syntax:[pulmonary,tuberculosis],num:sg,per:thr]).
+
+
 
 
 /*========================================================================
    Proper Names
 ========================================================================*/
 
-lexEntry(pn,[symbol:butch,syntax:[butch]]).
-lexEntry(pn,[symbol:esmarelda,syntax:[esmarelda]]).
-lexEntry(pn,[symbol:honey_bunny,syntax:[honey,bunny]]).
-lexEntry(pn,[symbol:jimmy,syntax:[jimmy]]).
-lexEntry(pn,[symbol:jody,syntax:[jody]]).
-lexEntry(pn,[symbol:jules,syntax:[jules]]).
-lexEntry(pn,[symbol:lance,syntax:[lance]]).
-lexEntry(pn,[symbol:marsellus,syntax:[marsellus]]).
-lexEntry(pn,[symbol:marsellus,syntax:[marsellus,wallace]]).
-lexEntry(pn,[symbol:marvin,syntax:[marvin]]).
-lexEntry(pn,[symbol:mia,syntax:[mia]]).
-lexEntry(pn,[symbol:mia,syntax:[mia,wallace]]).
-lexEntry(pn,[symbol:pumpkin,syntax:[pumpkin]]).
-lexEntry(pn,[symbol:thewolf,syntax:[the,wolf]]).
-lexEntry(pn,[symbol:vincent,syntax:[vincent]]).
-lexEntry(pn,[symbol:vincent,syntax:[vincent,vega]]).
-lexEntry(pn,[symbol:yolanda,syntax:[yolanda]]).
+lexEntry(pn,[symbol:butch,syntax:[butch],num:sg, per:thr]).
 
+lexEntry(pn,[symbol:jimmy,syntax:[jimmy],num:sg, per:thr]).
 
-/*========================================================================
-   Quantified Noun Phrases
-========================================================================*/
+lexEntry(pn,[symbol:jody,syntax:[jody],num:sg, per:thr]).
 
-lexEntry(qnp,[symbol:person,syntax:[who],mood:int,type:wh]).
-lexEntry(qnp,[symbol:thing,syntax:[what],mood:int,type:wh]).
+lexEntry(pn,[symbol:jules,syntax:[jules],num:sg, per:thr]).
+
+lexEntry(pn,[symbol:lance,syntax:[lance],num:sg, per:thr]).
+
+lexEntry(pn,[symbol:marvin,syntax:[marvin],num:sg, per:thr]).
+
+lexEntry(pn,[symbol:mia,syntax:[mia],num:sg, per:thr]).
+
+lexEntry(pn,[symbol:pumpkin,syntax:[pumpkin],num:sg, per:thr]).
+
+lexEntry(pn,[symbol:vincent,syntax:[vincent],num:sg, per:thr]).
+
+lexEntry(pn,[symbol:marsellus,syntax:[marsellus],num:sg, per:thr]).
+
+% personal pronouns:
+lexEntry(pn,[symbol:i,syntax:[i],num:sg,per:one]).
+lexEntry(pn,[symbol:you,syntax:[you],num:sg,per:two]).
+lexEntry(pn,[symbol:he,syntax:[he],num:sg,per:thr]).
+lexEntry(pn,[symbol:she,syntax:[she],num:sg,per:thr]).
+lexEntry(pn,[symbol:we,syntax:[we],num:pl,per:one]).
+lexEntry(pn,[symbol:you_pl,syntax:[you],num:pl,per:two]).
+lexEntry(pn,[symbol:they,syntax:[they],num:pl,per:thr]).
+
 
 
 /*========================================================================
    Intransitive Verbs
 ========================================================================*/
 
-lexEntry(iv,[symbol:collapse,syntax:[collapse],inf:inf,num:sg]).
-lexEntry(iv,[symbol:collapse,syntax:[collapses],inf:fin,num:sg]).
-lexEntry(iv,[symbol:collapse,syntax:[collapse],inf:fin,num:pl]).
+lexEntry(iv_wo,[symbol:yes,syntax:[yes],inf:fin,num:sg,per:pos]).
+lexEntry(iv_wo,[symbol:no,syntax:[no],inf:fin,num:sg,per:neg]).
+lexEntry(iv_wo,[symbol:ok,syntax:[ok],inf:fin,num:sg,per:neu]).
 
-lexEntry(iv,[symbol:dance,syntax:[dance],inf:inf,num:sg]).
-lexEntry(iv,[symbol:dance,syntax:[dances],inf:fin,num:sg]).
-lexEntry(iv,[symbol:dance,syntax:[dance],inf:fin,num:pl]).
 
-lexEntry(iv,[symbol:die,syntax:[die],inf:inf,num:sg]).
-lexEntry(iv,[symbol:die,syntax:[dies],inf:fin,num:sg]).
-lexEntry(iv,[symbol:die,syntax:[die],inf:fin,num:pl]).
+% dance
+lexEntry(iv,[symbol:dance,syntax:[dance],inf:inf,num:sg,per:inf]).
+lexEntry(iv,[symbol:dance,syntax:[dance],inf:fin,num:sg,per:one]).
+lexEntry(iv,[symbol:dance,syntax:[dance],inf:fin,num:sg,per:two]).
+lexEntry(iv,[symbol:dance,syntax:[dances],inf:fin,num:sg,per:thr]).
+lexEntry(iv,[symbol:dance,syntax:[dance],inf:fin,num:pl,per:one]).
+lexEntry(iv,[symbol:dance,syntax:[dance],inf:fin,num:pl,per:two]).
+lexEntry(iv,[symbol:dance,syntax:[dance],inf:fin,num:pl,per:thr]).
 
-lexEntry(iv,[symbol:growl,syntax:[growl],inf:inf,num:sg]).
-lexEntry(iv,[symbol:growl,syntax:[growls],inf:fin,num:sg]).
-lexEntry(iv,[symbol:growl,syntax:[growl],inf:fin,num:pl]).
+% walk
+lexEntry(iv,[symbol:walk,syntax:[walk],inf:inf,num:sg,per:inf]).
+lexEntry(iv,[symbol:walk,syntax:[walk],inf:fin,num:sg,per:one]).
+lexEntry(iv,[symbol:walk,syntax:[walk],inf:fin,num:sg,per:two]).
+lexEntry(iv,[symbol:walk,syntax:[walks],inf:fin,num:sg,per:thr]).
+lexEntry(iv,[symbol:walk,syntax:[walk],inf:fin,num:pl,per:one]).
+lexEntry(iv,[symbol:walk,syntax:[walk],inf:fin,num:pl,per:two]).
+lexEntry(iv,[symbol:walk,syntax:[walk],inf:fin,num:pl,per:thr]).
 
-lexEntry(iv,[symbol:playairguitar,syntax:[play,air,guitar],inf:inf,num:sg]).
-lexEntry(iv,[symbol:playairguitar,syntax:[plays,air,guitar],inf:fin,num:sg]).
-lexEntry(iv,[symbol:playairguitar,syntax:[play,air,guitar],inf:fin,num:pl]).
+%talk
+lexEntry(iv,[symbol:talk,syntax:[talk],inf:inf,num:sg,per:inf]).
+lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:sg,per:one]).
+lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:sg,per:two]).
+lexEntry(iv,[symbol:talk,syntax:[talks],inf:fin,num:sg,per:thr]).
+lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:pl,per:one]).
+lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:pl,per:two]).
+lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:pl,per:thr]).
 
-lexEntry(iv,[symbol:smoke,syntax:[smoke],inf:inf,num:sg]).
-lexEntry(iv,[symbol:smoke,syntax:[smokes],inf:fin,num:sg]).
-lexEntry(iv,[symbol:smoke,syntax:[smoke],inf:fin,num:pl]).
+%hurt
+lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:inf,num:sg,per:inf]).
+lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:fin,num:sg,per:one]).
+lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:fin,num:sg,per:two]).
+lexEntry(iv,[symbol:hurt,syntax:[hurts],inf:fin,num:sg,per:thr]).
+lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:fin,num:pl,per:one]).
+lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:fin,num:pl,per:two]).
+lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:fin,num:pl,per:thr]).
 
-lexEntry(iv,[symbol:snort,syntax:[snort],inf:inf,num:sg]).
-lexEntry(iv,[symbol:snort,syntax:[snorts],inf:fin,num:sg]).
-lexEntry(iv,[symbol:snort,syntax:[snort],inf:fin,num:pl]).
-
-lexEntry(iv,[symbol:shriek,syntax:[shriek],inf:inf,num:sg]).
-lexEntry(iv,[symbol:shriek,syntax:[shrieks],inf:fin,num:sg]).
-lexEntry(iv,[symbol:shriek,syntax:[shriek],inf:fin,num:pl]).
-
-lexEntry(iv,[symbol:walk,syntax:[walk],inf:inf,num:sg]).
-lexEntry(iv,[symbol:walk,syntax:[walks],inf:fin,num:sg]).
-lexEntry(iv,[symbol:walk,syntax:[walk],inf:fin,num:pl]).
 
 
 /*========================================================================
    Transitive Verbs
 ========================================================================*/
 
-lexEntry(tv,[symbol:clean,syntax:[clean],inf:inf,num:sg]).
-lexEntry(tv,[symbol:clean,syntax:[cleans],inf:fin,num:sg]).
-lexEntry(tv,[symbol:clean,syntax:[clean],inf:fin,num:pl]).
+% eat
+lexEntry(tv,[symbol:eat,syntax:[eat],inf:inf,num:sg,per:inf]).
+lexEntry(tv,[symbol:eat,syntax:[eat],inf:fin,num:sg,per:one]).
+lexEntry(tv,[symbol:eat,syntax:[eat],inf:fin,num:sg,per:two]).
+lexEntry(tv,[symbol:eat,syntax:[eats],inf:fin,num:sg,per:thr]).
+lexEntry(tv,[symbol:eat,syntax:[eat],inf:fin,num:pl,per:one]).
+lexEntry(tv,[symbol:eat,syntax:[eat],inf:fin,num:pl,per:two]).
+lexEntry(tv,[symbol:eat,syntax:[eat],inf:fin,num:pl,per:thr]).
 
-lexEntry(tv,[symbol:drink,syntax:[drink],inf:inf,num:sg]).
-lexEntry(tv,[symbol:drink,syntax:[drinks],inf:fin,num:sg]).
-lexEntry(tv,[symbol:drink,syntax:[drink],inf:fin,num:pl]).
+% love
+lexEntry(tv,[symbol:love,syntax:[love],inf:inf,num:sg,per:inf]).
+lexEntry(tv,[symbol:love,syntax:[love],inf:fin,num:sg,per:one]).
+lexEntry(tv,[symbol:love,syntax:[love],inf:fin,num:sg,per:two]).
+lexEntry(tv,[symbol:love,syntax:[loves],inf:fin,num:sg,per:thr]).
+lexEntry(tv,[symbol:love,syntax:[love],inf:fin,num:pl,per:one]).
+lexEntry(tv,[symbol:love,syntax:[love],inf:fin,num:pl,per:two]).
+lexEntry(tv,[symbol:love,syntax:[love],inf:fin,num:pl,per:thr]).
 
-lexEntry(tv,[symbol:date,syntax:[date],inf:inf,num:sg]).
-lexEntry(tv,[symbol:date,syntax:[dates],inf:fin,num:sg]).
-lexEntry(tv,[symbol:date,syntax:[date],inf:fin,num:pl]).
+% know
+lexEntry(tv,[symbol:know,syntax:[know],inf:inf,num:sg,per:inf]).
+lexEntry(tv,[symbol:know,syntax:[know],inf:fin,num:sg,per:one]).
+lexEntry(tv,[symbol:know,syntax:[know],inf:fin,num:sg,per:two]).
+lexEntry(tv,[symbol:know,syntax:[knows],inf:fin,num:sg,per:thr]).
+lexEntry(tv,[symbol:know,syntax:[know],inf:fin,num:pl,per:one]).
+lexEntry(tv,[symbol:know,syntax:[know],inf:fin,num:pl,per:two]).
+lexEntry(tv,[symbol:know,syntax:[know],inf:fin,num:pl,per:thr]).
 
-lexEntry(tv,[symbol:discard,syntax:[discard],inf:inf,num:sg]).
-lexEntry(tv,[symbol:discard,syntax:[discards],inf:fin,num:sg]).
-lexEntry(tv,[symbol:discard,syntax:[discard],inf:fin,num:pl]).
-
-lexEntry(tv,[symbol:eat,syntax:[eat],inf:inf,num:sg]).
-lexEntry(tv,[symbol:eat,syntax:[eats],inf:fin,num:sg]).
-lexEntry(tv,[symbol:eat,syntax:[eat],inf:fin,num:pl]).
-
-lexEntry(tv,[symbol:enjoy,syntax:[enjoy],inf:inf,num:sg]).
-lexEntry(tv,[symbol:enjoy,syntax:[enjoys],inf:fin,num:sg]).
-lexEntry(tv,[symbol:enjoy,syntax:[enjoy],inf:fin,num:pl]).
-
-lexEntry(tv,[symbol:hate,syntax:[hate],inf:inf,num:sg]).
-lexEntry(tv,[symbol:hate,syntax:[hates],inf:fin,num:sg]).
-lexEntry(tv,[symbol:hate,syntax:[hate],inf:fin,num:pl]).
-
-lexEntry(tv,[symbol:have,syntax:[have],inf:inf,num:sg]).
-lexEntry(tv,[symbol:have,syntax:[has],inf:fin,num:sg]).
-lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:pl]).
-
-lexEntry(tv,[symbol:kill,syntax:[kill],inf:inf,num:sg]).
-lexEntry(tv,[symbol:kill,syntax:[kills],inf:fin,num:sg]).
-lexEntry(tv,[symbol:kill,syntax:[kill],inf:fin,num:pl]).
-
-lexEntry(tv,[symbol:know,syntax:[know],inf:inf,num:sg]).
-lexEntry(tv,[symbol:know,syntax:[knows],inf:fin,num:sg]).
-lexEntry(tv,[symbol:know,syntax:[know],inf:fin,num:pl]).
-
-lexEntry(tv,[symbol:like,syntax:[like],inf:inf,num:sg]).
-lexEntry(tv,[symbol:like,syntax:[likes],inf:fin,num:sg]).
-lexEntry(tv,[symbol:like,syntax:[like],inf:fin,num:pl]).
-
-lexEntry(tv,[symbol:love,syntax:[love],inf:inf,num:sg]).
-lexEntry(tv,[symbol:love,syntax:[loves],inf:fin,num:sg]).
-lexEntry(tv,[symbol:love,syntax:[love],inf:fin,num:pl]).
-
-lexEntry(tv,[symbol:pickup,syntax:[pick,up],inf:inf,num:sg]).
-lexEntry(tv,[symbol:pickup,syntax:[picks,up],inf:fin,num:sg]).
-lexEntry(tv,[symbol:pickup,syntax:[pick,up],inf:fin,num:pl]).
-
-lexEntry(tv,[symbol:shoot,syntax:[shot],inf:inf,num:sg]).
-lexEntry(tv,[symbol:shoot,syntax:[shot],inf:fin,num:sg]).
-lexEntry(tv,[symbol:shoot,syntax:[shoots],inf:fin,num:sg]).
-lexEntry(tv,[symbol:shoot,syntax:[shoot],inf:fin,num:pl]).
-
+% read
+lexEntry(tv,[symbol:read,syntax:[read],inf:inf,num:sg,per:inf]).
+lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:sg,per:one]).
+lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:sg,per:two]).
+lexEntry(tv,[symbol:read,syntax:[reads],inf:fin,num:sg,per:thr]).
+lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:pl,per:one]).
+lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:pl,per:two]).
+lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:pl,per:thr]).
 
 /*========================================================================
    Copula
 ========================================================================*/
+lexEntry(cop,[pol:pos,syntax:[am],inf:fin,num:sg,per:one]).
+lexEntry(cop,[pol:neg,syntax:[am,not],inf:fin,num:sg,per:one]).
 
-lexEntry(cop,[pol:pos,syntax:[is],inf:fin,num:sg]).
-lexEntry(cop,[pol:neg,syntax:[is,not],inf:fin,num:sg]).
-lexEntry(cop,[pol:pos,syntax:[are],inf:fin,num:pl]).
-lexEntry(cop,[pol:neg,syntax:[are,not],inf:fin,num:pl]).
+lexEntry(cop,[pol:pos,syntax:[is],inf:fin,num:sg,per:thr]).
+lexEntry(cop,[pol:neg,syntax:[is,not],inf:fin,num:sg,per:thr]).
+lexEntry(cop,[pol:pos,syntax:[are],inf:fin,num:sg,per:two]).
+lexEntry(cop,[pol:pos,syntax:[are],inf:fin,num:pl,per:two]).
+lexEntry(cop,[pol:pos,syntax:[are],inf:fin,num:pl,per:one]).
+lexEntry(cop,[pol:pos,syntax:[are],inf:fin,num:pl,per:thr]).
+
+lexEntry(cop,[pol:neg,syntax:[are,not],inf:fin,num:sg,per:two]).
+lexEntry(cop,[pol:neg,syntax:[are,not],inf:fin,num:pl,per:two]).
+lexEntry(cop,[pol:neg,syntax:[are,not],inf:fin,num:pl,per:one]).
+lexEntry(cop,[pol:neg,syntax:[are,not],inf:fin,num:pl,per:thr]).
+
 
 
 /*========================================================================
@@ -246,6 +256,8 @@ lexEntry(adj,[symbol:sad,syntax:[sad]]).
 lexEntry(adj,[symbol:small,syntax:[small]]).
 lexEntry(adj,[symbol:tall,syntax:[tall]]).
 
+lexEntry(adj,[symbol:tired,syntax:[tired]]).
+
 
 /*========================================================================
    Relative Pronouns
@@ -266,10 +278,28 @@ lexEntry(coord,[syntax:[or],type:disj]).
 /*========================================================================
    Auxiliary Verbs
 ========================================================================*/
+lexEntry(av,[syntax:[do],inf:fin,num:sg,pol:pos,per:one]).
+lexEntry(av,[syntax:[do,not],inf:fin,num:sg,pol:neg,per:one]).
 
-lexEntry(av,[syntax:[does],inf:fin,num:sg,pol:pos]).
-lexEntry(av,[syntax:[does,not],inf:fin,num:sg,pol:neg]).
-lexEntry(av,[syntax:[did],inf:fin,num:sg,pol:pos]).
-lexEntry(av,[syntax:[did,not],inf:fin,num:sg,pol:neg]).
+lexEntry(av,[syntax:[does],inf:fin,num:sg,pol:pos,per:thr]).
+lexEntry(av,[syntax:[does,not],inf:fin,num:sg,pol:neg,per:thr]).
 
+lexEntry(av,[syntax:[did],inf:fin,num:sg,pol:pos,per:two]).
+lexEntry(av,[syntax:[did],inf:fin,num:pl,pol:pos,per:two]).
+lexEntry(av,[syntax:[did],inf:fin,num:pl,pol:pos,per:one]).
+lexEntry(av,[syntax:[did],inf:fin,num:pl,pol:pos,per:thr]).
+
+lexEntry(av,[syntax:[did,not],inf:fin,num:sg,pol:neg,per:two]).
+lexEntry(av,[syntax:[did,not],inf:fin,num:pl,pol:neg,per:two]).
+lexEntry(av,[syntax:[did,not],inf:fin,num:pl,pol:neg,per:one]).
+lexEntry(av,[syntax:[did,not],inf:fin,num:pl,pol:neg,per:thr]).
+
+
+
+/*========================================================================
+   Quantified Noun Phrases
+========================================================================*/
+
+lexEntry(qnp,[symbol:person,syntax:[who],mood:int,type:wh]).
+lexEntry(qnp,[symbol:thing,syntax:[what],mood:int,type:wh]).
 

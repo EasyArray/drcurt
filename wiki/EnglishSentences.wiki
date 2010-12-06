@@ -5,61 +5,61 @@
 
 =Questions about Symptoms=
 
-	* Do you frequently have loose watery stools?
-	* Is your throat sore?
-	* Do you have a rash and/or itchiness?
-	* Do you have heartburn?
-	* Do you have a fever
-	* Does your stomach hurt?
-        * Are you experiencing a whooping cough?
-        * Are you coughing?
-	* Do you experience paralysis?
-	* Is it painful when you swallow?
-	* Are you coughing up blood?
-	* Do you experience abdominal cramps?
-	* Does your breath smell bad?
-        * Do you have pockmarks?
-	* Are you experiencing chills or sudden fits of coldness?
-	* Do you feel experience dizziness?
-	* Are you losing your appetite?
-	* Are you vomiting?
-	* Do you sweat excessively at night?
-	* Do you have pain on one side of your chest when you breathe or cough?
-	* Is your nose runny?
-	* Do your joints hurt?
-	* Does your head hurt?
-	* Do you experience seizures?
-	* Do your ribs hurt?
-	* Does your body hurt?
-	* Are you beheaded?
-	* Are there spots on the back of your throat?
-	* Do you feel fatigue?
-	* Are your tonsils red or swollen?
-	* Do you feel nausea?
-	* Is your nose congested?
-	* Do you experience pain in your neck, your back, and your legs?
-	* Does your throat hurt?  
+  * Do you frequently have loose watery stools?
+  * Is your throat sore?
+  * Do you have a rash and/or itchiness?
+  * Do you have heartburn?
+  * Do you have a fever
+  * Does your stomach hurt?
+  * Are you experiencing a whooping cough?
+  * Are you coughing?
+  * Do you experience paralysis?
+  * Is it painful when you swallow?
+  * Are you coughing up blood?
+  * Do you experience abdominal cramps?
+  * Does your breath smell bad?
+  * Do you have pockmarks?
+  * Are you experiencing chills or sudden fits of coldness?
+  * Do you feel experience dizziness?
+  * Are you losing your appetite?
+  * Are you vomiting?
+  * Do you sweat excessively at night?
+  * Do you have pain on one side of your chest when you breathe or cough?
+  * Is your nose runny?
+  * Do your joints hurt?
+  * Does your head hurt?
+  * Do you experience seizures?
+  * Do your ribs hurt?
+  * Does your body hurt?
+  * Are you beheaded?
+  * Are there spots on the back of your throat?
+  * Do you feel fatigue?
+  * Are your tonsils red or swollen?
+  * Do you feel nausea?
+  * Is your nose congested?
+  * Do you experience pain in your neck, your back, and your legs?
+  * Does your throat hurt?  
       SHOULD THIS BE CONSIDERED THE SAME AS "IS YOUR THROAT SORE?"
-	* Do you have difficulty breathing?
-	* Do you have a headache?
-	* Do you have sores on your body?
-	* Are your stools bloody?
-	* Do you experience convulsions?
-	* Are your eyes red?
-	* Are you dry coughing?
-	* Is your nose bloody?
-	* Are your gums bleeding?
-	* Are you experiencing back pain?
-	* Do you have wheezing?
-	* Are you sneezing excessively?
-	* Do you have nasal congestion?
-	* Do you suffer from urinary incontinence?
-	* Is your spleen enlarged?
-        * Do your teeth feel sensitive?
-	* Does your ear hurt?
-	* Are you salivating excessively?
-	* Are you coughing up phlegm?
-	* Is your neck stiff?
-	* Is your neck swollen?
-	* Are you losing weight unexpectedly?
-	* Do your muscles ache?
+  * Do you have difficulty breathing?
+  * Do you have a headache?
+  * Do you have sores on your body?
+  * Are your stools bloody?
+  * Do you experience convulsions?
+  * Are your eyes red?
+  * Are you dry coughing?
+  * Is your nose bloody?
+  * Are your gums bleeding?
+  * Are you experiencing back pain?
+  * Do you have wheezing?
+  * Are you sneezing excessively?
+  * Do you have nasal congestion?
+  * Do you suffer from urinary incontinence?
+  * Is your spleen enlarged?
+  * Do your teeth feel sensitive?
+  * Does your ear hurt?
+  * Are you salivating excessively?
+  * Are you coughing up phlegm?
+  * Is your neck stiff?
+  * Is your neck swollen?
+  * Are you losing weight unexpectedly?
+  * Do your muscles ache?

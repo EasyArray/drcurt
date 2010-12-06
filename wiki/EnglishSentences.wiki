@@ -3,9 +3,12 @@
   * I have a fever.
   * I have a cough.
 
-=Questions=
+=Questions about Symptoms=
 
+  * Do you have a rash and/or itchiness?
+  * Do your teeth feel sensitive?
   * What hurts?
+  * Have you been experiencing abdominal cramps?
   * How are you feeling?
   * How long have you been coughing
   * When did you start coughing?  
@@ -19,6 +22,7 @@
   * Does your stomach hurt? 
   * Is your nose runny? 
   * Have you been sneezing? 
+  * Have you been salivating excessively?
   * Has your ear been hurting?
   * Do your ribs hurt? 
   * Have you been vomiting? 
@@ -27,6 +31,7 @@
   * Have you been experiencing chills? 
   * Does your stomach hurt? 
   * Do you have an earache? 
+  * Do you sweat excessively at night? 
   * Do you know if there are spots on the back of your throat? 
   * Do you have difficulty swallowing? 
   * Do you have sores on your body? 
@@ -38,4 +43,5 @@
   * Have you lost weight unexpectedly?
   * Do you have wheezing?
   * Do you have heartburn?
+  * Is your nose congested?
   * Do you have pain on one side of your chest when you breathe or cough?

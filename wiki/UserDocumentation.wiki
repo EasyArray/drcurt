@@ -1,0 +1,23 @@
+#summary One-sentence summary of this page.
+
+= Overview =
+
+What the program does: diagnosis diseases.
+
+
+= Flow =
+
+1. User free form entry of symptoms
+2. User responds to Dr Curt's questions (may repeat several times)
+3. Dr Curt diagnoses problem if possible
+
+
+= Guide to English that Dr Curt understands =
+
+(Find out from Grammar team what language is possible)
+
+= Guide to symptoms/diseases handled =
+
+(Find out from Diagnosis team)
+
+= Errors =

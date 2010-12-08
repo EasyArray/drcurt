@@ -30,6 +30,7 @@ lexEntry(det,[syntax:[a],mood:decl,type:indef]).
 lexEntry(det,[syntax:[the],mood:decl,type:def]).
 lexEntry(det,[syntax:[which],mood:int,type:wh]).
 
+%edit info for these!
 lexEntry(det,[syntax:[my],mood:decl,type:uni]).
 lexEntry(det,[syntax:[your],mood:decl,type:uni]).
 lexEntry(det,[syntax:[her],mood:decl,type:uni]).
@@ -127,6 +128,7 @@ lexEntry(pn,[symbol:they,syntax:[they],num:pl,per:thr]).
    Intransitive Verbs
 ========================================================================*/
 
+%one-word sentences
 lexEntry(iv_wo,[symbol:yes,syntax:[yes],inf:fin,num:sg,per:pos]).
 lexEntry(iv_wo,[symbol:no,syntax:[no],inf:fin,num:sg,per:neg]).
 lexEntry(iv_wo,[symbol:ok,syntax:[ok],inf:fin,num:sg,per:neu]).
@@ -210,19 +212,31 @@ lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:pl,per:one]).
 lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:pl,per:two]).
 lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:pl,per:thr]).
 
+
+%have
+lexEntry(iv,[symbol:have,syntax:[have],inf:inf,num:sg,per:inf]).
+lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:sg,per:one]).
+lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:sg,per:two]).
+lexEntry(iv,[symbol:have,syntax:[has],inf:fin,num:sg,per:thr]).
+lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:pl,per:one]).
+lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:pl,per:two]).
+lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:pl,per:thr]).
+
+
+
 /*========================================================================
    Copula
 ========================================================================*/
+
+
 lexEntry(cop,[pol:pos,syntax:[am],inf:fin,num:sg,per:one]).
 lexEntry(cop,[pol:neg,syntax:[am,not],inf:fin,num:sg,per:one]).
-
 lexEntry(cop,[pol:pos,syntax:[is],inf:fin,num:sg,per:thr]).
 lexEntry(cop,[pol:neg,syntax:[is,not],inf:fin,num:sg,per:thr]).
 lexEntry(cop,[pol:pos,syntax:[are],inf:fin,num:sg,per:two]).
 lexEntry(cop,[pol:pos,syntax:[are],inf:fin,num:pl,per:two]).
 lexEntry(cop,[pol:pos,syntax:[are],inf:fin,num:pl,per:one]).
 lexEntry(cop,[pol:pos,syntax:[are],inf:fin,num:pl,per:thr]).
-
 lexEntry(cop,[pol:neg,syntax:[are,not],inf:fin,num:sg,per:two]).
 lexEntry(cop,[pol:neg,syntax:[are,not],inf:fin,num:pl,per:two]).
 lexEntry(cop,[pol:neg,syntax:[are,not],inf:fin,num:pl,per:one]).
@@ -280,15 +294,12 @@ lexEntry(coord,[syntax:[or],type:disj]).
 ========================================================================*/
 lexEntry(av,[syntax:[do],inf:fin,num:sg,pol:pos,per:one]).
 lexEntry(av,[syntax:[do,not],inf:fin,num:sg,pol:neg,per:one]).
-
 lexEntry(av,[syntax:[does],inf:fin,num:sg,pol:pos,per:thr]).
 lexEntry(av,[syntax:[does,not],inf:fin,num:sg,pol:neg,per:thr]).
-
 lexEntry(av,[syntax:[did],inf:fin,num:sg,pol:pos,per:two]).
 lexEntry(av,[syntax:[did],inf:fin,num:pl,pol:pos,per:two]).
 lexEntry(av,[syntax:[did],inf:fin,num:pl,pol:pos,per:one]).
 lexEntry(av,[syntax:[did],inf:fin,num:pl,pol:pos,per:thr]).
-
 lexEntry(av,[syntax:[did,not],inf:fin,num:sg,pol:neg,per:two]).
 lexEntry(av,[syntax:[did,not],inf:fin,num:pl,pol:neg,per:two]).
 lexEntry(av,[syntax:[did,not],inf:fin,num:pl,pol:neg,per:one]).

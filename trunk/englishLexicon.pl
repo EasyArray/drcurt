@@ -30,13 +30,12 @@ lexEntry(det,[syntax:[a],mood:decl,type:indef]).
 lexEntry(det,[syntax:[the],mood:decl,type:def]).
 lexEntry(det,[syntax:[which],mood:int,type:wh]).
 
-%edit info for these!
-lexEntry(det,[syntax:[my],mood:decl,type:uni]).
-lexEntry(det,[syntax:[your],mood:decl,type:uni]).
-lexEntry(det,[syntax:[her],mood:decl,type:uni]).
-lexEntry(det,[syntax:[his],mood:decl,type:uni]).
-lexEntry(det,[syntax:[our],mood:decl,type:uni]).
-lexEntry(det,[syntax:[their],mood:decl,type:uni]).
+lexEntry(det,[syntax:[my],mood:decl,type:def]).
+lexEntry(det,[syntax:[your],mood:decl,type:def]).
+lexEntry(det,[syntax:[her],mood:decl,type:def]).
+lexEntry(det,[syntax:[his],mood:decl,type:def]).
+lexEntry(det,[syntax:[our],mood:decl,type:def]).
+lexEntry(det,[syntax:[their],mood:decl,type:def]).
 
 
 
@@ -118,9 +117,17 @@ lexEntry(pn,[symbol:i,syntax:[i],num:sg,per:one]).
 lexEntry(pn,[symbol:you,syntax:[you],num:sg,per:two]).
 lexEntry(pn,[symbol:he,syntax:[he],num:sg,per:thr]).
 lexEntry(pn,[symbol:she,syntax:[she],num:sg,per:thr]).
+lexEntry(pn,[symbol:she,syntax:[it],num:sg,per:thr]).
 lexEntry(pn,[symbol:we,syntax:[we],num:pl,per:one]).
 lexEntry(pn,[symbol:you_pl,syntax:[you],num:pl,per:two]).
 lexEntry(pn,[symbol:they,syntax:[they],num:pl,per:thr]).
+
+/*========================================================================
+   Quantified Noun Phrases
+========================================================================*/
+
+lexEntry(qnp,[symbol:person,syntax:[who],mood:int,type:wh]).
+lexEntry(qnp,[symbol:thing,syntax:[what],mood:int,type:wh]).
 
 
 
@@ -135,7 +142,7 @@ lexEntry(iv_wo,[symbol:ok,syntax:[ok],inf:fin,num:sg,per:neu]).
 
 
 % dance
-lexEntry(iv,[symbol:dance,syntax:[dance],inf:inf,num:sg,per:inf]).
+lexEntry(iv,[symbol:dance,syntax:[dance],inf:inf,num:inf,per:inf]).
 lexEntry(iv,[symbol:dance,syntax:[dance],inf:fin,num:sg,per:one]).
 lexEntry(iv,[symbol:dance,syntax:[dance],inf:fin,num:sg,per:two]).
 lexEntry(iv,[symbol:dance,syntax:[dances],inf:fin,num:sg,per:thr]).
@@ -144,7 +151,7 @@ lexEntry(iv,[symbol:dance,syntax:[dance],inf:fin,num:pl,per:two]).
 lexEntry(iv,[symbol:dance,syntax:[dance],inf:fin,num:pl,per:thr]).
 
 % walk
-lexEntry(iv,[symbol:walk,syntax:[walk],inf:inf,num:sg,per:inf]).
+lexEntry(iv,[symbol:walk,syntax:[walk],inf:inf,num:inf,per:inf]).
 lexEntry(iv,[symbol:walk,syntax:[walk],inf:fin,num:sg,per:one]).
 lexEntry(iv,[symbol:walk,syntax:[walk],inf:fin,num:sg,per:two]).
 lexEntry(iv,[symbol:walk,syntax:[walks],inf:fin,num:sg,per:thr]).
@@ -153,7 +160,7 @@ lexEntry(iv,[symbol:walk,syntax:[walk],inf:fin,num:pl,per:two]).
 lexEntry(iv,[symbol:walk,syntax:[walk],inf:fin,num:pl,per:thr]).
 
 %talk
-lexEntry(iv,[symbol:talk,syntax:[talk],inf:inf,num:sg,per:inf]).
+lexEntry(iv,[symbol:talk,syntax:[talk],inf:inf,num:inf,per:inf]).
 lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:sg,per:one]).
 lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:sg,per:two]).
 lexEntry(iv,[symbol:talk,syntax:[talks],inf:fin,num:sg,per:thr]).
@@ -162,7 +169,7 @@ lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:pl,per:two]).
 lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:pl,per:thr]).
 
 %hurt
-lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:inf,num:sg,per:inf]).
+lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:inf,num:inf,per:inf]).
 lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:fin,num:sg,per:one]).
 lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:fin,num:sg,per:two]).
 lexEntry(iv,[symbol:hurt,syntax:[hurts],inf:fin,num:sg,per:thr]).
@@ -177,7 +184,7 @@ lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:fin,num:pl,per:thr]).
 ========================================================================*/
 
 % eat
-lexEntry(tv,[symbol:eat,syntax:[eat],inf:inf,num:sg,per:inf]).
+lexEntry(tv,[symbol:eat,syntax:[eat],inf:inf,num:inf,per:inf]).
 lexEntry(tv,[symbol:eat,syntax:[eat],inf:fin,num:sg,per:one]).
 lexEntry(tv,[symbol:eat,syntax:[eat],inf:fin,num:sg,per:two]).
 lexEntry(tv,[symbol:eat,syntax:[eats],inf:fin,num:sg,per:thr]).
@@ -186,7 +193,7 @@ lexEntry(tv,[symbol:eat,syntax:[eat],inf:fin,num:pl,per:two]).
 lexEntry(tv,[symbol:eat,syntax:[eat],inf:fin,num:pl,per:thr]).
 
 % love
-lexEntry(tv,[symbol:love,syntax:[love],inf:inf,num:sg,per:inf]).
+lexEntry(tv,[symbol:love,syntax:[love],inf:inf,num:inf,per:inf]).
 lexEntry(tv,[symbol:love,syntax:[love],inf:fin,num:sg,per:one]).
 lexEntry(tv,[symbol:love,syntax:[love],inf:fin,num:sg,per:two]).
 lexEntry(tv,[symbol:love,syntax:[loves],inf:fin,num:sg,per:thr]).
@@ -195,7 +202,7 @@ lexEntry(tv,[symbol:love,syntax:[love],inf:fin,num:pl,per:two]).
 lexEntry(tv,[symbol:love,syntax:[love],inf:fin,num:pl,per:thr]).
 
 % know
-lexEntry(tv,[symbol:know,syntax:[know],inf:inf,num:sg,per:inf]).
+lexEntry(tv,[symbol:know,syntax:[know],inf:inf,num:inf,per:inf]).
 lexEntry(tv,[symbol:know,syntax:[know],inf:fin,num:sg,per:one]).
 lexEntry(tv,[symbol:know,syntax:[know],inf:fin,num:sg,per:two]).
 lexEntry(tv,[symbol:know,syntax:[knows],inf:fin,num:sg,per:thr]).
@@ -204,7 +211,7 @@ lexEntry(tv,[symbol:know,syntax:[know],inf:fin,num:pl,per:two]).
 lexEntry(tv,[symbol:know,syntax:[know],inf:fin,num:pl,per:thr]).
 
 % read
-lexEntry(tv,[symbol:read,syntax:[read],inf:inf,num:sg,per:inf]).
+lexEntry(tv,[symbol:read,syntax:[read],inf:inf,num:inf,per:inf]).
 lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:sg,per:one]).
 lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:sg,per:two]).
 lexEntry(tv,[symbol:read,syntax:[reads],inf:fin,num:sg,per:thr]).
@@ -214,7 +221,7 @@ lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:pl,per:thr]).
 
 
 %have
-lexEntry(iv,[symbol:have,syntax:[have],inf:inf,num:sg,per:inf]).
+lexEntry(iv,[symbol:have,syntax:[have],inf:inf,num:inf,per:inf]).
 lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:sg,per:one]).
 lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:sg,per:two]).
 lexEntry(iv,[symbol:have,syntax:[has],inf:fin,num:sg,per:thr]).
@@ -292,25 +299,33 @@ lexEntry(coord,[syntax:[or],type:disj]).
 /*========================================================================
    Auxiliary Verbs
 ========================================================================*/
-lexEntry(av,[syntax:[do],inf:fin,num:sg,pol:pos,per:one]).
-lexEntry(av,[syntax:[do,not],inf:fin,num:sg,pol:neg,per:one]).
-lexEntry(av,[syntax:[does],inf:fin,num:sg,pol:pos,per:thr]).
-lexEntry(av,[syntax:[does,not],inf:fin,num:sg,pol:neg,per:thr]).
-lexEntry(av,[syntax:[did],inf:fin,num:sg,pol:pos,per:two]).
-lexEntry(av,[syntax:[did],inf:fin,num:pl,pol:pos,per:two]).
-lexEntry(av,[syntax:[did],inf:fin,num:pl,pol:pos,per:one]).
-lexEntry(av,[syntax:[did],inf:fin,num:pl,pol:pos,per:thr]).
-lexEntry(av,[syntax:[did,not],inf:fin,num:sg,pol:neg,per:two]).
-lexEntry(av,[syntax:[did,not],inf:fin,num:pl,pol:neg,per:two]).
-lexEntry(av,[syntax:[did,not],inf:fin,num:pl,pol:neg,per:one]).
-lexEntry(av,[syntax:[did,not],inf:fin,num:pl,pol:neg,per:thr]).
+lexEntry(av,[syntax:[do],inf:fin,pol:pos,num:sg,per:one]).
+lexEntry(av,[syntax:[do,not],inf:fin,pol:neg,num:sg,per:one]).
 
+lexEntry(av,[syntax:[do],inf:fin,pol:pos,num:sg,per:two]).
+lexEntry(av,[syntax:[do,not],inf:fin,pol:neg,num:sg,per:two]).
 
+lexEntry(av,[syntax:[does],inf:fin,pol:pos,num:sg,per:thr]).
+lexEntry(av,[syntax:[does,not],inf:fin,pol:neg,num:sg,per:thr]).
 
-/*========================================================================
-   Quantified Noun Phrases
-========================================================================*/
+lexEntry(av,[syntax:[do],inf:fin,pol:pos,num:pl,per:one]).
+lexEntry(av,[syntax:[do,not],inf:fin,pol:neg,num:pl,per:one]).
 
-lexEntry(qnp,[symbol:person,syntax:[who],mood:int,type:wh]).
-lexEntry(qnp,[symbol:thing,syntax:[what],mood:int,type:wh]).
+lexEntry(av,[syntax:[do],inf:fin,pol:pos,num:pl,per:two]).
+lexEntry(av,[syntax:[do,not],inf:fin,pol:neg,num:pl,per:two]).
+
+lexEntry(av,[syntax:[do],inf:fin,pol:pos,num:pl,per:thr]).
+lexEntry(av,[syntax:[do,not],inf:fin,pol:neg,num:pl,per:thr]).
+
+*/
+lexEntry(av,[syntax:[did],inf:fin,pol:pos,num:sg,per:two]).
+lexEntry(av,[syntax:[did],inf:fin,pol:pos,num:pl,per:two]).
+lexEntry(av,[syntax:[did],inf:fin,pol:pos,num:pl,per:one]).
+lexEntry(av,[syntax:[did],inf:fin,pol:pos,num:pl,per:thr]).
+lexEntry(av,[syntax:[did,not],inf:fin,pol:neg,num:sg,per:two]).
+lexEntry(av,[syntax:[did,not],inf:fin,pol:neg,num:pl,per:two]).
+lexEntry(av,[syntax:[did,not],inf:fin,pol:neg,num:pl,per:one]).
+lexEntry(av,[syntax:[did,not],inf:fin,pol:neg,num:pl,per:thr]).
+/*
+
 

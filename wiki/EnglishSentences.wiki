@@ -14,6 +14,47 @@
   * You have malaria
   * You have yellow fever
 
+=List of User generated sentences=
+
+  * My body hurts.
+  * I have no head.
+  * I have spots on the back of your throat.
+  * I feel tired often.
+  * I have swollen tonsils.
+  * I have red tonsils.
+  * I am feeling nauseated.
+  * I have a congestion in my nose.
+  * I have pain in my neck.
+  * I have pain in my back.
+  * I have pain in my legs.
+  * I have pain in my ribs.
+  * I have a sore throat.
+  * I often have difficulty breathing.
+  * I have a headache
+  * I have sores on my body.
+  * When I go to the bathroom, my poop is bloody.
+  * I have convulsions.
+  * I have red eyes.
+  * I have a dry cough
+  * I have a bloody nose.
+  * I have bleeding gums
+  * I am experiencing back pain.
+  * I am wheezing
+  * I am sneezing excessively
+  * I have nasal congestion
+  * I suffer from urinary incontinence.
+  * I have an enlarged spleen.
+  * My teeth feel sensitive.
+  * I have an earache.
+  * I am salivating excessively.
+  * I am coughing up phlegm.
+  * I am losing weight unexpectedly.
+  * I have a stiff neck.
+  * I have a runny nose.
+  * I have pain in my joints.
+  * I am having seizures.
+  * I have congestion in my nose.
+
 =Questions about Symptoms=
 
   * Do you frequently have loose watery stools?

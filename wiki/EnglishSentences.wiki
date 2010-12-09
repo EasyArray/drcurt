@@ -1,20 +1,20 @@
 =List of Diagnoses=
 
-  * You have a Mononucleosis/Mono
-  * You have a whooping Cough
-  * You have a swine Flu
+  * You have mononucleosis
+  * You have a whooping cough
+  * You have the swine flu
   * You are experiencing decapitation
-  * You have strep throat
+  * You have a strep throat
   * You have pulmonary tuberculosis
   * You have diarrhea
   * You have tonsillitis
   * You have chickenpox
-  * You have acid Reflux Disease
+  * You have acid reflux Disease
   * You have a common cold
   * You have malaria
   * You have yellow fever
 
-=List of User generated sentences=
+=List of User-generated sentences=
 
   * My body hurts.
   * I have no head.

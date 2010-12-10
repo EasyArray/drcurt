@@ -33,6 +33,11 @@ semLex(det,M):-
    M = [type:wh,
         sem:lam(P,lam(Q,que(X,app(P,X),app(Q,X))))].
 
+%the..doesn't work       
+semLex(det,M):-
+   M = [type:def,
+        sem:lam(P,lam(Q,que(X,app(P,X),app(Q,X))))].        
+
 semLex(pn,M):-
    M = [symbol:Sym,
         sem:lam(P,app(P,Sym))].
@@ -43,17 +48,17 @@ semLex(noun,M):-
    compose(Formula,Sym,[X]).
 
 semLex(iv_wo,M):-
-   M = [symbol:Sym,per:pos,
+   M = [symbol:Sym, per:pos,
         sem:Formula],
    compose(Formula,Sym,[yes]).
 
 semLex(iv_wo,M):-
-   M = [symbol:Sym,per:neg,
+   M = [symbol:Sym, per:neg,
         sem:Formula],
    compose(Formula,Sym,[no]).
-   
+
 semLex(iv_wo,M):-
-   M = [symbol:Sym,per:neu,
+   M = [symbol:Sym, per:neu,
         sem:Formula],
    compose(Formula,Sym,[ok]).   
 

@@ -89,30 +89,9 @@ lexEntry(noun,[symbol:pulmonarytb,syntax:[pulmonary,tuberculosis],num:sg,per:thr
 
 
 /*========================================================================
-   Proper Names
+   Personal Pronouns
 ========================================================================*/
 
-lexEntry(pn,[symbol:butch,syntax:[butch],num:sg, per:thr]).
-
-lexEntry(pn,[symbol:jimmy,syntax:[jimmy],num:sg, per:thr]).
-
-lexEntry(pn,[symbol:jody,syntax:[jody],num:sg, per:thr]).
-
-lexEntry(pn,[symbol:jules,syntax:[jules],num:sg, per:thr]).
-
-lexEntry(pn,[symbol:lance,syntax:[lance],num:sg, per:thr]).
-
-lexEntry(pn,[symbol:marvin,syntax:[marvin],num:sg, per:thr]).
-
-lexEntry(pn,[symbol:mia,syntax:[mia],num:sg, per:thr]).
-
-lexEntry(pn,[symbol:pumpkin,syntax:[pumpkin],num:sg, per:thr]).
-
-lexEntry(pn,[symbol:vincent,syntax:[vincent],num:sg, per:thr]).
-
-lexEntry(pn,[symbol:marsellus,syntax:[marsellus],num:sg, per:thr]).
-
-% personal pronouns:
 lexEntry(pn,[symbol:i,syntax:[i],num:sg,per:one]).
 lexEntry(pn,[symbol:you,syntax:[you],num:sg,per:two]).
 lexEntry(pn,[symbol:he,syntax:[he],num:sg,per:thr]).
@@ -219,7 +198,7 @@ lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:pl,per:one]).
 lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:pl,per:two]).
 lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:pl,per:thr]).
 
-
+/*
 %have
 lexEntry(iv,[symbol:have,syntax:[have],inf:inf,num:inf,per:inf]).
 lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:sg,per:one]).
@@ -228,7 +207,7 @@ lexEntry(iv,[symbol:have,syntax:[has],inf:fin,num:sg,per:thr]).
 lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:pl,per:one]).
 lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:pl,per:two]).
 lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:pl,per:thr]).
-
+*/
 
 
 /*========================================================================
@@ -317,7 +296,7 @@ lexEntry(av,[syntax:[do,not],inf:fin,pol:neg,num:pl,per:two]).
 lexEntry(av,[syntax:[do],inf:fin,pol:pos,num:pl,per:thr]).
 lexEntry(av,[syntax:[do,not],inf:fin,pol:neg,num:pl,per:thr]).
 
-*/
+/*
 lexEntry(av,[syntax:[did],inf:fin,pol:pos,num:sg,per:two]).
 lexEntry(av,[syntax:[did],inf:fin,pol:pos,num:pl,per:two]).
 lexEntry(av,[syntax:[did],inf:fin,pol:pos,num:pl,per:one]).
@@ -326,6 +305,6 @@ lexEntry(av,[syntax:[did,not],inf:fin,pol:neg,num:sg,per:two]).
 lexEntry(av,[syntax:[did,not],inf:fin,pol:neg,num:pl,per:two]).
 lexEntry(av,[syntax:[did,not],inf:fin,pol:neg,num:pl,per:one]).
 lexEntry(av,[syntax:[did,not],inf:fin,pol:neg,num:pl,per:thr]).
-/*
 
+*/
 

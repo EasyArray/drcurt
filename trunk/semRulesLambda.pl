@@ -42,8 +42,8 @@ combine(s:S,[or:S]).
 
 combine(sinv:app(B,app(A,C)),[av:A,np:B,vp:C]).
 
-combine(q:app(A,B),[whnp:A,vp:B]).
 combine(q:A,[sinv:A]).
+combine(q:app(A,B),[whnp:A,vp:B]).
 
 combine(np:app(app(B,A),C),[np:A,coord:B,np:C]).
 combine(np:app(A,B),[det:A,n:B]).
@@ -67,6 +67,7 @@ combine(vp_wo:A,[iv_wo:A]).
 combine(vp:app(app(B,A),C),[vp:A,coord:B,vp:C]).
 combine(vp:app(A,B),[av:A,vp:B]).
 combine(vp:app(A,B),[cop:A,np:B]).
+combine(vp:app(A,B),[cop:A,adj:B]).
 combine(vp:A,[iv:A]).
 combine(vp:app(A,B),[tv:A,np:B]).
 

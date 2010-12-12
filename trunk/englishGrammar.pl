@@ -30,24 +30,24 @@ t([sem:T])-->
    {combine(t:T,[s:S])}.
 
 bt([sem:T])-->
-   {combine(t:T,[s:S])},
-   s([coord:no,sem:S]).
+   {combine(bt:T,[bs:S])},
+   bs([coord:no,sem:S]).
 
 t([sem:T])-->
   s([coord:yes,sem:S]),
   {combine(t:T,[s:S])}.
    
 bt([sem:T])-->
-   {combine(t:T,[s:S])},
-   s([coord:yes,sem:S]).   
+   {combine(bt:T,[bs:S])},
+   bs([coord:yes,sem:S]).   
 
 t([sem:T])-->
    {combine(t:T,[q:Q])},
    q([sem:Q]).
    
 bt([sem:T])-->
-   {combine(t:T,[q:Q])},
-   q([sem:Q]).
+   {combine(bt:T,[bq:Q])},
+   bq([sem:Q]).
 
 /*========================================================================
    Sentences
@@ -60,18 +60,18 @@ s([coord:yes,sem:Sem])-->
    {combine(s:Sem,[s:S1,coord:C,s:S2])}.
    
 bs([coord:yes,sem:Sem])--> 
-   {combine(s:Sem,[s:S1,coord:C,s:S2])},   
-   s([coord:no,sem:S1]), 
+   {combine(bs:Sem,[bs:S1,coord:C,bs:S2])},   
+   bs([coord:no,sem:S1]), 
    coord([type:_,sem:C]),  
-   s([coord:_,sem:S2]).
+   bs([coord:_,sem:S2]).
 
 s([coord:no,sem:Sem])--> 
    vp_wo([coord:_,inf:fin,num:_,per:_,gap:[],sem:VP]),
    {combine(s:Sem,[vp_wo:VP])}.
    
 bs([coord:no,sem:Sem])--> 
-   {combine(s:Sem,[vp_wo:VP])},
-   vp_wo([coord:_,inf:fin,num:_,per:_,gap:[],sem:VP]).
+   {combine(bs:Sem,[bvp_wo:VP])},
+   bvp_wo([coord:_,inf:fin,num:_,per:_,gap:[],sem:VP]).
 
 s([coord:no,sem:Sem])-->
    np([coord:_,num:Num,per:Per,gap:[],sem:NP]),
@@ -80,43 +80,9 @@ s([coord:no,sem:Sem])-->
 
 
 bs([coord:no,sem:Sem])-->
-   {combine(s:Sem,[np:NP,vp:VP])},
-   np([coord:_,num:Num,per:Per,gap:[],sem:NP]),
-   vp([coord:_,inf:fin,num:Num,per:Per,gap:[],sem:VP]).
-   
-
-   
-/*========================================================================
-   Questions
-========================================================================*/
-
-q([sem:Sem])-->
-   sinv([gap:[np:NP],sem:S]),
-  {combine(q:Sem,[sinv:S])}.
-  
-bq([sem:Sem])-->
-   sinv([gap:[np:NP],sem:S]),
-  {combine(q:Sem,[sinv:S])}.
-
-q([sem:Sem])-->
-  whnp([num:_,sem:NP]),
-  vp([coord:_,inf:fin,num:Num,per:Per,gap:[],sem:VP]),
-  {combine(q:Sem,[whnp:NP,vp:VP])}.
-
-bq([sem:Sem])-->
-  {combine(q:Sem,[whnp:NP,vp:VP])},
-  whnp([num:Num,sem:NP]),
-  vp([coord:_,inf:fin,num:Num,per:Per,gap:[],sem:VP]).    
-
-q([sem:Sem])-->
-   whnp([num:_,sem:NP]),
-   sinv([gap:[np:NP],sem:S]),
-  {combine(q:Sem,[sinv:S])}.   
-   
-bq([sem:Sem])-->
-   {combine(q:Sem,[sinv:S])},
-   whnp([num:_,sem:NP]),
-   sinv([gap:[np:NP],sem:S]).
+   {combine(bs:Sem,[bnp:NP,bvp:VP])},
+   bnp([coord:_,num:Num,per:Per,gap:[],sem:NP]),
+   bvp([coord:_,inf:fin,num:Num,per:Per,gap:[],sem:VP]).
    
 sinv([gap:G,sem:S])-->
    av([inf:fin,num:Num,per:Per,sem:Sem]),
@@ -125,11 +91,46 @@ sinv([gap:G,sem:S])-->
    {combine(sinv:S,[av:Sem,np:NP,vp:VP])}.
 
 bsinv([gap:G,sem:S])-->
-   {combine(sinv:S,[av:Sem,np:NP,vp:VP])},
-   av([inf:fin,num:Num,per:Per,sem:Sem]),
-   np([coord:_,num:Num,per:Per,gap:[],sem:NP]),
-   vp([coord:_,inf:inf,num:inf,per:inf,gap:G,sem:VP]).   
+   {combine(bsinv:S,[bav:Sem,bnp:NP,bvp:VP])},
+   bav([inf:fin,num:Num,per:Per,sem:Sem]),
+   bnp([coord:_,num:Num,per:Per,gap:[],sem:NP]),
+   bvp([coord:_,inf:inf,num:inf,per:inf,gap:G,sem:VP]).   
 
+
+   
+/*========================================================================
+   Questions
+========================================================================*/
+/*
+q([sem:Sem])-->
+   sinv([gap:G,sem:S]),
+  {combine(q:Sem,[sinv:S])}.
+  
+bq([sem:Sem])-->
+   bsinv([gap:G,sem:S]),
+  {combine(bq:Sem,[bsinv:S])}.
+*/
+q([sem:Sem])-->
+  whnp([num:_,sem:NP]),
+  vp([coord:_,inf:fin,num:Num,per:Per,gap:[],sem:VP]),
+  {combine(q:Sem,[whnp:NP,vp:VP])}.
+
+bq([sem:Sem])-->
+  {combine(bq:Sem,[bwhnp:NP,bvp:VP])},
+  bwhnp([num:Num,sem:NP]),
+  bvp([coord:_,inf:fin,num:Num,per:Per,gap:[],sem:VP]).    
+
+%how is this different from the simple sinv rule?
+q([sem:Sem])-->
+   whnp([num:_,sem:NP]),
+   sinv([gap:[np:NP],sem:S]),
+  {combine(q:Sem,[sinv:S])}.   
+   
+bq([sem:Sem])-->
+   {combine(bq:Sem,[bsinv:S])},
+   bwhnp([num:_,sem:NP]),
+   bsinv([gap:[np:NP],sem:S]).
+   
 
 
 /*========================================================================
@@ -355,8 +356,6 @@ bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
    cop([inf:Inf,num:Num,per:Per,sem:Cop]),
    np([coord:_,num:Num,per:_,gap:[],sem:NP]).
    
-%how does this work? 'i am big'
-
 vp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
    cop([inf:Inf,num:Num,per:Per,sem:Cop]),
    adj([sem:A]),

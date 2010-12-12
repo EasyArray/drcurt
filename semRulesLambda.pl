@@ -42,8 +42,8 @@ combine(s:S,[or:S]).
 
 combine(sinv:app(B,app(A,C)),[av:A,np:B,vp:C]).
 
-combine(q:A,[sinv:A]).
 combine(q:app(A,B),[whnp:A,vp:B]).
+combine(q:A,[sinv:A]).
 
 combine(np:app(app(B,A),C),[np:A,coord:B,np:C]).
 combine(np:app(A,B),[det:A,n:B]).
@@ -75,3 +75,55 @@ combine(pp:app(A,B),[prep:A,np:B]).
 
 combine(rc:app(A,B),[relpro:A,vp:B]).
 
+
+%backwards ?
+
+combine(bt:Converted,[bs:Sem]):- 
+   betaConvert(Sem,Converted).
+
+combine(bt:Converted,[bq:Sem]):- 
+   betaConvert(Sem,Converted).
+
+combine(bs:A,[bvp_wo:A]).
+combine(bs:app(app(B,A),C),[bs:A,bcoord:B,bs:C]).
+combine(bs:app(A,B),[bnp:A,bvp:B]).
+combine(bs:app(A,B),[bs:A,bs:B]).
+combine(bs:lam(B,imp(S,B)),[if:S]).
+combine(bs:lam(B,or(S,B)),[either:S]).
+combine(bs:S,[then:S]).
+combine(bs:S,[or:S]).
+
+combine(bsinv:app(B,app(A,C)),[bav:A,bnp:B,bvp:C]).
+
+combine(bq:app(A,B),[bwhnp:A,bvp:B]).
+combine(bq:A,[bsinv:A]).
+
+combine(bnp:app(app(B,A),C),[bnp:A,bcoord:B,bnp:C]).
+combine(bnp:app(A,B),[bdet:A,bn:B]).
+combine(bnp:A,[bpn:A]).
+combine(bnp:A,[bqnp:A]).
+
+combine(bwhnp:A,[bqnp:A]).
+combine(bwhnp:app(A,B),[bdet:A,bn:B]).
+
+combine(bn:app(app(B,A),C),[bn:A,bcoord:B,bn:C]).
+combine(bn:app(A,B),[badj:A,bn:B]).
+combine(bn:A,[bnoun:A]).
+combine(bn:app(B,A),[bnoun:A,bnmod:B]).
+
+combine(bnmod:A,[bpp:A]).
+combine(bnmod:A,[brc:A]).
+combine(bnmod:lam(P,app(A,app(B,P))),[bpp:A,bnmod:B]).
+
+combine(bvp_wo:A,[biv_wo:A]).
+
+combine(bvp:app(app(B,A),C),[bvp:A,bcoord:B,bvp:C]).
+combine(bvp:app(A,B),[bav:A,bvp:B]).
+combine(bvp:app(A,B),[bcop:A,bnp:B]).
+combine(bvp:app(A,B),[bcop:A,badj:B]).
+combine(bvp:A,[biv:A]).
+combine(bvp:app(A,B),[btv:A,bnp:B]).
+
+combine(bpp:app(A,B),[bprep:A,bnp:B]).
+
+combine(brc:app(A,B),[brelpro:A,bvp:B]).

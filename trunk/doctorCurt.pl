@@ -50,11 +50,17 @@ curt:-
 curtTalk(quit).
 
 curtTalk(run):-
-	askAbout(X,flag), %diagnosis logic gives X to ask user about, flag tells us if diagnosis is complete
+	(   numDiseases == 1
+	->  curtFinish(true)
+	;
+	),
+	askAbout(X), %diagnosis logic gives X to ask user about, flag tells us if diagnosis is complete
 	doYouHave(X), % outputs text,asking user if they suffer from X
-	readLine(Input), % user replies with yes or no, is parsed, stored in trueOrFalse
-	tellDiagnosisEngine(X, TrueOrFalse); /*store as a true or false atom to be sent to the
-	                                        daignosis engine.*/
+	read(Y),
+	(   Y == 'yes'
+	->  pruneDiseases(X, true)
+	;   pruneDiseases(X, false)
+	),
    %curtUpdate(Input,CurtsMoves,State), will be replaced with diagnosis logic
    /* will want to update diagnosis info here */
    curtOutput(CurtsMoves), % curt gives a canned response depending on success

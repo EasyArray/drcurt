@@ -59,19 +59,21 @@
 
   * Do you frequently have loose watery stools?
   * Do you have a sore throat?
-  * Do you have a rash and/or itchiness?
+  * *Do you have a rash?*
+  * *Do you have itchiness?*
   * Do you have heartburn?
   * Do you have a fever
   * Do you have a stomach ache?
   * Are you experiencing a whooping cough?
   * Are you coughing?
   * Do you experience paralysis?
-  * Is it painful when you swallow?
+  * *Is it swallowing pain?*
   * Are you coughing up blood?
   * Do you experience abdominal cramps?
   * Do you have bad breath?
   * Do you have pockmarks?
-  * Are you experiencing chills or sudden fits of coldness?
+  * *Are you experiencing chills* 
+  * *Are you experiencing sudden fits of coldness?*
   * Do you feel experience dizziness?
   * Do you experience loss of appetite?
   * Are you vomiting?

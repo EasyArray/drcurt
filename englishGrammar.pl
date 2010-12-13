@@ -455,9 +455,9 @@ cop([inf:Inf,num:Num,per:Per,sem:Sem])-->
    {semLex(cop,[pol:Pol,sem:Sem])}.
    
 bcop([inf:Inf,num:Num,per:Per,sem:Sem])-->
-   {semLex(cop,[pol:Pol,sem:Sem])},
-   Word,
-   {lexEntry(cop,[pol:Pol,syntax:Word,inf:Inf,num:Num,per:Per])}. 
+   {semLex(cop,[pol:Pol,sem:Sem]),
+   lexEntry(cop,[pol:Pol,syntax:Word,inf:Inf,num:Num,per:Per])},
+   Word. 
    
 det([mood:M,type:Type,sem:Det])-->
    {lexEntry(det,[syntax:Word,mood:M,type:Type])},
@@ -485,9 +485,9 @@ relpro([sem:Sem])-->
    {semLex(relpro,[sem:Sem])}.
    
 brelpro([sem:Sem])--> 
-   {semLex(relpro,[sem:Sem])},
-   Word,
-   {lexEntry(relpro,[syntax:Word])}.
+   {semLex(relpro,[sem:Sem]),
+   lexEntry(relpro,[syntax:Word])},
+   Word.
    
 prep([sem:Sem])--> 
    {lexEntry(prep,[symbol:Sym,syntax:Word])},
@@ -495,9 +495,9 @@ prep([sem:Sem])-->
    {semLex(prep,[symbol:Sym,sem:Sem])}.
  
 bprep([sem:Sem])--> 
-   {semLex(prep,[symbol:Sym,sem:Sem])},
-   Word,
-   {lexEntry(prep,[symbol:Sym,syntax:Word])}. 
+   {semLex(prep,[symbol:Sym,sem:Sem]),
+   lexEntry(prep,[symbol:Sym,syntax:Word])},
+   Word.
    
 adj([sem:Sem])--> 
    {lexEntry(adj,[symbol:Sym,syntax:Word])},
@@ -505,9 +505,9 @@ adj([sem:Sem])-->
    {semLex(adj,[symbol:Sym,sem:Sem])}.
 
 badj([sem:Sem])--> 
-   {semLex(adj,[symbol:Sym,sem:Sem])},
-   Word,
-   {lexEntry(adj,[symbol:Sym,syntax:Word])}.   
+   {semLex(adj,[symbol:Sym,sem:Sem]),
+   lexEntry(adj,[symbol:Sym,syntax:Word])},
+   Word.   
    
 av([inf:Inf,num:Num,per:Per,sem:Sem])--> 
    {lexEntry(av,[syntax:Word,inf:Inf,pol:Pol,num:Num,per:Per])},
@@ -515,9 +515,9 @@ av([inf:Inf,num:Num,per:Per,sem:Sem])-->
    {semLex(av,[pol:Pol,sem:Sem])}.
 
 bav([inf:Inf,num:Num,per:Per,sem:Sem])--> 
-   {semLex(av,[pol:Pol,sem:Sem])},
-   Word,
-   {lexEntry(av,[syntax:Word,inf:Inf,pol:Pol,num:Num,per:Per])}.   
+   {semLex(av,[pol:Pol,sem:Sem]),
+   lexEntry(av,[syntax:Word,inf:Inf,pol:Pol,num:Num,per:Per])},
+   Word.   
    
 coord([type:Type,sem:Sem])-->
    {lexEntry(coord,[syntax:Word,type:Type])},
@@ -525,9 +525,9 @@ coord([type:Type,sem:Sem])-->
    {semLex(coord,[type:Type,sem:Sem])}.
    
 bcoord([type:Type,sem:Sem])-->
-   {semLex(coord,[type:Type,sem:Sem])},
-   Word,
-   {lexEntry(coord,[syntax:Word,type:Type])}.
+   {semLex(coord,[type:Type,sem:Sem]),
+   lexEntry(coord,[syntax:Word,type:Type])},
+   Word.
    
 qnp([mood:M,sem:NP])--> 
    {lexEntry(qnp,[symbol:Symbol,syntax:Word,mood:M,type:Type])},
@@ -535,10 +535,10 @@ qnp([mood:M,sem:NP])-->
    {semLex(qnp,[type:Type,symbol:Symbol,sem:NP])}.
    
 bqnp([mood:M,sem:NP])--> 
-   {semLex(bqnp,[symbol:Symbol,type:Type,sem:NP])},   
-   Word,
-   {lexEntry(bqnp,[symbol:Symbol,syntax:Word,mood:M,type:Type])}.
-
+   {semLex(bqnp,[symbol:Symbol,type:Type,sem:NP]),
+   lexEntry(bqnp,[symbol:Symbol,syntax:Word,mood:M,type:Type])},   
+   Word.
+ 
 noun([num:Num,per:Per,sem:Sem])-->
   {lexEntry(noun,[symbol:Sym,syntax:Word,num:Num,per:Per])},
   Word,

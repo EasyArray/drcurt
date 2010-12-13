@@ -7,8 +7,11 @@ Dr. Curt is a program that diagnoses diseases
 = Flow =
 
 1.	The program begins with Dr. Curt introducing himself to the user
+
 2.	The user inputs their symptoms in a free form format 
+
 3.	The user then responds to Dr Curt's questions based on the symptoms that were presented (may repeat several times) 
+
 4.	Dr. Curt diagnoses the user with a disease if possible
 
 = Guide to English that Dr Curt Understands =

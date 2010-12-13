@@ -105,8 +105,7 @@ bsinv([gap:G,sem:S])-->
 /*
 q([sem:Sem])-->
    sinv([gap:G,sem:S]),
-%  {combine(q:Sem,[sinv:S])}.
-  {combine(q:Sem,[sinv:S, np:NP])}.
+  {combine(q:Sem,[sinv:S])}.
   
 bq([sem:Sem])-->
    bsinv([gap:G,sem:S]),

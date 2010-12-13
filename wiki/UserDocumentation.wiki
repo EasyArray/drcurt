@@ -1,4 +1,4 @@
-_Internal User Documentation of Dr. Curt_
+_Internal User Documentation for Dr. Curt_
 
 = Overview =
 

@@ -27,16 +27,17 @@
 
 lexEntry(det,[syntax:[every],mood:decl,type:uni]).
 lexEntry(det,[syntax:[a],mood:decl,type:indef]).
-lexEntry(det,[syntax:[the],mood:decl,type:def]).
 lexEntry(det,[syntax:[which],mood:int,type:wh]).
 
+/*
+lexEntry(det,[syntax:[the],mood:decl,type:def]).
 lexEntry(det,[syntax:[my],mood:decl,type:def]).
 lexEntry(det,[syntax:[your],mood:decl,type:def]).
 lexEntry(det,[syntax:[her],mood:decl,type:def]).
 lexEntry(det,[syntax:[his],mood:decl,type:def]).
 lexEntry(det,[syntax:[our],mood:decl,type:def]).
 lexEntry(det,[syntax:[their],mood:decl,type:def]).
-
+*/
 
 
 /*========================================================================
@@ -44,7 +45,7 @@ lexEntry(det,[syntax:[their],mood:decl,type:def]).
 ========================================================================*/
 
 
-
+/*
 lexEntry(noun,[symbol:book,syntax:[book],num:sg,per:thr]).
 lexEntry(noun,[symbol:joke,syntax:[joke],num:sg,per:thr]).
 lexEntry(noun,[symbol:man,syntax:[man],num:sg,per:thr]).
@@ -58,6 +59,7 @@ lexEntry(noun,[symbol:picture,syntax:[picture],num:sg,per:thr]).
 lexEntry(noun,[symbol:magazine,syntax:[magazine],num:sg,per:thr]).
 lexEntry(noun,[symbol:lamp,syntax:[lamp],num:sg,per:thr]).
 lexEntry(noun,[symbol:person,syntax:[person],num:sg,per:thr]).
+*/
 
 lexEntry(noun,[symbol:head,syntax:[head],num:sg,per:thr]).
 lexEntry(noun,[symbol:throat,syntax:[throat],num:sg,per:thr]).
@@ -114,11 +116,12 @@ lexEntry(qnp,[symbol:thing,syntax:[what],mood:int,type:wh]).
    Intransitive Verbs
 ========================================================================*/
 
+/*
 %one-word sentences
 lexEntry(iv_wo,[symbol:yes,syntax:[yes],inf:fin,num:sg,per:pos]).
 lexEntry(iv_wo,[symbol:no,syntax:[no],inf:fin,num:sg,per:neg]).
 lexEntry(iv_wo,[symbol:ok,syntax:[ok],inf:fin,num:sg,per:neu]).
-
+*/
 
 % dance
 lexEntry(iv,[symbol:dance,syntax:[dance],inf:inf,num:inf,per:inf]).
@@ -257,6 +260,57 @@ lexEntry(adj,[symbol:small,syntax:[small]]).
 lexEntry(adj,[symbol:tall,syntax:[tall]]).
 
 lexEntry(adj,[symbol:tired,syntax:[tired]]).
+
+lexEntry(adj,[symbol:headless,syntax:[headless]]).
+lexEntry(adj,[symbol:beheaded,syntax:[beheaded]]).
+lexEntry(adj,[symbol:sore,syntax:[sore]]).
+lexEntry(adj,[symbol:common,syntax:[common]]).
+lexEntry(adj,[symbol:yellow,syntax:[yellow]]).
+lexEntry(adj,[symbol:spots,syntax:[spots]]).
+lexEntry(adj,[symbol:swollen,syntax:[swollen]]).
+lexEntry(adj,[symbol:nauseated,syntax:[nauseated]]).
+lexEntry(adj,[symbol:congested,syntax:[congested]]).
+lexEntry(adj,[symbol:painful,syntax:[painful]]).
+lexEntry(adj,[symbol:bloody,syntax:[bloody]]).
+
+lexEntry(adj,[symbol:dry,syntax:[dry]]).
+lexEntry(adj,[symbol:bloody,syntax:[bloody]]).
+lexEntry(adj,[symbol:bleeding,syntax:[bleeding]]).
+lexEntry(adj,[symbol:nasal,syntax:[nasal]]).
+lexEntry(adj,[symbol:urinary,syntax:[urinary]]).
+lexEntry(adj,[symbol:enlarged,syntax:[enlarged]]).
+lexEntry(adj,[symbol:sensitive,syntax:[sensitive]]).
+lexEntry(adj,[symbol:stiff,syntax:[stiff]]).
+lexEntry(adj,[symbol:runny,syntax:[runny]]).
+lexEntry(adj,[symbol:loose,syntax:[loose]]).
+lexEntry(adj,[symbol:watery,syntax:[watery]]).
+
+lexEntry(adj,[symbol:itchy,syntax:[itchy]]).
+lexEntry(adj,[symbol:abdominal,syntax:[abdominal]]).
+lexEntry(adj,[symbol:unpleasant,syntax:[unpleasant]]).
+lexEntry(adj,[symbol:bad,syntax:[bad]]).
+lexEntry(adj,[symbol:sudden,syntax:[sudden]]).
+lexEntry(adj,[symbol:chilly,syntax:[chilly]]).
+lexEntry(adj,[symbol:lost,syntax:[lost]]).
+lexEntry(adj,[symbol:sweaty,syntax:[sweaty]]).
+lexEntry(adj,[symbol:clammy,syntax:[clammy]]).
+lexEntry(adj,[symbol:fatigued,syntax:[fatigued]]).
+lexEntry(adj,[symbol:excessive,syntax:[excessive]]).
+
+
+
+lexEntry(adj,[symbol:bodily,syntax:[bodily]]).
+lexEntry(adj,[symbol:hurting,syntax:[hurting]]).
+lexEntry(adj,[symbol:bleeding,syntax:[bleeding]]).
+lexEntry(adj,[symbol:nasal,syntax:[nasal]]).
+lexEntry(adj,[symbol:urinary,syntax:[urinary]]).
+lexEntry(adj,[symbol:enlarged,syntax:[enlarged]]).
+lexEntry(adj,[symbol:sensitive,syntax:[sensitive]]).
+lexEntry(adj,[symbol:stiff,syntax:[stiff]]).
+lexEntry(adj,[symbol:runny,syntax:[runny]]).
+lexEntry(adj,[symbol:loose,syntax:[loose]]).
+lexEntry(adj,[symbol:watery,syntax:[watery]]).
+
 
 
 /*========================================================================

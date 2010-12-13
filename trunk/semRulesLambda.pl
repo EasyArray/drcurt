@@ -86,7 +86,14 @@ combine(bt:Converted,[bq:Sem]):-
 
 combine(bs:A,[bvp_wo:A]).
 combine(bs:app(app(B,A),C),[bs:A,bcoord:B,bs:C]).
-combine(bs:app(A,B),[bnp:A,bvp:B]).
+combine(bs:Sem,[bnp:lam(X,app(X,A)),bvp:lam(Y,F)]) :- 
+	compose(Sem, B, [A]),
+	compose(F,B,[Y]).
+combine(bs:some(Z,and(F1,F2)),[bnp:lam(X,app(X,A)), bvp:lam(Y,some(Z,and(F1,F2)))]) :-
+	compose(F1, _, [Z]),
+	compose(F2, B, [Y,Z]).
+	
+	
 combine(bs:app(A,B),[bs:A,bs:B]).
 combine(bs:lam(B,imp(S,B)),[if:S]).
 combine(bs:lam(B,or(S,B)),[either:S]).
@@ -102,6 +109,10 @@ combine(bnp:app(app(B,A),C),[bnp:A,bcoord:B,bnp:C]).
 combine(bnp:app(A,B),[bdet:A,bn:B]).
 combine(bnp:A,[bpn:A]).
 combine(bnp:A,[bqnp:A]).
+combine(bnp:lam(X,some(Y,and(F, app(X,Y)))), 
+		[bdet:lam(Z, lam(X,some(Y,and(app(Z,Y),app(X,Y))))),
+		 bn:lam(X,F)]) :-
+	compose(F, _, [X]).
 
 combine(bwhnp:A,[bqnp:A]).
 combine(bwhnp:app(A,B),[bdet:A,bn:B]).
@@ -123,6 +134,7 @@ combine(bvp:app(A,B),[bcop:A,bnp:B]).
 combine(bvp:app(A,B),[bcop:A,badj:B]).
 combine(bvp:A,[biv:A]).
 combine(bvp:app(A,B),[btv:A,bnp:B]).
+
 
 combine(bpp:app(A,B),[bprep:A,bnp:B]).
 

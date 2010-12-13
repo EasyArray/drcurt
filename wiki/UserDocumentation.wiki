@@ -16,7 +16,7 @@ Dr. Curt is a program that diagnoses diseases
 
 = Guide to English that Dr Curt Understands =
 
-The user can only phrase their symptoms as, “I have…”, “I am (adjective)”, “I feel…”.  Dr. Curt does not understand phrases that are in the past tense, or anything out of first person and nothing in the progressive format.  Refer to the complete list of sentences that are acceptable to the program.
+The user can only phrase their symptoms as, “I have…”, “I am (adjective)”, “I feel…”.  Dr. Curt does not understand phrases that are in the past tense, or anything out of first person and nothing in the progressive format.  The program does not use personal pronouns, such as "my", and "your".  Refer to the complete list of sentences that are acceptable to the program.
 
 = Guide to Symptoms/Diseases Handled =
 
@@ -24,4 +24,4 @@ Dr. Curt can diagnose thirteen different diseases and understands an unlimited n
 
 = Errors/Disadvantages =
 
-The program will continue to grow, and Prolog will need to be able to overcome the bottle-neck effect and not limit the user as to ways they can describe their symtoms.  There is a trade off between the degree of how the user describes their symptoms and the complicity of the program.
+The program will continue to grow, and Prolog will need to be able to overcome the bottle-neck effect and not limit the user as to ways they can describe their symtoms.  There is a trade off between the degree of how the user describes their symptoms and the complicity of the program.  Dr. Curt does not encode personal pronouns and will result in a failure to answer the user's questions.

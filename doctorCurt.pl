@@ -62,12 +62,12 @@ curtTalk(run):-
 
 curtFinish(X):-
 	curtDiagnose(X); % will output a diagnosis saying that the user suffers from X
-	
+
 curtFinish(none):-
 	format('~ Curt: Based upon the symptoms you have entered, I cannot make a diagnosis.',[]),
 	format('~ Curt: Would you like to input a disease into the database?', []),
 	readLine(Input),
-	
+
 
 /*========================================================================
    Update Curt's Information State

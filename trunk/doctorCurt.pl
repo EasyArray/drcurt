@@ -19,7 +19,7 @@
 
 :- use_module(foResolution,[rprove/1]).
 
-:- use_module(diagnosis, [init/0,
+:- use_module(diagnosis, [initFromList/1,
 			  pruneDiseases/2,
 			  diseasesLeft/1,
 			  askAbout/1]).
@@ -43,21 +43,35 @@ curt:-
    format('~n Curt: Hello, I am Dr. Curt.',[]),
    format('~n Curt: What symptoms are you currently experiencing?',[]),
    format('~n~n',[]),
-	readLine(Input),
-	%User will list their symptoms. needs to be parsed.
-	diagnoseInit(Symptoms),
-   curtTalk(run).
+   curtStart(true, Symptoms).
+
+curtStart(true, Symptoms):-
+	read(Symp),
+	%sendToGrammar(Input,Symp), %input is sentence, Symp is the returned symptom
+	%here we'll append the symptom to the current list
+	format('~n Curt: I see. Is there anything else?',[]),
+	format('~n~n',[]),
+	read(Response),
+	(   Response == 'no'
+	->  initFromList([Symp|Symptoms]),
+	    curtTalk(run),
+	    curtTalk(quit)
+	;   curtStart(true, [Symp|Symptoms])
+	).
+
 
 /*========================================================================
    Control
 ========================================================================*/
+
+
 
 curtTalk(quit).
 
 curtTalk(run):-
 	(   numDiseases == 1
 	->  curtFinish(true)
-	;
+	; 
 	),
 	askAbout(X), %diagnosis logic gives X to ask user about, flag tells us if diagnosis is complete
 	doYouHave(X), % outputs text,asking user if they suffer from X
@@ -72,12 +86,17 @@ curtTalk(run):-
    curtTalk(State).
 
 curtFinish(X):-
-	curtDiagnose(X); % will output a diagnosis saying that the user suffers from X
+	format('~n Curt: Sorry friend, it would appear that you are suffering from:',[]),
+	write(X),
+	format('~n~n',[]),
+	format('~n Curt: Please note that I am no substitute for real medical advice! ~n
+			Please be sure to see a real doctor to confirm any of my findings!', []),
+	exit().
 
 curtFinish(none):-
 	format('~ Curt: Based upon the symptoms you have entered, I cannot make a diagnosis.',[]),
 	format('~ Curt: Would you like to input a disease into the database?', []),
-	readLine(Input),
+	readLine(Input).
 
 
 /*========================================================================

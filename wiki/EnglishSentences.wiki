@@ -3,7 +3,7 @@
   * You have mononucleosis
   * You have a whooping cough
   * You have the swine flu
-  * *bold* You are headless. *bold*  
+  * *You are headless.*  
   * You have a strep throat
   * You have pulmonary tuberculosis
   * You have diarrhea

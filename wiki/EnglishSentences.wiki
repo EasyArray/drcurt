@@ -3,7 +3,7 @@
   * You have mononucleosis
   * You have a whooping cough
   * You have the swine flu
-  * You are beheaded
+  * *bold*You are headless. *bold*  
   * You have a strep throat
   * You have pulmonary tuberculosis
   * You have diarrhea
@@ -17,7 +17,7 @@
 =List of User-generated sentences=
 
   * I feel bodily pain.
-  * I have no head.
+  * I am headless.
   * I have throat spots.
   * I feel tired.
   * I have swollen tonsils.
@@ -81,7 +81,7 @@
   * Do you have joint pain?
   * Do you have a headache?
   * Do you experience seizures?
-  * Do you have hurting ribs?
+  * Do you have rib pain?
   * Do you feel bodily pain?
   * Are you beheaded?
   * Do you have throat spots?

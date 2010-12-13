@@ -2,21 +2,20 @@
 
 = Overview =
 
-What the program does: diagnosis diseases.
-
+Dr. Curt is a program that diagnoses diseases
 
 = Flow =
 
-1. User free form entry of symptoms
-2. User responds to Dr Curt's questions (may repeat several times)
-3. Dr Curt diagnoses problem if possible
+1.	The program begins with Dr. Curt introducing himself to the user
+2.	The user inputs their symptoms in a free form format 
+3.	The user then responds to Dr Curt's questions based on the symptoms that were presented (may repeat several times) 
+4.	Dr. Curt diagnoses the user with a disease if possible
 
+= Guide to English that Dr Curt Understands =
 
-= Guide to English that Dr Curt understands =
+The user can only phrase their symptoms as, “I have…”, “I am (adjective)”, “I feel…”.  Dr. Curt does not understand phrases that are in the past tense, or anything out of first person and nothing in the progressive format.  Refer to the complete list of sentences that are acceptable to the program.
 
-(Find out from Grammar team what language is possible)
-
-= Guide to symptoms/diseases handled =
+= Guide to Symptoms/Diseases Handled =
 
 (Find out from Diagnosis team)
 

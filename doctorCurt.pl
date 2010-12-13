@@ -19,6 +19,11 @@
 
 :- use_module(foResolution,[rprove/1]).
 
+:- use_module(diagnosis, [init/0,
+			  pruneDiseases/2,
+			  diseasesLeft/1,
+			  askAbout/1]).
+
 /* we'll also want to add modules for diagnosis and translation */
 
 /*========================================================================

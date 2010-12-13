@@ -58,8 +58,8 @@ lambda:-
 	printRepresentations(Sems).
 
 lambda(Sentence,Sems):-
-	setof(Sem,t([sem:Sem],Sentence,[]),Sems).
-
+%	setof(Sem,t([sem:Sem],Sentence,[]),Sems).
+	setof(S,(t([sem:Sem],Sentence,[]),betaConvert(Sem,S)),Sems).
 
 /*========================================================================
    Test Suite Predicates

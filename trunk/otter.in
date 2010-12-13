@@ -21,6 +21,7 @@ formula_list(usable).
                                                   ((all K (person(K) -> -(animal(K)))) & 
                                                        ((all L (woman(L) -> -(man(L)))) & 
                                                             (all M ((M = mia) -> woman(M))))))))))))))) & 
-     -(walk(mia))))).
+     (exists N (woman(N) & 
+          (mia = N)))))).
 
 end_of_list.

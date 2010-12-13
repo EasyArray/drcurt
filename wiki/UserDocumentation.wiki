@@ -17,6 +17,8 @@ The user can only phrase their symptoms as, “I have…”, “I am (adjective)
 
 = Guide to Symptoms/Diseases Handled =
 
-(Find out from Diagnosis team)
+Dr. Curt can diagnose thirteen different diseases and understands an unlimited number of symptoms.  Each disease accepts six kinds of representations of symptom logic because of the variations alloted for the user input.  The predicates in the program will grow as the diversity of user input grows.  Refer to LING 394 - Diagnosis Logic[https://spreadsheets0.google.com/ccc?key=tO_g2JN3UIAdpwcahRF7KjA&authkey=CPvml_EN&hl=en&authkey=CPvml_EN#gid=0] to see detailed information on the diseases covered in the database.
 
 = Errors =
+
+The program will continue to grow, and Prolog will need to be able to overcome the bottle-neck effect and not limit the user as to ways they can describe their symtoms.  There is a trade off between the degree of how the user describes their symptoms and the complicity of the program.

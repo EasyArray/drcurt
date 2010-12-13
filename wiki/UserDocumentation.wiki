@@ -16,7 +16,7 @@ Dr. Curt is a program that diagnoses diseases
 
 = Guide to English that Dr Curt Understands =
 
-The user can only phrase their symptoms as, “I have…”, “I am (adjective)”, “I feel…”.  Dr. Curt does not understand phrases that are in the past tense, or anything out of first person and nothing in the progressive format.  The program does not use personal pronouns, such as "my", and "your".  When a noun is used as an adjective, Dr. Curt encodes it as a noun, for example in the sentence, "I have body pain.", "body pain" is encoded as a single noun, instead of adjective: "body", noun:  "pain".  Refer to the complete list of sentences that are acceptable to the program.
+The user can only phrase their symptoms as, “I have…”, “I am (adjective)”, “I feel…”.  Dr. Curt does not understand phrases that are in the past tense, or anything out of first person and nothing in the progressive format.  The program does not use personal pronouns, such as "my", and "your".  When a noun is used as an adjective, Dr. Curt encodes it as a noun, for example in the sentence, "I have body pain.", "body pain" is encoded as a single noun, instead of adjective: "body", noun:  "pain".  Refer to the complete list of sentences that are acceptable to the program.  [http://code.google.com/p/drcurt/wiki/EnglishSentences EnglishSentences]
 
 = Guide to Symptoms/Diseases Handled =
 

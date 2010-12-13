@@ -1,9 +1,15 @@
+:- module(diagnosis, [init/0,
+		      pruneDiseases/2,
+		      diseasesLeft/1,
+		      askAbout/1]).
+
+
 :- dynamic alreadyAsked/1.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % List of diseases
 
-diseaseList([ 
+diseaseList([
 
 disease(mono, [fatigue, malaise, notHungry, hurt(head), hurt(throat), coughing, chills, fever, nausea, hurt(stomach)]),
 disease(pertussis, [coughing, whoop, problem(urinary), problem(artery), hurt(ear), runnyNose]),
@@ -65,7 +71,7 @@ iterate through each disease(X,Y)
 if member(symptom, Y)
 symptomScore ++
 */
-	
+
 scoreSymptoms([], 0).
 scoreSymptoms([Symptom | Tail], Out) :-
 	% get a list of diseases
@@ -84,7 +90,7 @@ scoreSymptoms([Symptom | Tail], Out) :-
 	),
 	scoreSymptoms(Tail, _),
 	best(Out, _).
-	
+
 
 scoreSymptomsHelper(_, [], 0).
 scoreSymptomsHelper(Symptom, [SymptomList | Tail], Score) :-

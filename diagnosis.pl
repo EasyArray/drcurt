@@ -28,7 +28,7 @@ genSymptomsOne(SymptomList) :-
 genSymptomsTwo([A, B, C], Out) :-
 	union(A,B,AB),
 	union(AB,C,Out).
-0
+
 genSymptomsTwo([A, B], Out) :-
 	union(A,B,Out).
 

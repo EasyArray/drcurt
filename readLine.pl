@@ -33,6 +33,18 @@ readLine(WordList):-
    readWords(Words),
    checkWords(Words,WordList).
 
+%getAnswer(WordList, X):-
+%	nl, write('> '),
+%	readWords(Words),
+%	checkWords(Words,WordList).
+%	findPos(WordList,X);
+%	findNeg(WordList,X);
+	
+%findPos([WHead|WTail], X) :-
+	
+	
+	
+
 
 /*========================================================================
    Read in a sequence of characters, until a return is registered

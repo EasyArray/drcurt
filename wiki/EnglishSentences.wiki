@@ -3,7 +3,7 @@
   * You have mononucleosis
   * You have a whooping cough
   * You have the swine flu
-  * You are experiencing decapitation
+  * You are beheaded
   * You have a strep throat
   * You have pulmonary tuberculosis
   * You have diarrhea
@@ -16,102 +16,99 @@
 
 =List of User-generated sentences=
 
-  * My body hurts.
+  * I feel bodily pain.
   * I have no head.
-  * I have spots on the back of your throat.
-  * I feel tired often.
+  * I have throat spots.
+  * I often feel tired.
   * I have swollen tonsils.
   * I have red tonsils.
   * I am feeling nauseated.
-  * I have a congestion in my nose.
-  * I have pain in my neck.
-  * I have pain in my back.
-  * I have pain in my legs.
-  * I have pain in my ribs.
+  * I have a nasal congestion.
+  * I have neck pain.
+  * I have back pain.
+  * I have leg pain.
+  * I have rib pain.
   * I have a sore throat.
   * I often have difficulty breathing.
   * I have a headache
-  * I have sores on my body.
-  * When I go to the bathroom, my poop is bloody.
+  * I have bodily sores.
+  * When I go to the bathroom, I have bloody stools.
   * I have convulsions.
   * I have red eyes.
   * I have a dry cough
   * I have a bloody nose.
-  * I have bleeding gums
+  * I have bleeding gums.
   * I am experiencing back pain.
   * I am wheezing
   * I am sneezing excessively
   * I have nasal congestion
   * I suffer from urinary incontinence.
   * I have an enlarged spleen.
-  * My teeth feel sensitive.
+  * I have sensitive teeth
   * I have an earache.
   * I am salivating excessively.
   * I am coughing up phlegm.
   * I am losing weight unexpectedly.
   * I have a stiff neck.
   * I have a runny nose.
-  * I have pain in my joints.
+  * I have joint pain.
   * I am having seizures.
-  * I have congestion in my nose.
+  * I have nasal congestion.
 
 =Questions about Symptoms=
 
   * Do you frequently have loose watery stools?
-  * Is your throat sore?
+  * Do you have a sore throat?
   * Do you have a rash and/or itchiness?
   * Do you have heartburn?
   * Do you have a fever
-  * Does your stomach hurt?
+  * Do you have a stomach ache?
   * Are you experiencing a whooping cough?
   * Are you coughing?
   * Do you experience paralysis?
   * Is it painful when you swallow?
   * Are you coughing up blood?
   * Do you experience abdominal cramps?
-  * Does your breath smell bad?
+  * Do you have bad breath?
   * Do you have pockmarks?
   * Are you experiencing chills or sudden fits of coldness?
   * Do you feel experience dizziness?
-  * Are you losing your appetite?
+  * Do you experience loss of appetite?
   * Are you vomiting?
   * Do you sweat excessively at night?
-  * Do you have pain on one side of your chest when you breathe or cough?
-  * Is your nose runny?
-  * Do your joints hurt?
-  * Does your head hurt?
+  * Do you have chest pain on one side when you breathe or cough?
+  * Do you have a runny nose?
+  * Do you have joint pain?
+  * Do you have a headache?
   * Do you experience seizures?
-  * Do your ribs hurt?
-  * Does your body hurt?
+  * Do you have hurting ribs?
+  * Do you feel bodily pain?
   * Are you beheaded?
-  * Are there spots on the back of your throat?
+  * Do you have throat spots?
   * Do you feel fatigue?
-  * Are your tonsils red or swollen?
+  * Do you have red or swollen tonsils?
   * Do you feel nausea?
-  * Is your nose congested?
-  * Do you experience pain in your neck, your back, and your legs?
-  * Does your throat hurt?  
-      SHOULD THIS BE CONSIDERED THE SAME AS "IS YOUR THROAT SORE?"
+  * Do you have nasal congestion?
+  * Do you experience neck, back, or leg pain?
+  * Do you throat hurt?  
   * Do you have difficulty breathing?
   * Do you have a headache?
-  * Do you have sores on your body?
-  * Are your stools bloody?
+  * Do you have bodily sores?
   * Do you experience convulsions?
-  * Are your eyes red?
+  * Do you have red eyes?
   * Are you dry coughing?
-  * Is your nose bloody?
-  * Are your gums bleeding?
+  * Do you have a bloody nose?
+  * Do you have bleeding gums?
   * Are you experiencing back pain?
   * Do you have wheezing?
   * Are you sneezing excessively?
   * Do you have nasal congestion?
   * Do you suffer from urinary incontinence?
-  * Is your spleen enlarged?
-  * Do your teeth feel sensitive?
-  * Does your ear hurt?
+  * Do you have an enlarged spleen?
+  * Do you have an earache?
   * Are you salivating excessively?
   * Are you coughing up phlegm?
-  * Is your neck stiff?
-  * Is your neck swollen?
+  * Do you have a stiff neck?
+  * Do you have a swollen neck?
   * Are you losing weight unexpectedly?
-  * Do your muscles ache?
+  * Do you feel muscle pain?

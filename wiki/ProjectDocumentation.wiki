@@ -9,7 +9,7 @@ Basically, the Discourse Engine Team is the prime team that oversees that the ot
 
 == Grammar ==
 
-The Grammar Team is involved in converting the logical format of what the Diagnosis Team uses into and out of English.  The Diagnosis Team makes a list of possible symptoms and diseases and sends them to the Grammar Team to convert into a grammatical and logical format that the program understands.  The English grammar has to include questions and declarative statements.  The current list of supported sentences is at EngishSentences.  In essence, the Grammar Team develops a predicate for translating Logic to English and another predicate for translating English to Logic.  Predicate for converting Logic to English and a predicate to convert English to logic 
+The Grammar Team is involved in converting the logical format of what the Diagnosis Team uses into and out of English.  The Diagnosis Team makes a list of possible symptoms and diseases and sends them to the Grammar Team to convert into a grammatical and logical format that the program understands.  The English grammar has to include questions and declarative statements.  The current list of supported sentences is at EngishSentences.  In essence, the Grammar Team develops a predicate for translating Logic to English and another predicate for translating English to Logic.  The predicate for converting English to Logic is newlambda(Predicate for converting Logic to English and a predicate to convert English to logic 
 
 == Diagnosis Logic ==
 

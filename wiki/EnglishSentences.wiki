@@ -17,7 +17,7 @@
 =List of User-generated sentences=
 
   * I feel bodily pain.
-  * I am headless.
+  * *I am headless.*
   * I have throat spots.
   * I feel tired.
   * I have swollen tonsils.

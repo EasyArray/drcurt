@@ -19,17 +19,17 @@
   * I feel bodily pain.
   * I have no head.
   * I have throat spots.
-  * I often feel tired.
+  * I feel tired.
   * I have swollen tonsils.
   * I have red tonsils.
-  * I am feeling nauseated.
-  * I have a nasal congestion.
+  * I have nausea.
+  * I have nasal congestion.
   * I have neck pain.
   * I have back pain.
   * I have leg pain.
   * I have rib pain.
   * I have a sore throat.
-  * I often have difficulty breathing.
+  * I have difficulty breathing.
   * I have a headache
   * I have bodily sores.
   * When I go to the bathroom, I have bloody stools.
@@ -39,16 +39,16 @@
   * I have a bloody nose.
   * I have bleeding gums.
   * I am experiencing back pain.
-  * I am wheezing
-  * I am sneezing excessively
+  * I am wheezing.
+  * I am sneezing.
   * I have nasal congestion
-  * I suffer from urinary incontinence.
+  * I have urinary incontinence.
   * I have an enlarged spleen.
   * I have sensitive teeth
   * I have an earache.
   * I am salivating excessively.
   * I am coughing up phlegm.
-  * I am losing weight unexpectedly.
+  * I have lost weight.
   * I have a stiff neck.
   * I have a runny nose.
   * I have joint pain.

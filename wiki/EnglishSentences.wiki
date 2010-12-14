@@ -57,55 +57,53 @@
 
 =Questions about Symptoms=
 
-  * Do you frequently have loose watery stools?
+  * *Do you have loose watery stools?*
   * Do you have a sore throat?
   * *Do you have a rash?*
   * *Do you have itchiness?*
   * Do you have heartburn?
-  * Do you have a fever
+  * Do you have a fever?
   * Do you have a stomach ache?
-  * Are you experiencing a whooping cough?
-  * Are you coughing?
-  * Do you experience paralysis?
-  * *Is it swallowing pain?*
-  * Are you coughing up blood?
-  * Do you experience abdominal cramps?
+  * *Do you have a whooping cough?*
+  * *Do you have a cough?*
+  * *Do you have paralysis?*
+  * *Does swallowing hurt?*
+  * *Do you cough up blood?*
+  * *Do you have abdominal cramps?*
   * Do you have bad breath?
   * Do you have pockmarks?
   * *Are you experiencing chills* 
   * *Are you experiencing sudden fits of coldness?*
   * Do you feel experience dizziness?
   * Do you experience loss of appetite?
-  * Are you vomiting?
-  * Do you sweat excessively at night?
-  * Do you have chest pain on one side when you breathe or cough?
+  * *Do you vomit?*
+  * *Do you have night sweats?*
+  * *Do you have chest pain?*
   * Do you have a runny nose?
   * Do you have joint pain?
   * Do you have a headache?
-  * Do you experience seizures?
+  * Do you have seizures?
   * Do you have rib pain?
   * Do you feel bodily pain?
   * Are you beheaded?
   * Do you have throat spots?
   * Do you feel fatigue?
-  * Do you have red or swollen tonsils?
+  * *Do you have swollen tonsils?*
   * Do you feel nausea?
   * Do you have nasal congestion?
-  * Do you experience neck, back, or leg pain?
-  * Do you throat hurt?  
+  * *Do you have neck pain?*
+  * *Do you have back pain?*
+  * *Do you have leg pain?*
   * Do you have difficulty breathing?
-  * Do you have a headache?
   * Do you have bodily sores?
-  * Do you experience convulsions?
+  * *Do you have convulsions?*
   * Do you have red eyes?
-  * Are you dry coughing?
+  * *Do you have a dry cough?*
   * Do you have a bloody nose?
   * Do you have bleeding gums?
-  * Are you experiencing back pain?
   * Do you have wheezing?
-  * Are you sneezing excessively?
-  * Do you have nasal congestion?
-  * Do you suffer from urinary incontinence?
+  * *Do you have excessive sneezing?*
+  * Do you have urinary incontinence?
   * Do you have an enlarged spleen?
   * Do you have an earache?
   * Are you salivating excessively?

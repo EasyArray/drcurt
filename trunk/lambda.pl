@@ -104,7 +104,7 @@ lambdaTestSuite:-
 	
 	sentenceCheck(Sentence, TrueOrFalse, Sem),
 	(TrueOrFalse =:= 1
-		->	print(' True '), write(Sem)
+		->	print(' True. The semantics are: '), write(Sem)
 		;	print(' False')
 	),
 	fail.

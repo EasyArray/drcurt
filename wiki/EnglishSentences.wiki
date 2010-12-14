@@ -72,7 +72,7 @@
   * *I am vomiting*
   * *I have night sweats*
   * *I feel chest pain*
-  * *I feel muscle pain
+  * *I feel muscle pain*
   * *I have a swollen neck*
 
 

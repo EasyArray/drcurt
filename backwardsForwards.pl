@@ -10,19 +10,13 @@
 :- [lambda].
 
 % from words to logic
-english1(E,F) :-
-	engs(Sem,E),
-	bengs(Sem,F).
+	
+english(Words,Logic) :-
+	lambda:t([sem:Logic],Words,[]).
 
 % from logic to words	
-english2(F,E) :-
-	bengs(Sem,F),
-	engs(Sem,E).
 	
-	
-engs(Sem,E) :-
-	lambda:t([sem:Sem],E,[]).
-	
-bengs(Sem,F) :-
-	lambda:bt([sem:Sem],F,[]).
+benglish(Logic,Words) :-
+	lambda:bt([sem:Logic],Words,[]).
+
 	

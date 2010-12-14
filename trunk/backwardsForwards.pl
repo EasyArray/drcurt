@@ -19,7 +19,6 @@ english2(F,E) :-
 	bengs(Sem,F),
 	engs(Sem,E).
 	
-% base predicates for sem/sents - for clarity
 	
 engs(Sem,E) :-
 	lambda:t([sem:Sem],E,[]).

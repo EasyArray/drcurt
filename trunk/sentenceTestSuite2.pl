@@ -21,7 +21,8 @@
 
 *************************************************************************/
 
-:- module(sentenceTestSuite,[sentence/2]).
+:- module(sentenceTestSuite2,[sentence/2]).
+% should that first have the 2 or not?
 
 
 /*========================================================================

@@ -214,15 +214,6 @@ lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:pl,per:one]).
 lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:pl,per:two]).
 lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:pl,per:thr]).
 
-%hurt
-lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:inf,num:inf,per:inf]).
-lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:fin,num:sg,per:one]).
-lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:fin,num:sg,per:two]).
-lexEntry(iv,[symbol:hurt,syntax:[hurts],inf:fin,num:sg,per:thr]).
-lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:fin,num:pl,per:one]).
-lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:fin,num:pl,per:two]).
-lexEntry(iv,[symbol:hurt,syntax:[hurt],inf:fin,num:pl,per:thr]).
-
 
 /*========================================================================
    Transitive Verbs
@@ -274,6 +265,14 @@ lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:pl,per:one]).
 lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:pl,per:two]).
 lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:pl,per:thr]).
 
+%feel
+lexEntry(tv,[symbol:feel,syntax:[feel],inf:inf,num:inf,per:inf]).
+lexEntry(tv,[symbol:feel,syntax:[feel],inf:fin,num:sg,per:one]).
+lexEntry(tv,[symbol:feel,syntax:[feel],inf:fin,num:sg,per:two]).
+lexEntry(tv,[symbol:feel,syntax:[feels],inf:fin,num:sg,per:thr]).
+lexEntry(tv,[symbol:feel,syntax:[feel],inf:fin,num:pl,per:one]).
+lexEntry(tv,[symbol:feel,syntax:[feel],inf:fin,num:pl,per:two]).
+lexEntry(tv,[symbol:feel,syntax:[feel],inf:fin,num:pl,per:thr]).
 
 
 /*========================================================================

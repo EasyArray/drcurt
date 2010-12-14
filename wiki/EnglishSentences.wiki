@@ -103,12 +103,11 @@
   * Do you have bleeding gums?
   * Do you have wheezing?
   * *Do you have excessive sneezing?*
-  * Do you have urinary incontinence?
-  * Do you have an enlarged spleen?
+  * *Do you have urinary incontinence?*
   * Do you have an earache?
-  * Are you salivating excessively?
-  * Are you coughing up phlegm?
+  * *Do you have excessive salivation?*
+  * *Do you cough up phlegm?*
   * Do you have a stiff neck?
   * Do you have a swollen neck?
-  * Are you losing weight unexpectedly?
-  * Do you feel muscle pain?
+  * *Do you have unexpected weight loss?*
+  * Do you have muscle pain?

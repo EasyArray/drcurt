@@ -103,4 +103,40 @@ sentence([do,you,have,sudden_fits_of_coldness],1). %check for adj
 sentence([do,you,feel,dizzy],1).
 sentence([do,you,have,loss_of_appetite],1).
 sentence([do,you,vomit],1).
+sentence([do,you,have,night_sweats],1).
+sentence([do,you,have,chest_pain],1).
+sentence([do,you,have,a,runny_nose],1).
+sentence([do,you,have,joint_pain],1).
+sentence([do,you,have,a,headache],1).
+sentence([do,you,have,seizures],1).
+sentence([do,you,have,rib_pain],1).
+sentence([are,you,beheaded],1). %check for beheaded encoding
+sentence([do,you,have,throat_spots],1).
+sentence([do,you,feel,fatigue],1).
+sentence([do,you,have,a,headache],1).
+sentence([do,you,have,swollen,tonsils],1).
+sentence([do,you,feel,nausea],1).
+sentence([do,you,have,nasal,congestion],1).
+sentence([do,you,have,neck_pain],1).
+sentence([do,you,have,back_pain],1).
+sentence([do,you,have,leg_pain],1).
+sentence([do,you,have,difficulty_breathing],1).
+sentence([do,you,have,bodily_sores],1).
+sentence([do,you,have,convulsions],1).
+sentence([do,you,have,red,eyes],1).
+sentence([do,you,have,a,dry,cough],1).
+sentence([do,you,have,a,bloody,nose],1).
+sentence([do,you,have,neck_pain],1).
+sentence([do,you,have,bleeding_gums],1).
+sentence([do,you,have,wheezing],1).
+sentence([do,you,have,excessive,sneezing],1).
+sentence([do,you,have,urinary_incontinence],1).
+sentence([do,you,have,an,earache],1). %check - can we do 'an'?
+sentence([do,you,have,excessive,salivation],1).
+sentence([do,you,cough,up,phelgm],1).
+sentence([do,you,have,a,stiff,neck],1).
+sentence([do,you,have,a,swollen,neck],1).
+sentence([do,you,have,unexpected,weight_loss],1). % check for adj
+sentence([do,you,have,muscle_pain],1).
+
 

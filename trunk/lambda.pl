@@ -37,7 +37,7 @@
 
 :- use_module(betaConversion,[betaConvert/2]).
 
-:- use_module(sentenceTestSuite,[sentence/2]).
+:- use_module(sentenceTestSuite2,[sentence/2]).
 
 :- [englishGrammar].
 
@@ -65,13 +65,30 @@ lambda(Sentence,Sems):-
    Test Suite Predicates
 ========================================================================*/
 
+stupidSentenceCheck(Sentence, OneOrZero) :-
+	( member(horrible, Sentence)
+	-> OneOrZero is 1
+	;	OneOrZero is 0
+	).
+
+
 lambdaTestSuite:-
 	nl, write('>>>>> LAMBDA ON SENTENCE TEST SUITE <<<<< '), nl,
         sentence(Sentence,_),
         nl, write('Sentence: '), write(Sentence),
+	
+	stupidSentenceCheck(Sentence, OneOrZero),
+	(OneOrZero =:= 1
+		->	print(' True')
+		;	print(' False')
+	),
+	fail.
+	
+	/*
 	lambda(Sentence,Formulas),
 	printRepresentations(Formulas),
         fail.
+	*/
 
 lambdaTestSuite.
 

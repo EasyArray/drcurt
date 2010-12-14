@@ -1,6 +1,6 @@
 
 
-:- module(backward,[english1/2,
+:- module(backforth,[english1/2,
 						  english2/2,
  						  engs/2,
 						  bengs/2]).

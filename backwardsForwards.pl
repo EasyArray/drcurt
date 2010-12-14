@@ -9,12 +9,12 @@
 
 :- [lambda].
 
-% from words to semantics
+% from words to logic
 english1(E,F) :-
 	engs(Sem,E),
 	bengs(Sem,F).
 
-% from semantics to words	
+% from logic to words	
 english2(F,E) :-
 	bengs(Sem,F),
 	engs(Sem,E).

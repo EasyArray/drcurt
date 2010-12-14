@@ -146,13 +146,17 @@ np([coord:no,num:pl,per:two,gap:[np:NP],sem:NP])--> [].
 np([coord:no,num:pl,per:thr,gap:[np:NP],sem:NP])--> [].
 
 np([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
+   pn([num:Num,per:Per,sem:PN]),
+   {combine(np:NP,[pn:PN])}.
+
+np([coord:no,num:Num,per:pl,vow:Vow,gap:[],sem:NP])-->
+   n([coord:no,num:Num,per:pl,vow:Vow,sem:N]),
+   {combine(np:NP,[n:N])}.
+
+np([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
    det([mood:decl,type:_,vow:Vow,sem:Det]),
    n([coord:no,num:Num,per:Per,vow:Vow,sem:N]),
    {combine(np:NP,[det:Det,n:N])}.
-
-np([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
-   pn([num:Num,per:Per,sem:PN]),
-   {combine(np:NP,[pn:PN])}.
 
 np([coord:no,num:sg,gap:[],sem:NP])-->
   qnp([mood:decl,sem:QNP]),
@@ -168,6 +172,10 @@ bnp([coord:no,num:pl,per:thr,gap:[np:NP],sem:NP])--> [].
 bnp([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
    {combine(bnp:NP,[bpn:PN])},
    bpn([num:Num,per:Per,sem:PN]).
+
+bnp([coord:no,num:Num,per:pl,vow:Vow,gap:[],sem:NP])-->
+   {combine(np:NP,[n:N])},
+   n([coord:no,num:Num,per:pl,vow:Vow,sem:N]).
 
 bnp([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
    {combine(bnp:NP,[bdet:Det,bn:N])},

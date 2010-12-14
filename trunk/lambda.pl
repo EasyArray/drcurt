@@ -72,11 +72,7 @@ sentenceCheck(Sentence, TrueOrFalse) :-
 	).
 	
 	
-logicCheck(Sem, TrueOrFalse) :-
-	( lambda:t([sem:Sem],Sentence,[])
-	-> TrueOrFalse is 1
-	; TrueOrFalse is 0
-	).
+
 
 /*
 stupidSentenceCheck(Sentence, OneOrZero) :-
@@ -91,10 +87,11 @@ lambdaTestSuite:-
 	nl, write('>>>>> LAMBDA ON SENTENCE TEST SUITE <<<<< '), nl,
         sentence(Sentence,_),
         nl, write('Sentence: '), write(Sentence),
+		nl, write('Logic: '), write(Sem), % this is a test line, let's see if it works
 	
 	sentenceCheck(Sentence, TrueOrFalse),
 	(TrueOrFalse =:= 1
-		->	print(' True')
+		->	print(' True'), 
 		;	print(' False')
 	),
 	fail.
@@ -107,10 +104,19 @@ lambdaTestSuite:-
 
 lambdaTestSuite.
 
+/*
+logicCheck(Sem, TrueOrFalse) :-
+	( lambda:t([sem:Sem],Sentence,[])
+	-> TrueOrFalse is 1
+	; TrueOrFalse is 0
+	).
+	
+	*/
 
+/*
 logicTestSuite :-
 	nl, write('>>>>> LAMBDA ON LOGIC STEST SUITE <<<<<'), nl,
-		sentence(Sentence,_),
+		sentence(Sem,_),
 		nl, write('Sentence: '), write(Sentence),
 	
 	logicCheck(Sem, TrueOrFalse),
@@ -122,7 +128,7 @@ logicTestSuite :-
 	
 logicTestSuite.
 % this probably does not actually work the way we want it to
-
+*/
 
 /*========================================================================
    Info

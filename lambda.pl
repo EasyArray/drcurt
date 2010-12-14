@@ -65,11 +65,26 @@ lambda(Sentence,Sems):-
    Test Suite Predicates
 ========================================================================*/
 
+sentenceCheck(Sentence, TrueOrFalse) :-
+	( lambda:t([sem:Sem],Sentence,[])
+	-> TrueOrFalse is 1
+	; TrueOrFalse is 0
+	).
+	
+	
+logicCheck(Sem, TrueOrFalse) :-
+	( lambda:t([sem:Sem],Sentence,[])
+	-> TrueOrFalse is 1
+	; TrueOrFalse is 0
+	).
+
+/*
 stupidSentenceCheck(Sentence, OneOrZero) :-
 	( member(horrible, Sentence)
 	-> OneOrZero is 1
 	;	OneOrZero is 0
 	).
+*/
 
 
 lambdaTestSuite:-
@@ -77,8 +92,8 @@ lambdaTestSuite:-
         sentence(Sentence,_),
         nl, write('Sentence: '), write(Sentence),
 	
-	stupidSentenceCheck(Sentence, OneOrZero),
-	(OneOrZero =:= 1
+	sentenceCheck(Sentence, TrueOrFalse),
+	(TrueOrFalse =:= 1
 		->	print(' True')
 		;	print(' False')
 	),
@@ -91,6 +106,21 @@ lambdaTestSuite:-
 	*/
 
 lambdaTestSuite.
+
+
+logicTestSuite :-
+	nl, write('>>>>> LAMBDA ON LOGIC STEST SUITE <<<<<'), nl,
+		sentence(Sentence,_),
+		nl, write('Sentence: '), write(Sentence),
+	
+	logicCheck(Sem, TrueOrFalse),
+	(TrueOrFalse =:= 1
+		-> print(' True')
+		;  print(' False')
+	),
+	fail.
+	
+logicTestSuite.
 
 
 /*========================================================================

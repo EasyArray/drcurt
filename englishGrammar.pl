@@ -145,13 +145,13 @@ np([coord:no,num:pl,per:one,gap:[np:NP],sem:NP])--> [].
 np([coord:no,num:pl,per:two,gap:[np:NP],sem:NP])--> [].
 np([coord:no,num:pl,per:thr,gap:[np:NP],sem:NP])--> [].
 
+np([coord:no,num:pl,per:Per,vow:_,gap:[],sem:NP])-->
+   n([coord:no,num:pl,per:Per,vow:_,sem:N]),
+   {combine(np:NP,[n:N])}.
+
 np([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
    pn([num:Num,per:Per,sem:PN]),
    {combine(np:NP,[pn:PN])}.
-
-np([coord:no,num:Num,per:pl,vow:Vow,gap:[],sem:NP])-->
-   n([coord:no,num:Num,per:pl,vow:Vow,sem:N]),
-   {combine(np:NP,[n:N])}.
 
 np([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
    det([mood:decl,type:_,vow:Vow,sem:Det]),

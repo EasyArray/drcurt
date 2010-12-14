@@ -46,7 +46,7 @@ combine(q:app(A,B),[whnp:A,vp:B]).
 combine(q:A,[sinv:A]).
 
 combine(np:app(app(B,A),C),[np:A,coord:B,np:C]).
-combine(np:A,[noun:A]).
+combine(np:A,[n:A]).
 combine(np:app(A,B),[det:A,n:B]).
 combine(np:A,[pn:A]).
 combine(np:A,[qnp:A]).

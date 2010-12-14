@@ -27,6 +27,7 @@ et/*************************************************************************
                   lambda/0,
                   lambda/2,
                   lambdaTestSuite/0]).
+% need to add logic test suite when it's all set up
 
 :- use_module(readLine,[readLine/1]).
 
@@ -65,11 +66,23 @@ lambda(Sentence,Sems):-
    Test Suite Predicates
 ========================================================================*/
 
-sentenceCheck(Sentence, TrueOrFalse) :-
+
+sentenceCheck(Sentence, TrueOrFalse, Sem) :-
 	( lambda:t([sem:Sem],Sentence,[])
 	-> TrueOrFalse is 1
 	; TrueOrFalse is 0
 	).
+	
+	
+	
+/*
+sentenceCheck(Sentence, TrueOrFalse) :-
+	( engs(Sem,E) :-
+		lambda:t([sem:Sem],E,[])
+	-> TrueOrFalse is 1
+	; TrueOrFalse is 0
+	).
+*/
 	
 	
 
@@ -87,14 +100,17 @@ lambdaTestSuite:-
 	nl, write('>>>>> LAMBDA ON SENTENCE TEST SUITE <<<<< '), nl,
         sentence(Sentence,_),
         nl, write('Sentence: '), write(Sentence),
-		nl, write('Logic: '), write(Sem), % this is a test line, let's see if it works
+		
 	
-	sentenceCheck(Sentence, TrueOrFalse),
+	sentenceCheck(Sentence, TrueOrFalse, Sem),
 	(TrueOrFalse =:= 1
-		->	print(' True'), 
+		->	print(' True '), write(Sem)
 		;	print(' False')
 	),
 	fail.
+	
+
+	
 	
 	/*
 	lambda(Sentence,Formulas),

@@ -27,15 +27,8 @@
 
 lexEntry(det,[syntax:[every],mood:decl,type:uni]).
 lexEntry(det,[syntax:[a],mood:decl,type:indef]).
-lexEntry(det,[syntax:[the],mood:decl,type:def]).
 lexEntry(det,[syntax:[which],mood:int,type:wh]).
 
-lexEntry(det,[syntax:[my],mood:decl,type:def]).
-lexEntry(det,[syntax:[your],mood:decl,type:def]).
-lexEntry(det,[syntax:[her],mood:decl,type:def]).
-lexEntry(det,[syntax:[his],mood:decl,type:def]).
-lexEntry(det,[syntax:[our],mood:decl,type:def]).
-lexEntry(det,[syntax:[their],mood:decl,type:def]).
 
 
 
@@ -161,7 +154,8 @@ lexEntry(noun,[symbol:malaria,syntax:[malaria],num:sg,per:thr]).
 lexEntry(noun,[symbol:yellowfever,syntax:[yellow,fever],num:sg,per:thr]).
 
 
-*========================================================================
+
+/*========================================================================
    Personal Pronouns
 ========================================================================*/
 
@@ -272,13 +266,13 @@ lexEntry(tv,[symbol:read,syntax:[read],inf:fin,num:pl,per:thr]).
 
 
 %have
-lexEntry(iv,[symbol:have,syntax:[have],inf:inf,num:inf,per:inf]).
-lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:sg,per:one]).
-lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:sg,per:two]).
-lexEntry(iv,[symbol:have,syntax:[has],inf:fin,num:sg,per:thr]).
-lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:pl,per:one]).
-lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:pl,per:two]).
-lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:pl,per:thr]).
+lexEntry(tv,[symbol:have,syntax:[have],inf:inf,num:inf,per:inf]).
+lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:sg,per:one]).
+lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:sg,per:two]).
+lexEntry(tv,[symbol:have,syntax:[has],inf:fin,num:sg,per:thr]).
+lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:pl,per:one]).
+lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:pl,per:two]).
+lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:pl,per:thr]).
 
 
 

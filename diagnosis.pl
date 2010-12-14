@@ -19,6 +19,15 @@ disease(strepThroat, [hurt(throat), problem(swallowing), fever, looksWeird(throa
 
 ]).
 
+% the above is no way gonna work - need to update the logic of the symptoms to what we're actually encoding - in process of fixing..
+
+
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%
 % Generate a listing of symptoms
 

@@ -121,6 +121,7 @@ logicTestSuite :-
 	fail.
 	
 logicTestSuite.
+% this probably does not actually work the way we want it to
 
 
 /*========================================================================

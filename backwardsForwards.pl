@@ -1,9 +1,7 @@
 
 
-:- module(backforth,[english1/2,
-						  english2/2,
- 						  engs/2,
-						  bengs/2]).
+:- module(backforth,[english/2,
+						  benglish/2]).
 						
 % loading in necessary files				 
 

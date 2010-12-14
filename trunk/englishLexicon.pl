@@ -317,7 +317,7 @@ lexEntry(noun,[symbol:swallowing,syntax:[swallowing],num:sg,per:thr]).
 lexEntry(adj,[symbol:headless,syntax:[headless]]).
 lexEntry(adj,[symbol:beheaded,syntax:[beheaded]]).
 lexEntry(adj,[symbol:sore,syntax:[sore]]).
-lexEntry(adj,[symbol:common,syntax:[common]]).
+lexEntry(adj,[symbol:common,syntax:[common]]). 
 lexEntry(adj,[symbol:yellow,syntax:[yellow]]).
 lexEntry(adj,[symbol:spots,syntax:[spots]]).
 lexEntry(adj,[symbol:swollen,syntax:[swollen]]).

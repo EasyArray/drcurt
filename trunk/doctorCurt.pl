@@ -79,8 +79,9 @@ curtStart(true):-
 curtTalk(quit).
 
 curtTalk(run):-
-	(   numDiseases == 1
-	->  format('~n hi',[]),
+	diseasesLeft(Num),
+	(   Num == 1
+	->  	format('~n hi',[]),
 		disease(X,Y),
 		curtFinish(X)
 	),

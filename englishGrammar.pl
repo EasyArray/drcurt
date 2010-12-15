@@ -35,11 +35,11 @@ t([sem:T])-->
    {combine(t:T,[q:Q])}.
 
 bt([sem:T])-->
-   {combine(t:T,[s:S])},
+   {combine(bt:T,[s:S])},
    bs([coord:no,sem:S]).
   
 bt([sem:T])-->
-   {combine(t:T,[q:Q])},
+   {combine(bt:T,[q:Q])},
    bq([sem:Q]).
    
 /*

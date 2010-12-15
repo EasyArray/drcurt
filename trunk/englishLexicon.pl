@@ -155,6 +155,33 @@ lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:pl,per:one]).
 lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:pl,per:two]).
 lexEntry(iv,[symbol:talk,syntax:[talk],inf:fin,num:pl,per:thr]).
 
+% wheeze
+lexEntry(iv,[symbol:wheeze,syntax:[wheeze],inf:inf,num:inf,per:inf]).
+lexEntry(iv,[symbol:wheeze,syntax:[wheeze],inf:fin,num:sg,per:one]).
+lexEntry(iv,[symbol:wheeze,syntax:[wheeze],inf:fin,num:sg,per:two]).
+lexEntry(iv,[symbol:wheezes,syntax:[wheezes],inf:fin,num:sg,per:thr]).
+lexEntry(iv,[symbol:wheeze,syntax:[wheeze],inf:fin,num:pl,per:one]).
+lexEntry(iv,[symbol:wheeze,syntax:[wheeze],inf:fin,num:pl,per:two]).
+lexEntry(iv,[symbol:wheeze,syntax:[wheeze],inf:fin,num:pl,per:thr]).
+
+% vomit
+lexEntry(iv,[symbol:vomit,syntax:[vomit],inf:inf,num:inf,per:inf]).
+lexEntry(iv,[symbol:vomit,syntax:[vomit],inf:fin,num:sg,per:one]).
+lexEntry(iv,[symbol:vomit,syntax:[vomit],inf:fin,num:sg,per:two]).
+lexEntry(iv,[symbol:vomits,syntax:[vomits],inf:fin,num:sg,per:thr]).
+lexEntry(iv,[symbol:vomit,syntax:[vomit],inf:fin,num:pl,per:one]).
+lexEntry(iv,[symbol:vomit,syntax:[vomit],inf:fin,num:pl,per:two]).
+lexEntry(iv,[symbol:vomit,syntax:[vomit],inf:fin,num:pl,per:thr]).
+
+%sweat excessively
+lexEntry(iv,[symbol:sweat_excessively,syntax:[sweat, excessively],inf:inf,num:inf,per:inf]).
+lexEntry(iv,[symbol:sweat_excessively,syntax:[sweat, excessively],inf:fin,num:sg,per:one]).
+lexEntry(iv,[symbol:sweat_excessively,syntax:[sweat, excessively],inf:fin,num:sg,per:two]).
+lexEntry(iv,[symbol:sweat_excessively,syntax:[sweats, excessively],inf:fin,num:sg,per:thr]).
+lexEntry(iv,[symbol:sweat_excessively,syntax:[sweat, excessively],inf:fin,num:pl,per:one]).
+lexEntry(iv,[symbol:sweat_excessively,syntax:[sweat, excessively],inf:fin,num:pl,per:two]).
+lexEntry(iv,[symbol:sweat_excessively,syntax:[sweat, excessively],inf:fin,num:pl,per:thr]).
+
 
 
 /*========================================================================

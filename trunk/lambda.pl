@@ -90,28 +90,27 @@ lambdaTestSuite:-
 		;	print(' False')
 	),
 	fail.
-	
-
-	
-	
-	/*
-	lambda(Sentence,Formulas),
-	printRepresentations(Formulas),
-        fail.
-	*/
-
 
 lambdaTestSuite.
 
 
+% for logic test suite:
+
+logicCheck(Sem, TrueOrFalse, Sentence) :-
+	( (lambda:bt([sem:Sem],Sentence,[])
+	; lambda:btq([sem:Sem],Sentence,[]))
+	-> TrueOrFalse is 1
+	; TrueOrFalse is 0
+	).
+
 
 logicTestSuite:-
 	nl, write('>>>>> LAMBDA ON LOGIC TEST SUITE <<<<< '), nl,
-        sentence(Sentence,_),
-        nl, write('Semantics: '), write(Sem),
+        sentence(_,Sem),
+        nl, write('Sentence: '), write(Sem),
 		
 	
-	sentenceCheck(Sentence, TrueOrFalse, Sem),
+	logicCheck(Sentence, TrueOrFalse, Sem),
 	(TrueOrFalse =:= 1
 		->	print(' True. The sentence is: '), write(Sentence)
 		;	print(' False')

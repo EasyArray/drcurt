@@ -19,7 +19,7 @@
 
 :- use_module(foResolution,[rprove/1]).
 
-:- use_module(diagnosis, [initFromList/1,
+:- use_module(diagnosis, [init/0,
 			  pruneDiseases/2,
 			  diseasesLeft/1,
 			  askAbout/1]).
@@ -47,23 +47,26 @@ readings([]).
 ========================================================================*/
 
 curt:-
+	init,
    format('~n Curt: Hello, I am Dr. Curt.',[]),
-   format('~n Curt: What symptoms are you currently experiencing?',[]),
+   format('~n Curt: What symptom are you currently experiencing?',[]),
    format('~n~n',[]),
-   curtStart(true, Symptoms).
+   curtStart(true).
 
-curtStart(true, Symptoms):-
+curtStart(true):-
 	read(Symp),
 	%sendToGrammar(Input,Symp), %input is sentence, Symp is the returned symptom
 	%here we'll append the symptom to the current list
+	pruneDiseases(Symp, true),
 	format('~n Curt: I see. Is there anything else?',[]),
 	format('~n~n',[]),
 	read(Response),
 	(   Response == 'no'
-	->  initFromList([Symp|Symptoms]),
-	    curtTalk(run),
+	->  curtTalk(run),
 	    curtTalk(quit)
-	;   curtStart(true, [Symp|Symptoms])
+	;   format('~n Curt: OK. What else is ailing you?',[]),
+		format('~n~n',[]),
+		curtStart(true)
 	).
 
 
@@ -77,10 +80,12 @@ curtTalk(quit).
 
 curtTalk(run):-
 	(   numDiseases == 1
-	->  curtFinish(true)
+	->  format('~n hi',[]),
+		disease(X,Y),
+		curtFinish(X)
 	),
 	askAbout(X), %diagnosis logic gives X to ask user about, flag tells us if diagnosis is complete
-	doYouHave(X), % outputs text,asking user if they suffer from X
+	%doYouHave(X), % outputs text,asking user if they suffer from X
 	read(Y),
 	(   Y == 'yes'
 	->  pruneDiseases(X, true)
@@ -88,8 +93,8 @@ curtTalk(run):-
 	),
    %curtUpdate(Input,CurtsMoves,State), will be replaced with diagnosis logic
    /* will want to update diagnosis info here */
-   curtOutput(CurtsMoves), % curt gives a canned response depending on success
-   curtTalk(State).
+   %curtOutput(CurtsMoves), % curt gives a canned response depending on success
+   curtTalk(run).
 
 curtFinish(X):-
 	format('~n Curt: Sorry friend, it would appear that you are suffering from:',[]),

@@ -205,13 +205,13 @@ lexEntry(tv,[symbol:feel,syntax:[feel],inf:fin,num:pl,per:two]).
 lexEntry(tv,[symbol:feel,syntax:[feel],inf:fin,num:pl,per:thr]).
 
 %have
-lexEntry(iv,[symbol:have,syntax:[have],inf:inf,num:inf,per:inf]).
-lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:sg,per:one]).
-lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:sg,per:two]).
-lexEntry(iv,[symbol:have,syntax:[has],inf:fin,num:sg,per:thr]).
-lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:pl,per:one]).
-lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:pl,per:two]).
-lexEntry(iv,[symbol:have,syntax:[have],inf:fin,num:pl,per:thr]).
+lexEntry(tv,[symbol:have,syntax:[have],inf:inf,num:inf,per:inf]).
+lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:sg,per:one]).
+lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:sg,per:two]).
+lexEntry(tv,[symbol:have,syntax:[has],inf:fin,num:sg,per:thr]).
+lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:pl,per:one]).
+lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:pl,per:two]).
+lexEntry(tv,[symbol:have,syntax:[have],inf:fin,num:pl,per:thr]).
 
 
 

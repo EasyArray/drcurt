@@ -155,10 +155,10 @@ testAll :-
 	sentence([do, you, have, abdominal, cramps], 1).
 
 	% am
-	sentence([are, you, headless], 1).
-	sentence([are, you, wheezing], 1).
-	sentence([are, you, sweating, excessively], 1).
-	sentence([are, you, vomiting], 1).
+	sentence([do,you,have,a,head], 1).
+	sentence([do, you, wheeze], 1).
+	sentence([do, you, sweat, excessively], 1).
+	sentence([do, you, vomit], 1).
 
 	% feel
 	sentence([do, you, feel, bodily, pain], 1).

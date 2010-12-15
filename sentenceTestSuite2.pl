@@ -83,7 +83,7 @@ testAll :-
 	sentence([i, have, loose, watery, stools], 1).
 	sentence([i, have, a, rash], 1).
 	sentence([i, have, itchiness], 1).
-	sentence([i, have, eartburn], 1).
+	sentence([i, have, heartburn], 1).
 	sentence([i, have, a, fever], 1).
 	sentence([i, have, a, stomachache], 1).
 	sentence([i, have, paralysis], 1). % really?

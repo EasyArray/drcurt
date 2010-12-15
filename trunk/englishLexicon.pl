@@ -258,7 +258,6 @@ lexEntry(adj,[symbol:vomiting,syntax:[vomiting],vow:no]).
 lexEntry(adj,[symbol:sweating_excessively,syntax:[sweating,excessively],vow:no]).
 lexEntry(adj,[symbol:wheezing,syntax:[wheezing],vow:no]).
 
-% I'm not sure if we're handling adj-adj sequences, so I put these as 1 adjective
 
 
 lexEntry(adj,[symbol:dry,syntax:[dry],vow:no]).

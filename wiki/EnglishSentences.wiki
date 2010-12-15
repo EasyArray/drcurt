@@ -57,7 +57,7 @@
   * *I have itchiness*
   * *I have heartburn*
   * *I have a fever*
-  * *I have a stomach ache*
+  * *I have a stomachache*
   * *I have paralysis*
   * *I have pain swallowing* (NOTE THIS SENTENCE.  Pain swallowing= noun)
   * *I feel abdominal cramps*

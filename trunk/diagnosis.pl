@@ -140,7 +140,7 @@ pruneDiseasesHelper(Symptom, TrueOrFalse, [(Name, Symptoms) | Tail]) :-
 
 diseasesLeft(Num) :-
 	setof((Y,X), (Y ^ disease(Y, X)) , DiseaseList),
-	print(DiseaseList),
+	%print(DiseaseList),
 	length(DiseaseList, Num).
 
 askAbout(Symptom) :-

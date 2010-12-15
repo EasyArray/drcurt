@@ -141,11 +141,11 @@ testAll :-
 	sentence([do, you, have, seizures], 1).
 	sentence([do, you, have, loose, watery, stools], 1).
 	sentence([do, you, have, a, rash], 1).
-	sentence([do, you, have, do, itchiness], 1).
-	sentence([do, you, have, eartburn], 1).
+	sentence([do, you, have, itchiness], 1).
+	sentence([do, you, have, heartburn], 1).
 	sentence([do, you, have, a, fever], 1).
 	sentence([do, you, have, a, stomachache], 1).
-	sentence([do, you, have, paralysis], 1). % really?
+	sentence([do, you, have, paralysis], 1). 
 	sentence([do, you, feel, abdominal, cramps], 1).
 	sentence([do, you, have, bad, breath], 1).
 	sentence([do, you, have, pockmarks], 1).

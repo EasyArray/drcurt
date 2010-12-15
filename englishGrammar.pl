@@ -38,8 +38,8 @@ bt([sem:T])-->
    {combine(bt:T,[s:S])},
    bs([coord:no,sem:S]).
   
-bt([sem:T])-->
-   {combine(bt:T,[q:Q])},
+btq([sem:T])-->
+   {combine(btq:T,[q:Q])},
    bq([sem:Q]).
    
 /*
@@ -324,11 +324,12 @@ bnmod([sem:Sem])-->
    Verb Phrases
 ========================================================================*/
 
+
 vp([coord:no,inf:fin,num:Num,per:Per,gap:[],sem:VP])--> 
    av([inf:fin,num:Num,per:Per,sem:Mod]), 
    vp([coord:_,inf:inf,num:inf,per:inf,gap:[],sem:V2]),
    {combine(vp:VP,[av:Mod,vp:V2])}.   
-   
+
 vp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
    cop([inf:Inf,num:Num,per:Per,sem:Cop]),
    np([coord:_,num:Num,per:_,vow:_,gap:[],sem:NP]),

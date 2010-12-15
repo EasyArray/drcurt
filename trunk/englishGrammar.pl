@@ -249,8 +249,8 @@ bwhnp([num:sg,sem:NP])-->
    Nouns
 ========================================================================*/
 
-n([coord:no,num:Num,per:Per,vow:Vow,sem:N])-->
-   noun([num:Num,per:Per,vow:Vow,sem:Noun]),
+n([coord:no,num:Num,per:Per,vow:_,sem:N])--> % changed
+   noun([num:Num,per:Per,vow:_,sem:Noun]),
    {combine(n:N,[noun:Noun])}.
 
 n([coord:_,num:Num,per:Per,vow:Vow,sem:Sem])--> 
@@ -343,10 +343,12 @@ vp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
    iv([inf:Inf,num:Num,per:Per,sem:IV]),
    {combine(vp:VP,[iv:IV])}. 
 
-vp([coord:no,inf:I,num:Num,per:Per,gap:G,sem:VP])-->
-   tv([inf:I,num:Num,per:Per,sem:TV]),
+vp([coord:no,inf:Inf,num:_,per:Per,gap:G,sem:VP])--> % changing num then changing back - is Num in what "should work"
+   tv([inf:Inf,num:_,per:Per,sem:TV]), % here too
    np([coord:_,num:_,per:_,vow:_,gap:G,sem:NP]),
    {combine(vp:VP,[tv:TV,np:NP])}.
+
+% this above is the relevant vp rule
 
 bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])--> 
    {combine(vp:VP,[av:Mod,vp:V2])},

@@ -70,13 +70,14 @@ combine(vp:app(A,B),[av:A,vp:B]).
 combine(vp:app(A,B),[cop:A,np:B]).
 combine(vp:app(A,B),[cop:A,adj:B]).
 combine(vp:A,[iv:A]).
-combine(vp:app(A,B),[tv:A,np:B]).
+combine(vp:app(A,B),[tv:A,np:B]). % this is the relevant combine rule - with the problem
 
 combine(pp:app(A,B),[prep:A,np:B]).
 
 combine(rc:app(A,B),[relpro:A,vp:B]).
 
 /*
+
 combine(bt:Converted,[bs:Sem]):- 
    betaConvert(Sem,Converted).
 
@@ -138,4 +139,5 @@ combine(bvp:app(A,B),[btv:A,bnp:B]).
 combine(bpp:app(A,B),[bprep:A,bnp:B]).
 
 combine(brc:app(A,B),[brelpro:A,bvp:B]).
+
 */

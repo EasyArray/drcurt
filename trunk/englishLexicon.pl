@@ -61,7 +61,6 @@ lexEntry(noun,[symbol:malaria,syntax:[malaria],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:fever,syntax:[fever],num:pl,per:thr,vow:no]).
 
 
-% various unordered nouns
 lexEntry(noun,[symbol:head,syntax:[head],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:throat,syntax:[throat],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:body,syntax:[body],num:sg,per:thr,vow:no]).

@@ -35,19 +35,20 @@ t([sem:T])-->
    {combine(t:T,[q:Q])}.
 
 bt([sem:T])-->
-   {combine(bt:T,[bs:S])},
+   {combine(t:T,[s:S])},
    bs([coord:no,sem:S]).
   
 bt([sem:T])-->
-   {combine(bt:T,[bq:Q])},
+   {combine(t:T,[q:Q])},
    bq([sem:Q]).
    
-/*t([sem:T])-->
+/*
+t([sem:T])-->
   s([coord:yes,sem:S]),
   {combine(t:T,[s:S])}.
    
 bt([sem:T])-->
-   {combine(bt:T,[bs:S])},
+   {combine(t:T,[s:S])},
    bs([coord:yes,sem:S]).   
 */
    
@@ -68,12 +69,12 @@ sinv([gap:G,sem:S])-->
    {combine(sinv:S,[av:Sem,np:NP,vp:VP])}.
 
 bs([coord:no,sem:Sem])-->
-   {combine(bs:Sem,[bnp:NP,bvp:VP])},
+   {combine(s:Sem,[np:NP,vp:VP])},
    bnp([coord:_,num:Num,per:Per,gap:[],sem:NP]),
    bvp([coord:_,inf:fin,num:Num,per:Per,gap:[],sem:VP]).
    
 bsinv([gap:G,sem:S])-->
-   {combine(bsinv:S,[bav:Sem,bnp:NP,bvp:VP])},
+   {combine(sinv:S,[av:Sem,np:NP,vp:VP])},
    bav([inf:fin,num:Num,per:Per,sem:Sem]),
    bnp([coord:_,num:Num,per:Per,gap:[],sem:NP]),
    bvp([coord:_,inf:inf,num:inf,per:inf,gap:G,sem:VP]).   
@@ -90,13 +91,13 @@ s([coord:no,sem:Sem])-->
    {combine(s:Sem,[vp_wo:VP])}.
  
 bs([coord:yes,sem:Sem])--> 
-   {combine(bs:Sem,[bs:S1,coord:C,bs:S2])},   
+   {combine(s:Sem,[s:S1,coord:C,s:S2])},   
    bs([coord:no,sem:S1]), 
    coord([type:_,sem:C]),  
    bs([coord:_,sem:S2]).
  
 bs([coord:no,sem:Sem])--> 
-   {combine(bs:Sem,[bvp_wo:VP])},
+   {combine(s:Sem,[vp_wo:VP])},
    bvp_wo([coord:_,inf:fin,num:_,per:_,gap:[],sem:VP]).
 */
    
@@ -119,16 +120,16 @@ q([sem:Sem])-->
   {combine(q:Sem,[sinv:S])}.   
   
 bq([sem:Sem])-->
-   bsinv([gap:[],sem:S]),
-  {combine(bq:Sem,[bsinv:S])}. 
+   {combine(q:Sem,[sinv:S])},
+   bsinv([gap:[],sem:S]). 
  
 bq([sem:Sem])-->
-   {combine(bq:Sem,[bsinv:S])},
+   {combine(q:Sem,[sinv:S])},
    bwhnp([num:_,sem:NP]),
    bsinv([gap:[np:NP],sem:S]).
    
 bq([sem:Sem])-->
-  {combine(bq:Sem,[bwhnp:NP,bvp:VP])},
+  {combine(q:Sem,[whnp:NP,vp:VP])},
   bwhnp([num:Num,sem:NP]),
   bvp([coord:_,inf:fin,num:Num,per:thr,gap:[],sem:VP]).      
  
@@ -170,7 +171,7 @@ bnp([coord:no,num:pl,per:two,gap:[np:NP],sem:NP])--> [].
 bnp([coord:no,num:pl,per:thr,gap:[np:NP],sem:NP])--> [].
 
 bnp([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
-   {combine(bnp:NP,[bpn:PN])},
+   {combine(np:NP,[pn:PN])},
    bpn([num:Num,per:Per,sem:PN]).
 
 bnp([coord:no,num:Num,per:pl,vow:Vow,gap:[],sem:NP])-->
@@ -178,12 +179,12 @@ bnp([coord:no,num:Num,per:pl,vow:Vow,gap:[],sem:NP])-->
    n([coord:no,num:Num,per:pl,vow:Vow,sem:N]).
 
 bnp([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
-   {combine(bnp:NP,[bdet:Det,bn:N])},
+   {combine(np:NP,[det:Det,n:N])},
    bdet([mood:decl,type:_,vow:Vow,sem:Det]),
    bn([coord:no,num:Num,per:Per,vow:Vow,sem:N]).   
   
 bnp([coord:no,num:sg,gap:[],sem:NP])-->
-  {combine(bnp:NP,[bqnp:QNP])},
+  {combine(np:NP,[qnp:QNP])},
   bqnp([mood:decl,sem:QNP]).  
   
  /*
@@ -192,7 +193,7 @@ bnp([coord:no,num:sg,gap:[],sem:NP])-->
    {combine(np:NP,[n:N])}.
    
 bnp([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
-   {combine(bnp:NP,[bn:N])},
+   {combine(np:NP,[n:N])},
    bn([coord:no,num:Num,per:Per,sem:N]).   
 
 np([coord:yes,num:pl,per:thr,gap:[],sem:NP])--> 
@@ -202,7 +203,7 @@ np([coord:yes,num:pl,per:thr,gap:[],sem:NP])-->
    {combine(np:NP,[np:NP1,coord:C,np:NP2])}.
 
 bnp([coord:yes,num:pl,per:thr,gap:[],sem:NP])--> 
-   {combine(bnp:NP,[bnp:NP1,bcoord:C,bnp:NP2])},
+   {combine(np:NP,[np:NP1,bcoord:C,np:NP2])},
    bnp([coord:no,num:_,per:_,gap:[],sem:NP1]), 
    bcoord([type:conj,sem:C]), 
    bnp([coord:_,num:_,per:_,gap:[],sem:NP2]).   
@@ -214,7 +215,7 @@ np([coord:yes,num:sg,per:thr,gap:[],sem:NP])-->
    {combine(np:NP,[np:NP1,coord:C,np:NP2])}.
    
 bnp([coord:yes,num:sg,per:thr,gap:[],sem:NP])--> 
-   {combine(bnp:NP,[bnp:NP1,bcoord:C,bnp:NP2])},
+   {combine(np:NP,[np:NP1,bcoord:C,np:NP2])},
    bnp([coord:no,num:sg,per:thr,gap:[],sem:NP1]), 
    bcoord([type:disj,sem:C]), 
    bnp([coord:_,num:sg,per:thr,gap:[],sem:NP2]).     
@@ -235,11 +236,11 @@ whnp([num:sg,sem:NP])-->
    {combine(whnp:NP,[det:Det,n:N])}.
    
 bwhnp([num:sg,sem:NP])-->
-   {combine(bwhnp:NP,[bqnp:QNP])},
+   {combine(whnp:NP,[qnp:QNP])},
    bqnp([mood:int,sem:QNP]).   
    
 bwhnp([num:sg,sem:NP])-->
-   {combine(bwhnp:NP,[bdet:Det,bn:N])},
+   {combine(whnp:NP,[det:Det,n:N])},
    bdet([mood:int,type:_,sem:Det]),
    bn([coord:_,sem:N]).
 
@@ -252,10 +253,10 @@ n([coord:no,num:Num,per:Per,vow:Vow,sem:N])-->
    noun([num:Num,per:Per,vow:Vow,sem:Noun]),
    {combine(n:N,[noun:Noun])}.
 
-   
 bn([coord:no,num:Num,per:Per,vow:Vow,sem:N])-->
-   {combine(bn:N,[bnoun:Noun])},
-   bnoun([num:Num,per:Per,vow:Vow,sem:Noun]).   
+   {combine(n:N,[noun:Noun])},
+   bnoun([num:Num,per:Per,vow:Vow,sem:Noun]).  
+   
 /*   
 n([coord:no,num:Num,per:Per,sem:Sem])--> 
    noun([num:Num,per:Per,sem:N]), 
@@ -263,7 +264,7 @@ n([coord:no,num:Num,per:Per,sem:Sem])-->
    {combine(n:Sem,[noun:N,nmod:PP])}. 
    
 bn([coord:no,num:Num,per:Per,sem:Sem])--> 
-   {combine(bn:Sem,[bnoun:N,bnmod:PP])},   
+   {combine(n:Sem,[noun:N,nmod:PP])},   
    bnoun([num:Num,per:Per,sem:N]), 
    bnmod([sem:PP]).
 
@@ -274,7 +275,7 @@ n([coord:yes,num:thr,per:pl,sem:N])-->
    {combine(n:N,[n:N1,coord:C,n:N2])}.
    
 bn([coord:yes,num:thr,per:pl,sem:N])--> 
-   {combine(bn:N,[bn:N1,bcoord:C,bn:N2])},   
+   {combine(n:N,[n:N1,coord:C,n:N2])},   
    bn([coord:no,num:_,per:_,sem:N1]), 
    bcoord([type:_,num:_,per:_,sem:C]),  
    bn([coord:_,sem:N2]).
@@ -286,7 +287,7 @@ n([coord:C,num:Num,per:Per,sem:Sem])-->
    {combine(n:Sem,[adj:A,n:N])}.
 
 bn([coord:C,sem:Sem])--> 
-   {combine(bn:Sem,[badj:A,bn:N])}, 
+   {combine(n:Sem,[adj:A,n:N])}, 
    badj([sem:A]), 
    bn([coord:C,sem:N]).
 */
@@ -305,15 +306,15 @@ nmod([sem:Sem])-->
    {combine(nmod:Sem,[pp:PP,nmod:NMod])}.
 
 bnmod([sem:N])--> 
-   {combine(bnmod:N,[bpp:PP])},   
+   {combine(nmod:N,[pp:PP])},   
    bpp([sem:PP]).
    
 bnmod([sem:N])--> 
-   {combine(bnmod:N,[brc:RC])},   
+   {combine(nmod:N,[rc:RC])},   
    brc([sem:RC]).   
 
 bnmod([sem:Sem])--> 
-   {combine(bnmod:Sem,[bpp:PP,bnmod:NMod])},
+   {combine(nmod:Sem,[pp:PP,nmod:NMod])},
    bpp([sem:PP]), 
    bnmod([sem:NMod]).
 
@@ -346,26 +347,26 @@ vp([coord:no,inf:I,num:Num,per:Per,gap:G,sem:VP])-->
    {combine(vp:VP,[tv:TV,np:NP])}.
 
 bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])--> 
-   {combine(bvp:VP,[bav:Mod,bvp:V2])},
+   {combine(vp:VP,[av:Mod,vp:V2])},
    bav([inf:Inf,num:Num,per:Per,sem:Mod]), 
    bvp([coord:_,inf:inf,num:inf,per:inf,gap:[],sem:V2]).   
      
 bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
-   {combine(bvp:VP,[bcop:Cop,bnp:NP])},  
+   {combine(vp:VP,[cop:Cop,np:NP])},  
    bcop([inf:Inf,num:Num,per:Per,sem:Cop]),
    bnp([coord:_,num:Num,per:_,gap:[],sem:NP]).
    
 bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
-   {combine(bvp:VP,[bcop:Cop,badj:A])},  
+   {combine(vp:VP,[cop:Cop,adj:A])},  
    bcop([inf:Inf,num:Num,per:Per,sem:Cop]),
    badj([sem:A]).
 
 bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
-   {combine(bvp:VP,[biv:IV])},
+   {combine(vp:VP,[iv:IV])},
    biv([inf:Inf,num:Num,per:Per,sem:IV]).  
 
 bvp([coord:no,inf:I,num:Num,per:Per,gap:G,sem:VP])-->
-   {combine(bvp:VP,[btv:TV,bnp:NP])},
+   {combine(vp:VP,[tv:TV,np:NP])},
    btv([inf:I,num:Num,per:Per,sem:TV]),
    bnp([coord:_,num:_,per:_,gap:G,sem:NP]).   
    
@@ -378,7 +379,7 @@ vp([coord:yes,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
    {combine(vp:VP,[vp:VP1,coord:C,vp:VP2])}.   
 
 bvp([coord:yes,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
-   {combine(bvp:VP,[bvp:VP1,bcoord:C,bvp:VP2])},
+   {combine(vp:VP,[vp:VP1,coord:C,vp:VP2])},
    bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP1]),
    bcoord([type:_,sem:C]),
    bvp([coord:_,inf:Inf,num:Num,per:Per,gap:[],sem:VP2]).
@@ -388,7 +389,7 @@ vp_wo([coord:no,inf:Inf,num:sg,per:Per,gap:[],sem:VP])-->
    {combine(vp_wo:VP,[iv_wo:IV])}.
    
 bvp_wo([coord:no,inf:Inf,num:sg,per:Per,gap:[],sem:VP])--> 
-   {combine(bvp_wo:VP,[biv_wo:IV])},
+   {combine(vp_wo:VP,[iv_wo:IV])},
    biv_wo([inf:Inf,num:sg,per:Per,sem:IV]).   
 */
    
@@ -403,7 +404,7 @@ pp([sem:PP])-->
    {combine(pp:PP,[prep:Prep,np:NP])}.
    
 bpp([sem:PP])--> 
-   {combine(bpp:PP,[bprep:Prep,bnp:NP])},   
+   {combine(pp:PP,[prep:Prep,np:NP])},   
    bprep([sem:Prep]), 
    bnp([coord:_,num:_,per:_,gap:[],sem:NP]).
 
@@ -417,7 +418,7 @@ rc([sem:RC])-->
    {combine(rc:RC,[relpro:RP,vp:VP])}.
 
 brc([sem:RC])--> 
-   {combine(brc:RC,[brelpro:RP,bvp:VP])},
+   {combine(rc:RC,[relpro:RP,vp:VP])},
    relpro([sem:RP]), 
    bvp([coord:_,inf:fin,num:sg,per:thr,gap:[],sem:VP]).
 

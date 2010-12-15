@@ -99,47 +99,28 @@ lexEntry(noun,[symbol:gums,syntax:[gums],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:throat_spots,syntax:[throat,spots],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:dizzy,syntax:[dizzy],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:nauseated,syntax:[nauseated],num:pl,per:thr,vow:no]).
-
-lexEntry(noun,[symbol:incontinence,syntax:[incontinence],num:sg,per:thr,vow:no]). % problem??
-
+lexEntry(noun,[symbol:incontinence,syntax:[incontinence],num:pl,per:thr,vow:no]). % problem??
 lexEntry(noun,[symbol:spleen,syntax:[spleen],num:sg,per:thr,vow:no]).
-
 lexEntry(noun,[symbol:teeth,syntax:[teeth],num:pl,per:thr,vow:no]).
-
+lexEntry(noun,[symbol:neck,syntax:[neck],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:earache,syntax:[earache],num:sg,per:thr,vow:yes]).
-
 lexEntry(noun,[symbol:phlegm,syntax:[phlegm],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:jointpain,syntax:[joint,pain],num:sg,per:thr,vow:no]).
-
 lexEntry(noun,[symbol:seizures,syntax:[seizures],num:pl,per:thr,vow:no]).
-
 lexEntry(noun,[symbol:rash,syntax:[rash],num:sg,per:the,vow:no]).
-
 lexEntry(noun,[symbol:itchiness,syntax:[itchiness],num:pl,per:thr,vow:yes]).
-
 lexEntry(noun,[symbol:heartburn,syntax:[heartburn],num:pl,per:thr,vow:no]).
-
 lexEntry(noun,[symbol:fever,syntax:[fever],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:stomachache,syntax:[stomachache],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:paralysis,syntax:[paralysis],num:sg,per:thr,vow:no]).
-
+lexEntry(noun,[symbol:paralysis,syntax:[paralysis],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:cramps,syntax:[cramps],num:pl,per:thr,vow:no]).
-
 lexEntry(noun,[symbol:breath,syntax:[breath],num:pl,per:thr,vow:no]).
-
 lexEntry(noun,[symbol:pockmarks,syntax:[pockmarks],num:pl,per:thr,vow:no]).
-
 lexEntry(noun,[symbol:chills,syntax:[chills],num:pl,per:thr,vow:no]).
-
-lexEntry(noun,[symbol:dizziness,syntax:[dizziness],num:sg,per:thr,vow:no]).
-
+lexEntry(noun,[symbol:dizziness,syntax:[dizziness],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:loss_of_appetite,syntax:[loss,of,appetite],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:night_sweats,syntax:[night, sweats],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:chest_pain,syntax:[chest,pain],num:sg,per:thr,vow:no]).
+lexEntry(noun,[symbol:night_sweats,syntax:[night, sweats],num:pl,per:thr,vow:no]).
 
-lexEntry(noun,[symbol:muscle_pain,syntax:[muscle,pain],num:sg,per:thr,vow:no]).
 
-lexEntry(noun,[symbol:neck,syntax:[neck],num:sg,per:thr,vow:no]).
 
 /*========================================================================
    Personal Pronouns

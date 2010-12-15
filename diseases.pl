@@ -1,7 +1,11 @@
-:- module(diseases, [diseaseList/1]).
+:- module(diseases, [diseaseList/1,
+					disease/2]).
 
 public(diseaseList).
 public(disease).
+
+
+:- dynamic disease/2.
 
 diseaseList([
 

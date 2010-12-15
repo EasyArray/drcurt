@@ -2,25 +2,13 @@
 		      pruneDiseases/2,
 		      diseasesLeft/1,
 		      initFromList/1,
-		      askAbout/1]).
+		      askAbout/1, disease/2]).
 
-:- use_module(diseases, [diseaseList/1]).
+:- use_module(diseases, [diseaseList/1,
+						disease/2]).
 
 
 :- dynamic alreadyAsked/1.
-
-%%%%%%%%%%%%%%%%%%%%%%%
-% List of diseases
-
-
-
-% the above is no way gonna work - need to update the logic of the symptoms to what we're actually encoding - in process of fixing..
-
-
-
-
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%

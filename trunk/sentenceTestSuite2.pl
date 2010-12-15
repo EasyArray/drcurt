@@ -62,18 +62,18 @@ sentence([i, have, bodily_sores], 1).
 sentence([i, have, bloody_stools], 1).
 sentence([i, have, convulsions], 1).
 sentence([i, have, red_eyes], 1).
-sentence([i, have, a, dry_cough], 1).
-sentence([i, have, a, bloody_nose], 1).
-sentence([i, have, bleeding_gums], 1). % check
+sentence([i, have, a, dry, cough], 1).
+sentence([i, have, a, bloody, nose], 1).
+sentence([i, have, bleeding, gums], 1). % check
 sentence([i, have, back_pain], 1).
 sentence([i, am, wheezing], 1).
 sentence([i, am, sneezing], 1).
 sentence([i, have, nasal_congestion], 1). % change nasal to adj later?
-sentence([i, have, urinary_incontinence], 1).
-sentence([i, have, an, enlarged_spleen], 1).
+sentence([i, have, urinary, incontinence], 1).
+sentence([i, have, an, enlarged, spleen], 1).
 sentence([i, have, sensitive_teeth], 1). % change to adj_noun if needed
 sentence([i, have, an, earache], 1).
-sentence([i, am, salivating_excessively], 1).
+sentence([i, have, excessive, salivation], 1).
 sentence([i, am, coughing, phlegm], 1). % change if needed
 sentence([i, have, weight_loss], 1). % nifty!
 sentence([i, have, a, stiff_neck], 1). % change to adj_noun if needed
@@ -91,7 +91,7 @@ sentence([do,you,have,itchiness],1).
 sentence([do,you,have,a,heartburn],1).
 sentence([do,you,have,a,fever],1).
 sentence([do,you,have,a,stomach_ache],1).
-sentence([do,you,have,a,whooping_cough],1).
+sentence([do,you,have,a,whooping,cough],1). %check
 sentence([do,you,have,a,cough],1).
 sentence([do,you,have,paralysis],1).
 sentence([does,swallowing,hurt],1).
@@ -106,7 +106,7 @@ sentence([do,you,have,loss_of_appetite],1).
 sentence([do,you,vomit],1).
 sentence([do,you,have,night_sweats],1).
 sentence([do,you,have,chest_pain],1).
-sentence([do,you,have,a,runny_nose],1).
+sentence([do,you,have,a,runnynose],1).
 sentence([do,you,have,joint_pain],1).
 sentence([do,you,have,a,headache],1).
 sentence([do,you,have,seizures],1).
@@ -144,10 +144,22 @@ sentence([do,you,have,muscle_pain],1).
 
 /*
 DISEASES WE'RE USING:
-Mononucleosis, Pertussis, Swine Flu, Decapitation, Strept Throat, 
+Mononucleosis, Pertussis, Swine Flu, Decapitation, Strep Throat, 
 Pulmonary Tuberculosis, Diarrhea, Tonsilitis, Chicken Pox, 
 Acid Reflux Disease, Common Cold, Malaria, Yellow Fever
 */
 
 sentence([you, have, mono],1).
-sentence([you, have, yellow_fever],1).
+sentence([you, have, pertussis],1).
+sentence([you, have, swine, flu],1).
+sentence([you, have, pulmonary, tuberculosis],1).
+sentence([you, are, headless],1).
+sentence([you, have, strep, throat],1).
+sentence([you, have, pulmonary_tuberculosis],1).
+sentence([you, have, diarrhea],1).
+sentence([you, have, tonsilitis],1).
+sentence([you, have, chicken_pox],1).
+sentence([you, have, acid,reflux,disease],1).
+sentence([you, have, common,cold],1).
+sentence([you, have, malaria],1).
+sentence([you, have, yellow,fever],1).

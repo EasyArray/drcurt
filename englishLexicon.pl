@@ -71,8 +71,8 @@ lexEntry(noun,[symbol:blood,syntax:[blood],num:sg,per:thr,vow:no]).
 
 lexEntry(noun,[symbol:sweat,syntax:[sweat],num:sg,per:thr,vow:no]).
 
-lexEntry(noun,[symbol:weight,syntax:[weight],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:fatigue,syntax:[fatigue],num:sg,per:the,vow:no]).
+lexEntry(noun,[symbol:weight,syntax:[weight],num:pl,per:thr,vow:no]).
+lexEntry(noun,[symbol:fatigue,syntax:[fatigue],num:pl,per:the,vow:no]).
 
 lexEntry(noun,[symbol:cough,syntax:[cough],num:sg,per:thr,vow:no]).
 

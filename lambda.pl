@@ -28,7 +28,6 @@
                   lambda/2,
                   lambdaTestSuite/0,
 				  logicTestSuite/0]).
-% need to add logic test suite when it's all set up
 
 :- use_module(readLine,[readLine/1]).
 

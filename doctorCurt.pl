@@ -61,13 +61,22 @@ curtStart(true):-
 	%sendToGrammar(Input,Symp), %input is sentence, Symp is the returned symptom
 
 	pruneDiseases(Symp, true),
+	
+	% check if there are diseases left to ask about
+	diseasesLeft(NumDiseases),
+	(   NumDiseases == 0
+	-> 	curtFinish(false), fail
+	;   true
+	),
+	
 	format('~n Curt: I see. Is there anything else?',[]),
 	format('~n~n',[]),
 	read(Response),
 	(   Response == 'no'
 	->  curtTalk(run),
 	    curtTalk(quit)
-	;   format('~n Curt: OK. What else is ailing you?',[]),
+	;   	
+		format('~n Curt: OK. What else is ailing you?',[]),
 		format('~n~n',[]),
 		curtStart(true)
 	).
@@ -171,7 +180,6 @@ curtUpdate(Input,Moves,run):-
 curtUpdate(_,[noparse],run).
 
 
-
 /*========================================================================
    Select Consistent Readings
 ========================================================================*/
@@ -222,6 +230,7 @@ info:-
 ========================================================================*/
 
 :- info.
+
 
 
 

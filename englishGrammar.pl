@@ -507,7 +507,7 @@ adj([vow:Vow,sem:Sem])-->
 
 badj([vow:Vow,sem:Sem])--> 
    {semLex(adj,[symbol:Sym,sem:Sem]),
-   lexEntry(adj,[symbol:Sym,syntax:Word,vow:Vow)},
+   lexEntry(adj,[symbol:Sym,syntax:Word,vow:Vow])},
    Word.   
    
 av([inf:Inf,num:Num,per:Per,sem:Sem])--> 

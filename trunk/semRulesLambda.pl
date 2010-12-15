@@ -31,7 +31,9 @@ combine(t:Converted,[s:Sem]):-
 combine(t:Converted,[q:Sem]):- 
    betaConvert(Sem,Converted).
 
-combine(s:A,[vp_wo:A]).
+combine(bt:Converted,[s:Sem]). 
+combine(bt:Converted,[q:Sem]).
+
 combine(s:app(app(B,A),C),[s:A,coord:B,s:C]).
 combine(s:app(A,B),[np:A,vp:B]).
 combine(s:app(A,B),[s:A,s:B]).
@@ -62,8 +64,6 @@ combine(n:app(B,A),[noun:A,nmod:B]).
 combine(nmod:A,[pp:A]).
 combine(nmod:A,[rc:A]).
 combine(nmod:lam(P,app(A,app(B,P))),[pp:A,nmod:B]).
-
-combine(vp_wo:A,[iv_wo:A]).
 
 combine(vp:app(app(B,A),C),[vp:A,coord:B,vp:C]).
 combine(vp:app(A,B),[av:A,vp:B]).

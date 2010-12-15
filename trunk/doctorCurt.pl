@@ -84,9 +84,13 @@ curtTalk(run):-
 	(   Num == 1
 	->  disease(X,Y),
 		curtFinish(X)
+	; diseasesLeft(Num)
 	),
 	askAbout(X), %diagnosis logic gives X to ask user about, flag tells us if diagnosis is complete
 	%doYouHave(X), % outputs text,asking user if they suffer from X
+	format('~n Curt: Do you experience: ',[]),
+	write(X),
+	format('~n',[]),
 	read(Y),
 	(   Y == 'yes'
 	->  pruneDiseases(X, true)
@@ -98,11 +102,12 @@ curtTalk(run):-
    curtTalk(run).
 
 curtFinish(X):-
-	format('~n Curt: Sorry friend, it would appear that you are suffering from:',[]),
+	format('~n Curt: Sorry friend, it would appear that you are suffering from: ',[]),
 	write(X),
-	format('~n~n',[]),
-	format('~n Curt: Please note that I am no substitute for real medical advice! ~n
-			Please be sure to see a real doctor to confirm any of my findings!', []).
+	format('~n',[]),
+	format('~n Curt: Please note that I am no substitute for real medical advice!',[]),
+	format('~n Curt: Please be sure to see a real doctor to confirm any of my findings!',[]).
+	curtTalk(quit).
 
 curtFinish(none):-
 	format('~ Curt: Based upon the symptoms you have entered, I cannot make a diagnosis.',[]),

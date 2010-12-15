@@ -154,9 +154,9 @@ np([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
    pn([num:Num,per:Per,sem:PN]),
    {combine(np:NP,[pn:PN])}.
 
-np([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
+np([coord:no,num:sg,per:Per,gap:[],sem:NP])-->
    det([mood:decl,type:_,vow:Vow,sem:Det]),
-   n([coord:no,num:Num,per:Per,vow:Vow,sem:N]),
+   n([coord:no,num:sg,per:Per,vow:Vow,sem:N]),
    {combine(np:NP,[det:Det,n:N])}.
 
 np([coord:no,num:sg,gap:[],sem:NP])-->
@@ -170,13 +170,13 @@ bnp([coord:no,num:pl,per:one,gap:[np:NP],sem:NP])--> [].
 bnp([coord:no,num:pl,per:two,gap:[np:NP],sem:NP])--> [].
 bnp([coord:no,num:pl,per:thr,gap:[np:NP],sem:NP])--> [].
 
-bnp([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
-   {combine(np:NP,[pn:PN])},
-   bpn([num:Num,per:Per,sem:PN]).
-
 bnp([coord:no,num:Num,per:pl,vow:Vow,gap:[],sem:NP])-->
    {combine(np:NP,[n:N])},
    n([coord:no,num:Num,per:pl,vow:Vow,sem:N]).
+
+bnp([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
+   {combine(np:NP,[pn:PN])},
+   bpn([num:Num,per:Per,sem:PN]).
 
 bnp([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
    {combine(np:NP,[det:Det,n:N])},
@@ -253,9 +253,20 @@ n([coord:no,num:Num,per:Per,vow:Vow,sem:N])-->
    noun([num:Num,per:Per,vow:Vow,sem:Noun]),
    {combine(n:N,[noun:Noun])}.
 
+n([coord:C,num:Num,per:Per,sem:Sem])--> 
+   adj([sem:A]), 
+   noun([num:Num,per:Per,sem:N]), 
+   {combine(n:Sem,[adj:A,n:N])}.
+
 bn([coord:no,num:Num,per:Per,vow:Vow,sem:N])-->
    {combine(n:N,[noun:Noun])},
    bnoun([num:Num,per:Per,vow:Vow,sem:Noun]).  
+   
+bn([coord:C,sem:Sem])--> 
+   {combine(n:Sem,[adj:A,n:N])}, 
+   badj([sem:A]), 
+   bn([coord:C,sem:N]).
+   
    
 /*   
 n([coord:no,num:Num,per:Per,sem:Sem])--> 
@@ -280,16 +291,6 @@ bn([coord:yes,num:thr,per:pl,sem:N])-->
    bcoord([type:_,num:_,per:_,sem:C]),  
    bn([coord:_,sem:N2]).
 
-
-n([coord:C,num:Num,per:Per,sem:Sem])--> 
-   adj([sem:A]), 
-   noun([num:Num,per:Per,sem:N]), 
-   {combine(n:Sem,[adj:A,n:N])}.
-
-bn([coord:C,sem:Sem])--> 
-   {combine(n:Sem,[adj:A,n:N])}, 
-   badj([sem:A]), 
-   bn([coord:C,sem:N]).
 */
 
 nmod([sem:N])--> 

@@ -79,7 +79,7 @@ testAll :-
 	sentence([i, have, a, stiff, neck], 1).
 	sentence([i, have, a, runny, nose], 1).
 	sentence([i, have, joint, pain], 1).
-	sentence([i have, seizures], 1).
+	sentence([i, have, seizures], 1).
 	sentence([i, have, loose, watery, stools], 1).
 	sentence([i, have, a, rash], 1).
 	sentence([i, have, itchiness], 1).
@@ -98,7 +98,7 @@ testAll :-
 	% am
 	sentence([i, am, headless], 1).
 	sentence([i, am, wheezing], 1).
-	sentence([i, am, salivating excessively], 1).
+	sentence([i, am, salivating, excessively], 1).
 	sentence([i, am, vomiting], 1).
 
 	% feel
@@ -120,11 +120,11 @@ testAll :-
 	sentence([do, you, have, neck, pain], 1).
 	sentence([do, you, have, back, pain], 1).
 	sentence([do, you, have, leg, pain], 1).
-	sentence([do, you, have, rib pain], 1).
+	sentence([do, you, have, rib, pain], 1).
 	sentence([do, you, have, a, sore, throat], 1).
 	sentence([do, you, have, difficulty, breathing], 1).
 	sentence([do, you, have, a, headache], 1).
-	sentence([do, you, have, bodily sores], 1).
+	sentence([do, you, have, bodily, sores], 1).
 	sentence([do, you, have, bloody, stools], 1).
 	sentence([do, you, have, convulsions], 1).
 	sentence([do, you, have, red, eyes], 1).
@@ -138,7 +138,7 @@ testAll :-
 	sentence([do, you, have, a, stiff, neck], 1).
 	sentence([do, you, have, a, runny, nose], 1).
 	sentence([do, you, have, joint, pain], 1).
-	sentence([do, you have, seizures], 1).
+	sentence([do, you, have, seizures], 1).
 	sentence([do, you, have, loose, watery, stools], 1).
 	sentence([do, you, have, a, rash], 1).
 	sentence([do, you, have, do, itchiness], 1).
@@ -164,7 +164,7 @@ testAll :-
 	sentence([do, you, feel, bodily, pain], 1).
 	sentence([do, you, feel, tired], 1).
 	sentence([do, you, feel, abdominal, cramps], 1).
-	sentence([do, you, feel, dizzy,], 1).
+	sentence([do, you, feel, dizzy], 1).
 	sentence([do, you, feel, chest, pain], 1).
 	sentence([do, you, feel, muscle, pain], 1).
 	sentence([do, you, feel, nauseated], 1).

@@ -104,7 +104,7 @@ lexEntry(noun,[symbol:incontinence,syntax:[incontinence],num:sg,per:thr,vow:no])
 
 lexEntry(noun,[symbol:spleen,syntax:[spleen],num:sg,per:thr,vow:no]).
 
-lexEntry(noun,[symbol:teeth,syntax:[teeth],num:sg,per:thr,vow:no]).
+lexEntry(noun,[symbol:teeth,syntax:[teeth],num:pl,per:thr,vow:no]).
 
 lexEntry(noun,[symbol:earache,syntax:[earache],num:sg,per:thr,vow:yes]).
 

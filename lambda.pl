@@ -26,7 +26,8 @@
                   prefix/0,
                   lambda/0,
                   lambda/2,
-                  lambdaTestSuite/0]).
+                  lambdaTestSuite/0
+				  logicTestSuite/0]).
 % need to add logic test suite when it's all set up
 
 :- use_module(readLine,[readLine/1]).
@@ -73,28 +74,6 @@ sentenceCheck(Sentence, TrueOrFalse, Sem) :-
 	; TrueOrFalse is 0
 	).
 	
-	
-	
-/*
-sentenceCheck(Sentence, TrueOrFalse) :-
-	( engs(Sem,E) :-
-		lambda:t([sem:Sem],E,[])
-	-> TrueOrFalse is 1
-	; TrueOrFalse is 0
-	).
-*/
-	
-	
-
-
-/*
-stupidSentenceCheck(Sentence, OneOrZero) :-
-	( member(horrible, Sentence)
-	-> OneOrZero is 1
-	;	OneOrZero is 0
-	).
-*/
-
 
 lambdaTestSuite:-
 	nl, write('>>>>> LAMBDA ON SENTENCE TEST SUITE <<<<< '), nl,
@@ -118,24 +97,54 @@ lambdaTestSuite:-
         fail.
 	*/
 
+
 lambdaTestSuite.
 
+
+
+logicTestSuite:-
+	nl, write('>>>>> LAMBDA ON LOGIC TEST SUITE <<<<< '), nl,
+        sentence(Sentence,_),
+        nl, write('Semantics: '), write(Sem),
+		
+	
+	sentenceCheck(Sentence, TrueOrFalse, Sem),
+	(TrueOrFalse =:= 1
+		->	print(' True. The sentence is: '), write(Sentence)
+		;	print(' False')
+	),
+	fail.
+
+logicTestSuite.
+
+
+
 /*
-logicCheck(Sem, TrueOrFalse) :-
+logicCheck(Sentence, TrueOrFalse, [sem:Sem]) :-
 	( lambda:t([sem:Sem],Sentence,[])
 	-> TrueOrFalse is 1
 	; TrueOrFalse is 0
 	).
+	*/
+	
+/*
+logicTestSuite:-
+	nl, write('>>> LAMBDA ON LOGIC TEST SUITE <<<'), nl,
+		s
 	
 	*/
+	
+% the problem with logic test suite is that it needs a predicate 'semantics' 
+% with the same values as 'sentence', except for... the semantics
 
 /*
+
 logicTestSuite :-
-	nl, write('>>>>> LAMBDA ON LOGIC STEST SUITE <<<<<'), nl,
-		sentence(Sem,_),
-		nl, write('Sentence: '), write(Sentence),
+	nl, write('>>>>> LAMBDA ON LOGIC TEST SUITE <<<<<'), nl,
+		semantics([sem:Sem],_),
+		nl, write('Sem: '), write(' here '),
 	
-	logicCheck(Sem, TrueOrFalse),
+	logicCheck([sem:Sem], TrueOrFalse),
 	(TrueOrFalse =:= 1
 		-> print(' True')
 		;  print(' False')
@@ -143,13 +152,19 @@ logicTestSuite :-
 	fail.
 	
 logicTestSuite.
+
+*/
+
+/*
 % this probably does not actually work the way we want it to
 */
+
+
 
 /*========================================================================
    Info
 ========================================================================*/
-
+/*
 info:-
    format('~n> ------------------------------------------------------------------ <',[]),
    format('~n> lambda.pl, by Patrick Blackburn and Johan Bos                      <',[]),
@@ -163,9 +178,10 @@ info:-
    format('~n> ------------------------------------------------------------------ <',[]),
    format('~n~n',[]).
 
-
+*/
 /*========================================================================
    Display info at start
 ========================================================================*/
-
+/*
 :- info.
+*/

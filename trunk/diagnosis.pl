@@ -1,6 +1,7 @@
 :- module(diagnosis, [init/0,
 		      pruneDiseases/2,
 		      diseasesLeft/1,
+		      initFromList/1,
 		      askAbout/1]).
 
 

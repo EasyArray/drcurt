@@ -23,6 +23,13 @@
 			  pruneDiseases/2,
 			  diseasesLeft/1,
 			  askAbout/1]).
+			  
+:- use_module(lambda,[%info/0,
+  infix/0,
+  prefix/0,
+  lambda/0,
+  lambda/2,
+  lambdaTestSuite/0]).
 
 /* we'll also want to add modules for diagnosis and translation */
 
@@ -71,7 +78,6 @@ curtTalk(quit).
 curtTalk(run):-
 	(   numDiseases == 1
 	->  curtFinish(true)
-	; 
 	),
 	askAbout(X), %diagnosis logic gives X to ask user about, flag tells us if diagnosis is complete
 	doYouHave(X), % outputs text,asking user if they suffer from X
@@ -90,14 +96,12 @@ curtFinish(X):-
 	write(X),
 	format('~n~n',[]),
 	format('~n Curt: Please note that I am no substitute for real medical advice! ~n
-			Please be sure to see a real doctor to confirm any of my findings!', []),
-	exit().
+			Please be sure to see a real doctor to confirm any of my findings!', []).
 
 curtFinish(none):-
 	format('~ Curt: Based upon the symptoms you have entered, I cannot make a diagnosis.',[]),
 	format('~ Curt: Would you like to input a disease into the database?', []),
 	readLine(Input).
-
 
 /*========================================================================
    Update Curt's Information State

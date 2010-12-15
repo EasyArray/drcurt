@@ -67,11 +67,15 @@ lambda(Sentence,Sems):-
 ========================================================================*/
 
 
+	
 sentenceCheck(Sentence, TrueOrFalse, Sem) :-
-	( lambda:t([sem:Sem],Sentence,[])
+	( (lambda:s([coord:no,sem:Sem],Sentence,[]) 
+	; lambda:q([sem:Sem],Sentence,[]))
 	-> TrueOrFalse is 1
 	; TrueOrFalse is 0
 	).
+	
+	
 	
 
 lambdaTestSuite:-

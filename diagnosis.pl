@@ -116,7 +116,12 @@ scoreSymptomsHelper(Symptom, [SymptomList | Tail], Score) :-
 
 pruneDiseases(Symptom, TrueOrFalse) :-
 	setof((Y,X), (Y ^ disease(Y, X)) , DiseaseList), % list of (disease, symptom)
-	pruneDiseasesHelper(Symptom, TrueOrFalse, DiseaseList).
+	pruneDiseasesHelper(Symptom, TrueOrFalse, DiseaseList),
+	%update the alreadyAsked list
+	alreadyAsked(AA),
+	append([Symptom], AA, NewAA),
+	retract(alreadyAsked(_)),
+	assert(alreadyAsked(NewAA)).
 
 pruneDiseasesHelper(_,_,[]).
 pruneDiseasesHelper(Symptom, TrueOrFalse, [(Name, Symptoms) | Tail]) :-
@@ -138,6 +143,9 @@ pruneDiseasesHelper(Symptom, TrueOrFalse, [(Name, Symptoms) | Tail]) :-
 	),
 	pruneDiseasesHelper(Symptom, TrueOrFalse, Tail).
 
+diseasesLeft(0) :-
+	not(disease(_,_)).
+
 diseasesLeft(Num) :-
 	setof((Y,X), (Y ^ disease(Y, X)) , DiseaseList),
 	%print(DiseaseList),
@@ -146,10 +154,4 @@ diseasesLeft(Num) :-
 askAbout(Symptom) :-
 	symptomListing(SList),
 	scoreSymptoms(SList, Symptom),
-	retract(best(_,_)), % clean up stuff from scoreSymptoms
-
-	%update the alreadyAsked list
-	alreadyAsked(AA),
-	append([Symptom], AA, NewAA),
-	retract(alreadyAsked(_)),
-	assert(alreadyAsked(NewAA)).
+	retract(best(_,_)). % clean up stuff from scoreSymptoms

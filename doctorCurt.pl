@@ -55,9 +55,11 @@ curt:-
    curtStart(true).
 
 curtStart(true):-
+	%in the final case, we'd want the user to be able to enter a sentence such as "I'm coughing."
+	%the use of read() is an abstraction for testing purposes. ideally we'd use something like sendToGrammar()
 	read(Symp),
 	%sendToGrammar(Input,Symp), %input is sentence, Symp is the returned symptom
-	%here we'll append the symptom to the current list
+
 	pruneDiseases(Symp, true),
 	format('~n Curt: I see. Is there anything else?',[]),
 	format('~n~n',[]),
@@ -87,7 +89,7 @@ curtTalk(run):-
 	; diseasesLeft(Num)
 	),
 	askAbout(X), %diagnosis logic gives X to ask user about, flag tells us if diagnosis is complete
-	%doYouHave(X), % outputs text,asking user if they suffer from X
+	%doYouHave(X), % outputs text,asking user if they suffer from X. below is a simpler non-grammatical case
 	format('~n Curt: Do you experience: ',[]),
 	write(X),
 	format('~n',[]),
@@ -96,24 +98,25 @@ curtTalk(run):-
 	->  pruneDiseases(X, true)
 	;   pruneDiseases(X, false)
 	),
-   %curtUpdate(Input,CurtsMoves,State), will be replaced with diagnosis logic
-   /* will want to update diagnosis info here */
-   %curtOutput(CurtsMoves), % curt gives a canned response depending on success
-   curtTalk(run).
+	diseasesLeft(Num2),
+	(   Num2 == 0
+	-> 	curtFinish(false)
+	;   curtTalk(run)
+	).
 
+% i can't get the code to reach this false case. if you can figure it out it'd be great!
+curtFinish(false):-
+	format('~n Curt: Based upon the symptoms you have entered, I cannot make a diagnosis. Sorry!',[]),
+	curtTalk(quit).
+		
 curtFinish(X):-
 	format('~n Curt: Sorry friend, it would appear that you are suffering from: ',[]),
 	write(X),
 	format('~n',[]),
 	format('~n Curt: Please note that I am no substitute for real medical advice!',[]),
-	format('~n Curt: Please be sure to see a real doctor to confirm any of my findings!',[]).
+	format('~n Curt: Please be sure to see a real doctor to confirm any of my findings!',[]),
 	curtTalk(quit).
-
-curtFinish(none):-
-	format('~ Curt: Based upon the symptoms you have entered, I cannot make a diagnosis.',[]),
-	format('~ Curt: Would you like to input a disease into the database?', []),
-	readLine(Input).
-
+	
 /*========================================================================
    Update Curt's Information State
 ========================================================================*/

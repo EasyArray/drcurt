@@ -43,7 +43,7 @@ lexEntry(noun,[symbol:swineflu,syntax:[swine,flu],num:pl,per:thr,vow:no]).
 
 
 lexEntry(noun,[symbol:strep,syntax:[strep,throat],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:pulmonarytuberculosis,syntax:[pulmonary,tuberculosis],num:pl,per:thr,vow:no]]).
+lexEntry(noun,[symbol:pulmonarytuberculosis,syntax:[pulmonary,tuberculosis],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:diarrhea,syntax:[diarrhea],num:pl,per:thr,vow:no]).
 
 lexEntry(noun,[symbol:tonsillitis,syntax:[tonsillitis],num:pl,per:thr,vow:no]).

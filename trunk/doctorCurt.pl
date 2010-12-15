@@ -23,7 +23,7 @@
 				disease/2,
 			  pruneDiseases/2,
 			  diseasesLeft/1,
-			  askAbout/1]).
+			  askAbout/1, disease/2]).
 			  
 :- use_module(lambda,[%info/0,
   infix/0,

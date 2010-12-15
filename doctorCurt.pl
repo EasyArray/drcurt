@@ -116,7 +116,7 @@ curtTalk(run):-
 % i can't get the code to reach this false case. if you can figure it out it'd be great!
 curtFinish(false):-
 	format('~n Curt: Based upon the symptoms you have entered, I cannot make a diagnosis. Sorry!',[]),
-	curtTalk(quit).
+	curtTalk(quit), !.
 		
 curtFinish(X):-
 	format('~n Curt: Sorry friend, it would appear that you are suffering from: ',[]),

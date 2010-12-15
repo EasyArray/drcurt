@@ -66,7 +66,6 @@
   * *I have bad breath*
   * *I have pockmarks*
   * *I feel chills*
-  * *I feel sudden fits of coldness?*
   * *I feel dizziness*
   * *I have loss of appetite*
   * *I am vomiting*
@@ -94,7 +93,6 @@
   * Do you have bad breath?
   * Do you have pockmarks?
   * *Are you having chills* 
-  * *Are you having sudden fits of coldness?*
   * Do you feel experience dizziness?
   * Do you experience loss of appetite?
   * *Do you vomit?*

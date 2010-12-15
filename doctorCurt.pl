@@ -20,6 +20,7 @@
 :- use_module(foResolution,[rprove/1]).
 
 :- use_module(diagnosis, [init/0,
+				disease/2,
 			  pruneDiseases/2,
 			  diseasesLeft/1,
 			  askAbout/1]).
@@ -81,8 +82,7 @@ curtTalk(quit).
 curtTalk(run):-
 	diseasesLeft(Num),
 	(   Num == 1
-	->  	format('~n hi',[]),
-		disease(X,Y),
+	->  disease(X,Y),
 		curtFinish(X)
 	),
 	askAbout(X), %diagnosis logic gives X to ask user about, flag tells us if diagnosis is complete

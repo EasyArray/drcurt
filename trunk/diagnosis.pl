@@ -4,21 +4,15 @@
 		      initFromList/1,
 		      askAbout/1]).
 
+:- use_module(diseases, [diseaseList/1]).
+
 
 :- dynamic alreadyAsked/1.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % List of diseases
 
-diseaseList([
 
-disease(mono, [fatigue, malaise, notHungry, hurt(head), hurt(throat), coughing, chills, fever, nausea, hurt(stomach)]),
-disease(pertussis, [coughing, whoop, problem(urinary), problem(artery), hurt(ear), runnyNose]),
-disease(swineFlu, [fever, coughing, hurt(throat), hurt(body), hurt(head), chills, fatigue]),
-disease(decapitation, [hurt(head), paralysis, hurt(throat), beheaded]),
-disease(strepThroat, [hurt(throat), problem(swallowing), fever, looksWeird(throat), sores])
-
-]).
 
 % the above is no way gonna work - need to update the logic of the symptoms to what we're actually encoding - in process of fixing..
 

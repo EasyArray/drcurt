@@ -154,7 +154,7 @@ np([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
    pn([num:Num,per:Per,sem:PN]),
    {combine(np:NP,[pn:PN])}.
 
-np([coord:no,num:sg,per:Per,gap:[],sem:NP])-->
+np([coord:no,num:sg,per:Per,vow:_,gap:[],sem:NP])-->
    det([mood:decl,type:_,vow:Vow,sem:Det]),
    n([coord:no,num:sg,per:Per,vow:Vow,sem:N]),
    {combine(np:NP,[det:Det,n:N])}.
@@ -174,11 +174,11 @@ bnp([coord:no,num:Num,per:pl,vow:Vow,gap:[],sem:NP])-->
    {combine(np:NP,[n:N])},
    n([coord:no,num:Num,per:pl,vow:Vow,sem:N]).
 
-bnp([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
+bnp([coord:no,num:Num,per:Per,vow:_,gap:[],sem:NP])-->
    {combine(np:NP,[pn:PN])},
    bpn([num:Num,per:Per,sem:PN]).
 
-bnp([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
+bnp([coord:no,num:Num,per:Per,vow:_,gap:[],sem:NP])-->
    {combine(np:NP,[det:Det,n:N])},
    bdet([mood:decl,type:_,vow:Vow,sem:Det]),
    bn([coord:no,num:Num,per:Per,vow:Vow,sem:N]).   
@@ -253,19 +253,20 @@ n([coord:no,num:Num,per:Per,vow:Vow,sem:N])-->
    noun([num:Num,per:Per,vow:Vow,sem:Noun]),
    {combine(n:N,[noun:Noun])}.
 
-n([coord:C,num:Num,per:Per,sem:Sem])--> 
-   adj([sem:A]), 
-   noun([num:Num,per:Per,sem:N]), 
+n([coord:_,num:Num,per:Per,vow:Vow,sem:Sem])--> 
+   adj([vow:Vow,sem:A]), 
+   noun([num:Num,per:Per,vow:_,sem:N]), 
    {combine(n:Sem,[adj:A,n:N])}.
 
 bn([coord:no,num:Num,per:Per,vow:Vow,sem:N])-->
    {combine(n:N,[noun:Noun])},
    bnoun([num:Num,per:Per,vow:Vow,sem:Noun]).  
    
-bn([coord:C,sem:Sem])--> 
+%check this rule!   
+bn([coord:_,num:Num,per:Per,vow:Vow,sem:Sem])--> 
    {combine(n:Sem,[adj:A,n:N])}, 
-   badj([sem:A]), 
-   bn([coord:C,sem:N]).
+   badj([vow:Vow,sem:A]), 
+   bn([num:Num,per:Per,vow:_,sem:N]).
    
    
 /*   
@@ -330,12 +331,12 @@ vp([coord:no,inf:fin,num:Num,per:Per,gap:[],sem:VP])-->
    
 vp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
    cop([inf:Inf,num:Num,per:Per,sem:Cop]),
-   np([coord:_,num:Num,per:_,gap:[],sem:NP]),
+   np([coord:_,num:Num,per:_,vow:_,gap:[],sem:NP]),
    {combine(vp:VP,[cop:Cop,np:NP])}.
      
 vp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
    cop([inf:Inf,num:Num,per:Per,sem:Cop]),
-   adj([sem:A]),
+   adj([vow:_,sem:A]),
    {combine(vp:VP,[cop:Cop,adj:A])}.
    
 vp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
@@ -344,7 +345,7 @@ vp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
 
 vp([coord:no,inf:I,num:Num,per:Per,gap:G,sem:VP])-->
    tv([inf:I,num:Num,per:Per,sem:TV]),
-   np([coord:_,num:_,per:_,gap:G,sem:NP]),
+   np([coord:_,num:_,per:_,vow:_,gap:G,sem:NP]),
    {combine(vp:VP,[tv:TV,np:NP])}.
 
 bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])--> 
@@ -355,12 +356,12 @@ bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
 bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
    {combine(vp:VP,[cop:Cop,np:NP])},  
    bcop([inf:Inf,num:Num,per:Per,sem:Cop]),
-   bnp([coord:_,num:Num,per:_,gap:[],sem:NP]).
+   bnp([coord:_,num:Num,per:_,vow:_,gap:[],sem:NP]).
    
 bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
    {combine(vp:VP,[cop:Cop,adj:A])},  
    bcop([inf:Inf,num:Num,per:Per,sem:Cop]),
-   badj([sem:A]).
+   badj([vow:_,sem:A]).
 
 bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
    {combine(vp:VP,[iv:IV])},
@@ -369,7 +370,7 @@ bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
 bvp([coord:no,inf:I,num:Num,per:Per,gap:G,sem:VP])-->
    {combine(vp:VP,[tv:TV,np:NP])},
    btv([inf:I,num:Num,per:Per,sem:TV]),
-   bnp([coord:_,num:_,per:_,gap:G,sem:NP]).   
+   bnp([coord:_,num:_,per:_,vow:_,gap:G,sem:NP]).   
    
 
 /*
@@ -427,16 +428,6 @@ brc([sem:RC])-->
    Lexical Rules
 ========================================================================*/
 
-iv_wo([inf:Inf,num:Num,per:Per,sem:Sem])-->
-   {lexEntry(iv_wo,[symbol:Sym,syntax:Word,inf:Inf,num:Num,per:Per])},
-   Word,
-   {semLex(iv_wo,[symbol:Sym,per:Per,sem:Sem])}.
-
-biv_wo([inf:Inf,num:Num,per:Per,sem:Sem])-->
-   {semLex(iv_wo,[symbol:Sym,per:Per,sem:Sem])},
-   Word,
-   {lexEntry(iv_wo,[symbol:Sym,syntax:Word,inf:Inf,num:Num,per:Per])}.
-   
 iv([inf:Inf,num:Num,per:Per,sem:Sem])-->
    {lexEntry(iv,[symbol:Sym,syntax:Word,inf:Inf,num:Num,per:Per])},
    Word,
@@ -507,14 +498,14 @@ bprep([sem:Sem])-->
    lexEntry(prep,[symbol:Sym,syntax:Word])},
    Word.
    
-adj([sem:Sem])--> 
-   {lexEntry(adj,[symbol:Sym,syntax:Word])},
+adj([vow:Vow,sem:Sem])--> 
+   {lexEntry(adj,[symbol:Sym,syntax:Word,vow:Vow])},
    Word,
    {semLex(adj,[symbol:Sym,sem:Sem])}.
 
-badj([sem:Sem])--> 
+badj([vow:Vow,sem:Sem])--> 
    {semLex(adj,[symbol:Sym,sem:Sem]),
-   lexEntry(adj,[symbol:Sym,syntax:Word])},
+   lexEntry(adj,[symbol:Sym,syntax:Word,vow:Vow)},
    Word.   
    
 av([inf:Inf,num:Num,per:Per,sem:Sem])--> 

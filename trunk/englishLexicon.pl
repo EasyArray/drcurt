@@ -34,22 +34,7 @@ lexEntry(det,[syntax:[every],mood:decl,type:uni,vow:_]).
    Nouns
 ========================================================================*/
 
-% Diseases
-
-lexEntry(noun,[symbol:mononucleosis,syntax:[mono],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:pertussis,syntax:[whooping,cough],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:swineflu,syntax:[swine,flu],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:strep,syntax:[strep,throat],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:pulmonarytuberculosis,syntax:[pulmonary,tuberculosis],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:diarrhea,syntax:[diarrhea],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:tonsilitis,syntax:[tonsilitis],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:chickenpox,syntax:[chicken,pox],num:pl,per:thr,vow:no]). %problem?
-lexEntry(noun,[symbol:acidreflux,syntax:[acid,reflux,disease],num:pl,per:thr,vow:yes]).
 lexEntry(noun,[symbol:commoncold,syntax:[common,cold],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:malaria,syntax:[malaria],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:fever,syntax:[fever],num:pl,per:thr,vow:no]).
-
-% other nouns
 
 lexEntry(noun,[symbol:head,syntax:[head],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:throat,syntax:[throat],num:sg,per:thr,vow:no]).
@@ -57,72 +42,77 @@ lexEntry(noun,[symbol:body,syntax:[body],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:chest,syntax:[chest],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:ear,syntax:[ear],num:sg,per:thr,vow:yes]).
 lexEntry(noun,[symbol:stomach,syntax:[stomach],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:eyes,syntax:[eyes],num:pl,per:the,vow:yes]).
-lexEntry(noun,[symbol:eyes,syntax:[eyes],num:pl,per:the,vow:yes]).
 lexEntry(noun,[symbol:blood,syntax:[blood],num:sg,per:thr,vow:no]).
-
 lexEntry(noun,[symbol:sweat,syntax:[sweat],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:weight,syntax:[weight],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:fatigue,syntax:[fatigue],num:pl,per:the,vow:no]).
 lexEntry(noun,[symbol:cough,syntax:[cough],num:sg,per:thr,vow:no]).
 
-
-
-% Ordered Nouns
-
-
-lexEntry(noun,[symbol:pain,syntax:[pain],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:spots,syntax:[spots],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:tonsils,syntax:[tonsils],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:nausea,syntax:[nausea],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:congestion,syntax:[congestion],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:neck_pain,syntax:[neck,pain],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:back_pain,syntax:[back,pain],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:joint_pain,syntax:[joint,pain],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:leg_pain,syntax:[leg,pain],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:rib_pain,syntax:[rib,pain],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:chest_pain,syntax:[chest,pain],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:muscle_pain,syntax:[muscle,pain],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:bodily_pain,syntax:[bodily,pain],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:throat,syntax:[throat],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:difficultybreathing,syntax:[difficulty,breathing],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:headache,syntax:[headache],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:sores,syntax:[sores],num:pl,per:the,vow:no]).
-lexEntry(noun,[symbol:stools,syntax:[stools],num:pl,per:the,vow:no]).
-lexEntry(noun,[symbol:convulsions,syntax:[convulsions],num:pl,per:the,vow:no]).
 lexEntry(noun,[symbol:cough,syntax:[cough],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:nose,syntax:[nose],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:gums,syntax:[gums],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:throat_spots,syntax:[throat,spots],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:dizzy,syntax:[dizzy],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:nauseated,syntax:[nauseated],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:incontinence,syntax:[incontinence],num:pl,per:thr,vow:no]). % problem??
 lexEntry(noun,[symbol:spleen,syntax:[spleen],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:teeth,syntax:[teeth],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:neck,syntax:[neck],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:earache,syntax:[earache],num:sg,per:thr,vow:yes]).
 lexEntry(noun,[symbol:phlegm,syntax:[phlegm],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:seizures,syntax:[seizures],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:rash,syntax:[rash],num:sg,per:the,vow:no]).
-lexEntry(noun,[symbol:itchiness,syntax:[itchiness],num:pl,per:thr,vow:yes]).
-lexEntry(noun,[symbol:heartburn,syntax:[heartburn],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:fever,syntax:[fever],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:stomachache,syntax:[stomachache],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:paralysis,syntax:[paralysis],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:cramps,syntax:[cramps],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:breath,syntax:[breath],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:pockmarks,syntax:[pockmarks],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:chills,syntax:[chills],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:dizziness,syntax:[dizziness],num:pl,per:thr,vow:no]).
 lexEntry(noun,[symbol:loss_of_appetite,syntax:[loss,of,appetite],num:sg,per:thr,vow:no]).
-lexEntry(noun,[symbol:night_sweats,syntax:[night,sweats],num:pl,per:thr,vow:no]).
-lexEntry(noun,[symbol:tired,syntax:[tired],num:pl,per:thr,vow:no]).
 
 
 
 /*========================================================================
    Personal Pronouns
 ========================================================================*/
+
+lexEntry(pn,[symbol:mononucleosis,syntax:[mono],num:sg,per:thr]).
+lexEntry(pn,[symbol:pain,syntax:[pain],num:sg,per:thr]).
+lexEntry(pn,[symbol:pertussis,syntax:[whooping,cough],num:pl,per:thr]).
+lexEntry(pn,[symbol:swineflu,syntax:[swine,flu],num:pl,per:thr]).
+lexEntry(pn,[symbol:strep,syntax:[strep,throat],num:pl,per:thr]).
+lexEntry(pn,[symbol:pulmonarytuberculosis,syntax:[pulmonary,tuberculosis],num:pl,per:thr]).
+lexEntry(pn,[symbol:diarrhea,syntax:[diarrhea],num:pl,per:thr]).
+lexEntry(pn,[symbol:tonsilitis,syntax:[tonsilitis],num:pl,per:thr]).
+lexEntry(pn,[symbol:chickenpox,syntax:[chicken,pox],num:pl,per:thr]).
+lexEntry(pn,[symbol:acidreflux,syntax:[acid,reflux,disease],num:pl,per:thr]).
+lexEntry(pn,[symbol:malaria,syntax:[malaria],num:pl,per:thr]).
+lexEntry(pn,[symbol:fever,syntax:[fever],num:pl,per:thr]).
+lexEntry(pn,[symbol:eyes,syntax:[eyes],num:pl,per:the]).
+lexEntry(pn,[symbol:weight,syntax:[weight],num:pl,per:thr]).
+lexEntry(pn,[symbol:fatigue,syntax:[fatigue],num:pl,per:thr]).
+lexEntry(pn,[symbol:spots,syntax:[spots],num:sg,per:thr]).
+lexEntry(pn,[symbol:tonsils,syntax:[tonsils],num:pl,per:thr]).
+lexEntry(pn,[symbol:congestion,syntax:[congestion],num:pl,per:thr]).
+lexEntry(pn,[symbol:neck_pain,syntax:[neck,pain],num:pl,per:thr]).
+lexEntry(pn,[symbol:back_pain,syntax:[back,pain],num:pl,per:thr]).
+lexEntry(pn,[symbol:joint_pain,syntax:[joint,pain],num:pl,per:thr]).
+lexEntry(pn,[symbol:leg_pain,syntax:[leg,pain],num:pl,per:thr]).
+lexEntry(pn,[symbol:rib_pain,syntax:[rib,pain],num:pl,per:thr]).
+lexEntry(pn,[symbol:chest_pain,syntax:[chest,pain],num:pl,per:thr]).
+lexEntry(pn,[symbol:muscle_pain,syntax:[muscle,pain],num:pl,per:thr]).
+lexEntry(pn,[symbol:bodily_pain,syntax:[bodily,pain],num:pl,per:thr]).
+lexEntry(pn,[symbol:difficultybreathing,syntax:[difficulty,breathing],num:pl,per:thr]).
+lexEntry(pn,[symbol:sores,syntax:[sores],num:pl,per:thr]).
+lexEntry(pn,[symbol:stools,syntax:[stools],num:pl,per:thr]).
+lexEntry(pn,[symbol:convulsions,syntax:[convulsions],num:pl,per:thr]).
+lexEntry(pn,[symbol:gums,syntax:[gums],num:pl,per:thr]).
+lexEntry(pn,[symbol:throat_spots,syntax:[throat,spots],num:pl,per:thr]).
+lexEntry(pn,[symbol:dizzy,syntax:[dizzy],num:pl,per:thr]).
+lexEntry(pn,[symbol:nauseated,syntax:[nauseated],num:pl,per:thr]).
+lexEntry(pn,[symbol:incontinence,syntax:[incontinence],num:pl,per:thr]). 
+lexEntry(pn,[symbol:teeth,syntax:[teeth],num:pl,per:thr]).
+lexEntry(pn,[symbol:seizures,syntax:[seizures],num:pl,per:thr]).
+lexEntry(pn,[symbol:itchiness,syntax:[itchiness],num:pl,per:thr]).
+lexEntry(pn,[symbol:heartburn,syntax:[heartburn],num:pl,per:thr]).
+lexEntry(pn,[symbol:cramps,syntax:[cramps],num:pl,per:thr]).
+lexEntry(pn,[symbol:breath,syntax:[breath],num:pl,per:thr]).
+lexEntry(pn,[symbol:paralysis,syntax:[paralysis],num:pl,per:thr]).
+lexEntry(pn,[symbol:pockmarks,syntax:[pockmarks],num:pl,per:thr]).
+lexEntry(pn,[symbol:chills,syntax:[chills],num:pl,per:thr]).
+lexEntry(pn,[symbol:dizziness,syntax:[dizziness],num:pl,per:thr]).
+lexEntry(pn,[symbol:night_sweats,syntax:[night,sweats],num:pl,per:thr]).
+lexEntry(pn,[symbol:tired,syntax:[tired],num:pl,per:thr]).
 
 lexEntry(pn,[symbol:i,syntax:[i],num:sg,per:one]).
 lexEntry(pn,[symbol:you,syntax:[you],num:sg,per:two]).

@@ -129,6 +129,9 @@ lexEntry(pn,[symbol:bloody_stools,syntax:[bloody,stools],num:pl,per:thr]).
 lexEntry(pn,[symbol:urinary_incontinence,syntax:[urinary,incontinence],num:pl,per:thr]).
 lexEntry(pn,[symbol:sensitive_teeth,syntax:[sensitive,teeth],num:pl,per:thr]).
 lexEntry(pn,[symbol:loose_watery_stools,syntax:[loose,watery,stools],num:pl,per:thr]).
+lexEntry(pn,[symbol:excessive_salivating,syntax:[excessive,salivation],num:pl,per:thr]).
+lexEntry(pn,[symbol:painful_swallowing,syntax:[painful,swallowing],num:pl,per:thr]).
+lexEntry(pn,[symbol:no_head,syntax:[no,head],num:pl,per:thr]).
 
 lexEntry(pn,[symbol:breath,syntax:[breath],num:pl,per:thr]).
 lexEntry(pn,[symbol:bad_breath,syntax:[bad,breath],num:pl,per:thr]).

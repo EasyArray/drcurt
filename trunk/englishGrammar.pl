@@ -172,7 +172,7 @@ bnp([coord:no,num:pl,per:thr,vow:_,gap:[np:NP],sem:NP])--> [].
 
 bnp([coord:no,num:Num,per:pl,vow:Vow,gap:[],sem:NP])-->
    {combine(np:NP,[n:N])},
-   n([coord:no,num:Num,per:pl,vow:Vow,sem:N]).
+   bn([coord:no,num:Num,per:pl,vow:Vow,sem:N]).
 
 bnp([coord:no,num:Num,per:Per,vow:_,gap:[],sem:NP])-->
    {combine(np:NP,[pn:PN])},
@@ -183,43 +183,10 @@ bnp([coord:no,num:Num,per:Per,vow:_,gap:[],sem:NP])-->
    bdet([mood:decl,type:_,vow:Vow,sem:Det]),
    bn([coord:no,num:Num,per:Per,vow:Vow,sem:N]).   
   
-bnp([coord:no,num:sg,gap:[],sem:NP])-->
+bnp([coord:no,num:sg,vow:_,gap:[],sem:NP])-->
   {combine(np:NP,[qnp:QNP])},
   bqnp([mood:decl,sem:QNP]).  
   
- /*
- np([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
-   n([coord:no,num:Num,per:Per,sem:N]),
-   {combine(np:NP,[n:N])}.
-   
-bnp([coord:no,num:Num,per:Per,gap:[],sem:NP])-->
-   {combine(np:NP,[n:N])},
-   bn([coord:no,num:Num,per:Per,sem:N]).   
-
-np([coord:yes,num:pl,per:thr,gap:[],sem:NP])--> 
-   np([coord:no,num:_,per:_,gap:[],sem:NP1]), 
-   coord([type:conj,sem:C]), 
-   np([coord:_,num:_,per:_,gap:[],sem:NP2]),
-   {combine(np:NP,[np:NP1,coord:C,np:NP2])}.
-
-bnp([coord:yes,num:pl,per:thr,gap:[],sem:NP])--> 
-   {combine(np:NP,[np:NP1,bcoord:C,np:NP2])},
-   bnp([coord:no,num:_,per:_,gap:[],sem:NP1]), 
-   bcoord([type:conj,sem:C]), 
-   bnp([coord:_,num:_,per:_,gap:[],sem:NP2]).   
-
-np([coord:yes,num:sg,per:thr,gap:[],sem:NP])--> 
-   np([coord:no,num:sg,per:thr,gap:[],sem:NP1]), 
-   coord([type:disj,sem:C]), 
-   np([coord:_,num:sg,per:thr,gap:[],sem:NP2]),
-   {combine(np:NP,[np:NP1,coord:C,np:NP2])}.
-   
-bnp([coord:yes,num:sg,per:thr,gap:[],sem:NP])--> 
-   {combine(np:NP,[np:NP1,bcoord:C,np:NP2])},
-   bnp([coord:no,num:sg,per:thr,gap:[],sem:NP1]), 
-   bcoord([type:disj,sem:C]), 
-   bnp([coord:_,num:sg,per:thr,gap:[],sem:NP2]).     
-*/
 
 
 /*========================================================================
@@ -231,8 +198,8 @@ whnp([num:sg,sem:NP])-->
    {combine(whnp:NP,[qnp:QNP])}.
    
 whnp([num:sg,sem:NP])-->
-   det([mood:int,type:_,sem:Det]),
-   n([coord:_,sem:N]),
+   det([mood:int,type:_,vow:_,sem:Det]),
+   n([coord:_,vow:_,sem:N]),
    {combine(whnp:NP,[det:Det,n:N])}.
    
 bwhnp([num:sg,sem:NP])-->
@@ -249,7 +216,7 @@ bwhnp([num:sg,sem:NP])-->
    Nouns
 ========================================================================*/
 
-n([coord:no,num:Num,per:Per,vow:_,sem:N])--> % changed
+n([coord:no,num:Num,per:Per,vow:_,sem:N])--> 
    noun([num:Num,per:Per,vow:_,sem:Noun]),
    {combine(n:N,[noun:Noun])}.
 
@@ -262,38 +229,11 @@ bn([coord:no,num:Num,per:Per,vow:Vow,sem:N])-->
    {combine(n:N,[noun:Noun])},
    bnoun([num:Num,per:Per,vow:Vow,sem:Noun]).  
    
-%check this rule!   
 bn([coord:_,num:Num,per:Per,vow:Vow,sem:Sem])--> 
    {combine(n:Sem,[adj:A,n:N])}, 
    badj([vow:Vow,sem:A]), 
    bn([num:Num,per:Per,vow:_,sem:N]).
    
-   
-/*   
-n([coord:no,num:Num,per:Per,sem:Sem])--> 
-   noun([num:Num,per:Per,sem:N]), 
-   nmod([sem:PP]),
-   {combine(n:Sem,[noun:N,nmod:PP])}. 
-   
-bn([coord:no,num:Num,per:Per,sem:Sem])--> 
-   {combine(n:Sem,[noun:N,nmod:PP])},   
-   bnoun([num:Num,per:Per,sem:N]), 
-   bnmod([sem:PP]).
-
-n([coord:yes,num:thr,per:pl,sem:N])--> 
-   n([coord:no,num:_,per:_,sem:N1]), 
-   coord([type:_,sem:C]),  
-   n([coord:_,num:_,per:_,sem:N2]),
-   {combine(n:N,[n:N1,coord:C,n:N2])}.
-   
-bn([coord:yes,num:thr,per:pl,sem:N])--> 
-   {combine(n:N,[n:N1,coord:C,n:N2])},   
-   bn([coord:no,num:_,per:_,sem:N1]), 
-   bcoord([type:_,num:_,per:_,sem:C]),  
-   bn([coord:_,sem:N2]).
-
-*/
-
 nmod([sem:N])--> 
    pp([sem:PP]),
    {combine(nmod:N,[pp:PP])}.
@@ -349,8 +289,6 @@ vp([coord:no,inf:Inf,num:_,per:Per,gap:G,sem:VP])--> % changing num then changin
    np([coord:_,num:_,per:_,vow:_,gap:G,sem:NP]),
    {combine(vp:VP,[tv:TV,np:NP])}.
 
-% this above is the relevant vp rule
-
 bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP])--> 
    {combine(vp:VP,[av:Mod,vp:V2])},
    bav([inf:Inf,num:Num,per:Per,sem:Mod]), 
@@ -374,29 +312,6 @@ bvp([coord:no,inf:I,num:Num,per:Per,gap:G,sem:VP])-->
    {combine(vp:VP,[tv:TV,np:NP])},
    btv([inf:I,num:Num,per:Per,sem:TV]),
    bnp([coord:_,num:_,per:_,vow:_,gap:G,sem:NP]).   
-   
-
-/*
-vp([coord:yes,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
-   vp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP1]),
-   coord([type:_,sem:C]),
-   vp([coord:_,inf:Inf,num:Num,per:Per,gap:[],sem:VP2]),
-   {combine(vp:VP,[vp:VP1,coord:C,vp:VP2])}.   
-
-bvp([coord:yes,inf:Inf,num:Num,per:Per,gap:[],sem:VP])-->
-   {combine(vp:VP,[vp:VP1,coord:C,vp:VP2])},
-   bvp([coord:no,inf:Inf,num:Num,per:Per,gap:[],sem:VP1]),
-   bcoord([type:_,sem:C]),
-   bvp([coord:_,inf:Inf,num:Num,per:Per,gap:[],sem:VP2]).
-   
-vp_wo([coord:no,inf:Inf,num:sg,per:Per,gap:[],sem:VP])--> 
-   iv_wo([inf:Inf,num:sg,per:Per,sem:IV]), 
-   {combine(vp_wo:VP,[iv_wo:IV])}.
-   
-bvp_wo([coord:no,inf:Inf,num:sg,per:Per,gap:[],sem:VP])--> 
-   {combine(vp_wo:VP,[iv_wo:IV])},
-   biv_wo([inf:Inf,num:sg,per:Per,sem:IV]).   
-*/
    
    
 /*========================================================================
@@ -544,10 +459,10 @@ bqnp([mood:M,sem:NP])-->
 noun([num:Num,per:Per,vow:Vow,sem:Sem])-->
   {lexEntry(noun,[symbol:Sym,syntax:Word,num:Num,per:Per,vow:Vow])},
   Word,
-  {semLex(noun,[symbol:Sym,sem:Sem])}.
+  {semLex(noun,[symbol:Sym,num:Num,sem:Sem])}.
   
 bnoun([num:Num,per:Per,vow:Vow,sem:Sem])-->
-  {semLex(noun,[symbol:Sym,sem:Sem]),
+  {semLex(noun,[symbol:Sym,num:Num,sem:Sem]),
   lexEntry(noun,[symbol:Sym,syntax:Word,num:Num,per:Per,vow:Vow])},  
   Word.  
 

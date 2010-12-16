@@ -14,24 +14,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Generate a listing of symptoms
 
-genSymptomsOne(SymptomList) :-
+genSymptoms(SymptomList) :-
 	setof(X, (Y ^ disease(Y, X)) , SymptomList).
 
-genSymptomsTwo([A, B, C], Out) :-
+unite([A, B, C], Out) :-
 	union(A,B,AB),
 	union(AB,C,Out).
 
-genSymptomsTwo([A, B], Out) :-
+unite([A, B], Out) :-
 	union(A,B,Out).
 
-genSymptomsTwo([A, B | T],Out) :-
+unite([A, B | T],Out) :-
 	union(A,B,C),
-	genSymptomsTwo(T,D),
+	unite(T,D),
 	union(C,D,Out).
 
 symptomListing(Out) :-
-	genSymptomsOne(Y),
-	genSymptomsTwo(Y, Z),
+	genSymptoms(Y),
+	unite(Y, Z),
 
 	% exclude symptoms we've already asked about
 	alreadyAsked(AA),
@@ -64,23 +64,36 @@ if member(symptom, Y)
 symptomScore ++
 */
 
-scoreSymptoms([], 0).
-scoreSymptoms([Symptom | Tail], Out) :-
+% This finds the symptom that is most common, if MostLeast == "most"
+% or least common, if MostLeast == "least".
+
+scoreSymptoms([], _, 0).
+scoreSymptoms([Symptom | Tail], MostLeast, Out) :-
 	% get a list of diseases
-	genSymptomsOne(Diseases),
+	genSymptoms(Diseases),
 	scoreSymptomsHelper(Symptom, Diseases, SymptomScore),
 
 	% find best symptom
 	(retract(best(Best, BestScore))
 	->
-		(SymptomScore > BestScore
-		-> assert(best(Symptom, SymptomScore))
-		;  assert(best(Best, BestScore))
+		(MostLeast == 'most'
+		-> 
+			(SymptomScore > BestScore
+			-> assert(best(Symptom, SymptomScore))
+			;  assert(best(Best, BestScore))
+			)
+			
+		;  
+			(SymptomScore < BestScore
+			-> assert(best(Symptom, SymptomScore))
+			;  assert(best(Best, BestScore))
+			)
 		)
+
 	;
 		assert(best(Symptom, SymptomScore))
 	),
-	scoreSymptoms(Tail, _),
+	scoreSymptoms(Tail, MostLeast, _),
 	best(Out, _).
 
 
@@ -92,6 +105,12 @@ scoreSymptomsHelper(Symptom, [SymptomList | Tail], Score) :-
 	),
 	scoreSymptomsHelper(Symptom, Tail, ChildScore),
 	Score is TempScore + ChildScore.
+
+	
+% New addition!
+% Find the symptom that is /least common/ if the one that is 
+% most common occurs in /all/ of the remaining diseases.
+% asking about that is kind of useless!
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % Retract diseases based on patient's answer
@@ -130,10 +149,25 @@ diseasesLeft(0) :-
 
 diseasesLeft(Num) :-
 	setof((Y,X), (Y ^ disease(Y, X)) , DiseaseList),
-	%print(DiseaseList),
 	length(DiseaseList, Num).
 
 askAbout(Symptom) :-
 	symptomListing(SList),
-	scoreSymptoms(SList, Symptom),
-	retract(best(_,_)). % clean up stuff from scoreSymptoms
+
+	% if most common occurs diseasesLeft times, get least common symptom.
+	% doesn't make that much sense to ask about something that'll
+	% eliminate either all or none of the diseases. Or does it?!
+	
+	scoreSymptoms(SList, 'most', SymptomMostCommon),
+	best(_, Score),
+	retract(best(_,_)), 	% clean up stuff from scoreSymptoms
+	diseasesLeft(NumDiseases),
+	
+	(Score == NumDiseases
+	-> 
+		scoreSymptoms(SList, 'least', Symptom),
+		retract(best(_,_))
+	; 
+		Symptom is SymptomMostCommon
+	),
+	true.

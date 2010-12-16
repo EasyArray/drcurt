@@ -43,6 +43,16 @@
 history([]).
 readings([]).
 
+/* =====================================================================
+	Utilities
+======================================================================*/
+
+% writeList writes a list of atoms to stdout, ending with '.' or '?'
+
+writeList(X) :- writeList(X, dcl). % default to declarative
+writeList([], que) :- write('?'), !.
+writeList([], dcl) :- write('.'), !.
+writeList([H|T], Q) :- write(' '), write(H), writeList(T,Q).
 
 /*========================================================================
    Start Curt
@@ -120,8 +130,8 @@ curtFinish(false):-
 	curtTalk(quit), !.
 		
 curtFinish(X):-
-	format('~n Curt: Sorry friend, it would appear that you are suffering from: ',[]),
-	diseases:simple2sem(X,Sem), lambda:bt([sem:Sem],Diagnosis,[]), write(Diagnosis),
+	format('~n Curt: Sorry friend, it would appear that',[]),
+	diseases:simple2sem(X,Sem), lambda:bt([sem:Sem],Diagnosis,[]), writeList(Diagnosis, dcl),
 	format('~n',[]),
 	format('~n Curt: Please note that I am no substitute for real medical advice!',[]),
 	format('~n Curt: Please be sure to see a real doctor to confirm any of my findings!',[]),

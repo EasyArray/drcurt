@@ -78,6 +78,7 @@ lexEntry(noun,[symbol:loss_of_appetite,syntax:[loss,of,appetite],num:sg,per:thr,
 lexEntry(pn,[symbol:mononucleosis,syntax:[mono],num:sg,per:thr]).
 lexEntry(pn,[symbol:pain,syntax:[pain],num:sg,per:thr]).
 lexEntry(pn,[symbol:bodily_pain,syntax:[bodily,pain],num:sg,per:thr]).
+lexEntry(pn,[symbol:pain,syntax:[pain],num:sg,per:thr]).
 
 lexEntry(pn,[symbol:pertussis,syntax:[whooping,cough],num:pl,per:thr]).
 lexEntry(pn,[symbol:swineflu,syntax:[swine,flu],num:pl,per:thr]).
@@ -93,6 +94,8 @@ lexEntry(pn,[symbol:red_eyes,syntax:[red,eyes],num:pl,per:the]).
 lexEntry(pn,[symbol:weight,syntax:[weight],num:pl,per:thr]).
 lexEntry(pn,[symbol:fatigue,syntax:[fatigue],num:pl,per:thr]).
 lexEntry(pn,[symbol:spots,syntax:[spots],num:sg,per:thr]).
+lexEntry(pn,[symbol:tonsils,syntax:[tonsils],num:pl,per:thr]).
+
 lexEntry(pn,[symbol:red_tonsils,syntax:[red,tonsils],num:pl,per:thr]).
 lexEntry(pn,[symbol:swollen_tonsils,syntax:[swollen,tonsils],num:pl,per:thr]).
 lexEntry(pn,[symbol:congestion,syntax:[congestion],num:pl,per:thr]).
@@ -109,9 +112,14 @@ lexEntry(pn,[symbol:difficultybreathing,syntax:[difficulty,breathing],num:pl,per
 lexEntry(pn,[symbol:throat_sores,syntax:[throat,sores],num:pl,per:thr]).
 lexEntry(pn,[symbol:bodily_sores,syntax:[bodily,sores],num:pl,per:thr]).
 lexEntry(pn,[symbol:bloody_stools,syntax:[bloody,stools],num:pl,per:thr]).
+
+lexEntry(pn,[symbol:sores,syntax:[sores],num:pl,per:thr]).
+lexEntry(pn,[symbol:stools,syntax:[stools],num:pl,per:thr]).
+lexEntry(pn,[symbol:gums,syntax:[gums],num:pl,per:thr]).
+lexEntry(pn,[symbol:teeth,syntax:[teeth],num:pl,per:thr]).
+
 lexEntry(pn,[symbol:loose_watery_stools,syntax:[loose,watery,stools],num:pl,per:thr]).
 lexEntry(pn,[symbol:convulsions,syntax:[convulsions],num:pl,per:thr]).
-lexEntry(pn,[symbol:bleeding_gums,syntax:[bleeding,gums],num:pl,per:thr]).
 lexEntry(pn,[symbol:throat_spots,syntax:[throat,spots],num:pl,per:thr]).
 lexEntry(pn,[symbol:dizzy,syntax:[dizzy],num:pl,per:thr]).
 lexEntry(pn,[symbol:nauseated,syntax:[nauseated],num:pl,per:thr]).
@@ -126,10 +134,7 @@ lexEntry(pn,[symbol:red_eyes,syntax:[red,eyes],num:pl,per:thr]).
 lexEntry(pn,[symbol:sore_throat,syntax:[sore,throat],num:pl,per:thr]).
 lexEntry(pn,[symbol:dry_cough,syntax:[dry,cough],num:pl,per:thr]).
 lexEntry(pn,[symbol:bleeding_gums,syntax:[bleeding,gums],num:pl,per:thr]).
-lexEntry(pn,[symbol:bodily_sores,syntax:[bodily,sores],num:pl,per:thr]).
-lexEntry(pn,[symbol:urinary_incontinence,syntax:[urinary,incontinence],num:pl,per:thr]).
 lexEntry(pn,[symbol:sensitive_teeth,syntax:[sensitive,teeth],num:pl,per:thr]).
-lexEntry(pn,[symbol:loose_watery_stools,syntax:[loose,watery,stools],num:pl,per:thr]).
 lexEntry(pn,[symbol:excessive_salivating,syntax:[excessive,salivation],num:pl,per:thr]).
 lexEntry(pn,[symbol:painful_swallowing,syntax:[painful,swallowing],num:pl,per:thr]).
 lexEntry(pn,[symbol:no_head,syntax:[no,head],num:pl,per:thr]).

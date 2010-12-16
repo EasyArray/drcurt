@@ -69,13 +69,25 @@ lambda(Sentence,Sems):-
 ========================================================================*/
 
 
-	
+
 sentenceCheck(Sentence, TrueOrFalse, Sem) :-
 	( (lambda:s([coord:no,sem:Sem],Sentence,[]) 
 	; lambda:q([sem:Sem],Sentence,[]))
 	-> TrueOrFalse is 1
 	; TrueOrFalse is 0
 	).
+	
+
+/*
+sentenceCheck(Sentence, TrueOrFalse, Sem) :-
+	( (lambda:t([sem:Sem],Sentence,[]))
+	-> TrueOrFalse is 1
+	; TrueOrFalse is 0
+	).
+	*/
+
+
+
 	
 	
 	
@@ -96,11 +108,39 @@ lambdaTestSuite:-
 lambdaTestSuite.
 
 
+% test of the logic test suite
+/*
+logicCheck(Sentence, TrueOrFalse, Sem) :-
+	print('Checking sem! '), 
+		(lambda:t([sem:Sem],Sentence,[])
+		-> TrueOrFalse is 1
+		; TrueOrFalse is 0
+		).
+
+
+
+logicTestSuite :-
+	nl, write('>>>>> LAMBDA ON LOGIC TEST SUITE <<<<< '), nl,
+        semantics(Sem,_),
+        nl, write('Sentence: '), write(' let us pretend this is the semantics '),
+		
+	
+	logicCheck(Sentence, TrueOrFalse, Sem),
+	(TrueOrFalse =:= 1
+		->	print(' True. The sentence is: '), write(Sentence)
+		;	print(' False')
+	),
+	fail.
+
+logicTestSuite.
+	
+*/
 % for logic test suite:
+
 
 logicCheck(Sem, TrueOrFalse, Variable) :-
 	print('Checking sem '), print(' [stuff] '),
-	( (lambda:bt([sem:Sem],Variable,[])
+	 ( lambda:bt([sem:Sem],Variable,[])
 	; lambda:btq([sem:Sem],Variable,[]))
 	-> TrueOrFalse is 1
 	; TrueOrFalse is 0

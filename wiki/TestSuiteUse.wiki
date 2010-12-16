@@ -3,6 +3,8 @@
 = Introduction =
 
 There are three test suites included once the file backwardsForwards.pl is loaded:
+
+
 1) lambdaTestSuite
 
 --> runs sentences to logic and outputs "True" and the logical representation of the semantics, or "False" if the sentence input does not work with the Grammar

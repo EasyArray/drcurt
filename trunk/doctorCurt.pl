@@ -43,6 +43,7 @@
 history([]).
 readings([]).
 
+
 /*========================================================================
    Start Curt
 ========================================================================*/
@@ -120,7 +121,7 @@ curtFinish(false):-
 		
 curtFinish(X):-
 	format('~n Curt: Sorry friend, it would appear that you are suffering from: ',[]),
-	write(X),
+	diseases:simple2sem(X,Sem), lambda:bt([sem:Sem],Diagnosis,[]), write(Diagnosis),
 	format('~n',[]),
 	format('~n Curt: Please note that I am no substitute for real medical advice!',[]),
 	format('~n Curt: Please be sure to see a real doctor to confirm any of my findings!',[]),

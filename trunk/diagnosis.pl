@@ -5,7 +5,8 @@
 		      askAbout/1, disease/2]).
 
 :- use_module(diseases, [diseaseList/1,
-						disease/2]).
+						disease/2,
+						simple2sem/2]).
 
 
 :- dynamic alreadyAsked/1.

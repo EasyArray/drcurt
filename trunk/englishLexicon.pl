@@ -45,6 +45,8 @@ lexEntry(noun,[symbol:stomach,syntax:[stomach],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:blood,syntax:[blood],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:sweat,syntax:[sweat],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:cough,syntax:[cough],num:sg,per:thr,vow:no]).
+lexEntry(noun,[symbol:nose,syntax:[nose],num:sg,per:thr,vow:no]).
+
 
 lexEntry(noun,[symbol:nausea,syntax:[nausea],num:sg,per:thr,vow:no]).
 lexEntry(noun,[symbol:throat,syntax:[throat],num:sg,per:thr,vow:no]).
@@ -125,7 +127,6 @@ lexEntry(pn,[symbol:sore_throat,syntax:[sore,throat],num:pl,per:thr]).
 lexEntry(pn,[symbol:dry_cough,syntax:[dry,cough],num:pl,per:thr]).
 lexEntry(pn,[symbol:bleeding_gums,syntax:[bleeding,gums],num:pl,per:thr]).
 lexEntry(pn,[symbol:bodily_sores,syntax:[bodily,sores],num:pl,per:thr]).
-lexEntry(pn,[symbol:bloody_stools,syntax:[bloody,stools],num:pl,per:thr]).
 lexEntry(pn,[symbol:urinary_incontinence,syntax:[urinary,incontinence],num:pl,per:thr]).
 lexEntry(pn,[symbol:sensitive_teeth,syntax:[sensitive,teeth],num:pl,per:thr]).
 lexEntry(pn,[symbol:loose_watery_stools,syntax:[loose,watery,stools],num:pl,per:thr]).

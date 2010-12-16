@@ -6,7 +6,6 @@ public(diseaseList).
 public(disease).
 public(simple2sem).
 
-
 :- dynamic disease/2.
 
 diseaseList([
@@ -34,7 +33,11 @@ disease(yellow_fever(you), [am(i, fatigue), am(i, fatigue), have(i, fatigue), fe
 
 ]).
 
+/*  ==================================================================*/
 % maps from simple logical representation to horrific semantic form
+
+% Diagnoses
+% issues: yellow fever representation won't backgenerate
 
 simple2sem(mononucleosis(you), app(lam(_G425, app(_G425, you)), app(lam(_G557, lam(_G560, app(_G557, lam(_G566, have(_G560, _G566))))), lam(_G686, app(_G686, mononucleosis)))) ).
 simple2sem(pertussis(you), app(lam(_G536, app(_G536, you)), app(lam(_G668, lam(_G671, app(_G668, lam(_G677, have(_G671, _G677))))), lam(_G803, app(_G803, pertussis))))).
@@ -46,6 +49,46 @@ simple2sem(diarrhea(you), app(lam(_G533, app(_G533, you)), app(lam(_G665, lam(_G
 simple2sem(tonsilitis(you), app(lam(_G533, app(_G533, you)), app(lam(_G665, lam(_G668, app(_G665, lam(_G674, have(_G668, _G674))))), lam(_G794, app(_G794, tonsilitis))))).
 simple2sem(chickenpox(you), app(lam(_G536, app(_G536, you)), app(lam(_G668, lam(_G671, app(_G668, lam(_G677, have(_G671, _G677))))), lam(_G803, app(_G803, chickenpox))))).
 simple2sem(acid_reflux_disease(you), app(lam(_G539, app(_G539, you)), app(lam(_G671, lam(_G674, app(_G671, lam(_G680, have(_G674, _G680))))), lam(_G812, app(_G812, acidreflux))))).
-simple2sem(common_cold(you), app(lam(_G539, app(_G539, you)), app(lam(_G671, lam(_G674, app(_G671, lam(_G680, have(_G674, _G680))))), app(lam(_G806, lam(_G809, some(_G812, and(app(_G806, _G812), app(_G809, _G812))))), lam(_G941, commoncold(_G941)))))).
+simple2sem(common_cold(you), app(lam(_G539, app(_G539, you)), app(lam(_G671, lam(_G674, app(_G671, lam(_G680, have(_G674, _G680))))), app(lam(_G806, lam(_G809, some(_G812, and(app(_G806, _G812), app(_G809, _G812))))), lam(_G941, commoncold(_G941))))).
 simple2sem(malaria(you), app(lam(_G533, app(_G533, you)), app(lam(_G665, lam(_G668, app(_G665, lam(_G674, have(_G668, _G674))))), lam(_G794, app(_G794, malaria))))).
 simple2sem(yellow_fever(you), app(lam(_G536, app(_G536, you)), app(lam(_G668, lam(_G671, app(_G668, lam(_G677, have(_G671, _G677))))), lam(_G803, app(_G803, yellowfever)))))).
+
+% Doctor Curt Queries (this is going to get messy)
+
+simple2sem(am(i, bloody_gums), app(lam(_G547, app(_G547, you_pl)), app(lam(_G433, lam(_G436, app(_G433, _G436))), app(lam(_G679, lam(_G682, app(_G679, lam(_G688, have(_G682, _G688))))), lam(_G814, app(_G814, bleeding_gums)))))).
+simple2sem(am(i, back_pain), app(lam(_G857, app(_G857, you)), app(lam(_G743, lam(_G746, app(_G743, _G746))), app(lam(_G989, lam(_G992, app(_G989, lam(_G998, have(_G992, _G998))))), lam(_G1124, app(_G1124, back_pain)))))).
+simple2sem(am(i, muscle_aches), app(lam(_G547, app(_G547, you)), app(lam(_G433, lam(_G436, app(_G433, _G436))), app(lam(_G679, lam(_G682, app(_G679, lam(_G688, have(_G682, _G688))))), lam(_G814, app(_G814, muscle_pain)))))).
+simple2sem(am(i, excessive_salivation), app(lam(_G547, app(_G547, you)), app(lam(_G433, lam(_G436, app(_G433, _G436))), app(lam(_G679, lam(_G682, app(_G679, lam(_G688, have(_G682, _G688))))), lam(_G814, app(_G814, excessive_salivating)))))).
+simple2sem(am(i, itchiness), app(lam(_G521, app(_G521, you)), app(lam(_G407, lam(_G410, app(_G407, _G410))), app(lam(_G653, lam(_G656, app(_G653, lam(_G662, have(_G656, _G662))))), lam(_G782, app(_G782, itchiness)))))).
+simple2sem(am(i, bad_breath), app(lam(_G527, app(_G527, you)), app(lam(_G413, lam(_G416, app(_G413, _G416))), app(lam(_G659, lam(_G662, app(_G659, lam(_G668, have(_G662, _G668))))), lam(_G794, app(_G794, bad_breath)))))).
+simple2sem(am(i, abdominal_cramps), app(lam(_G527, app(_G527, you_pl)), app(lam(_G413, lam(_G416, app(_G413, _G416))), app(lam(_G659, lam(_G662, app(_G659, lam(_G668, have(_G662, _G668))))), lam(_G794, app(_G794, abdominal_cramps))))) ).
+simple2sem(am(i, chest_pain), app(lam(_G527, app(_G527, you)), app(lam(_G413, lam(_G416, app(_G413, _G416))), app(lam(_G659, lam(_G662, app(_G659, lam(_G668, have(_G662, _G668))))), lam(_G794, app(_G794, chest_pain))))) ).
+simple2sem(am(i, painful_swallowing), app(lam(_G527, app(_G527, you)), app(lam(_G413, lam(_G416, app(_G413, _G416))), app(lam(_G659, lam(_G662, app(_G659, lam(_G668, have(_G662, _G668))))), lam(_G794, app(_G794, painful_swallowing))))) ).
+simple2sem(am(i, beheaded), app(lam(_G521, app(_G521, you)), app(lam(_G407, lam(_G410, app(_G407, _G410))), app(lam(_G653, lam(_G656, app(_G653, lam(_G662, have(_G656, _G662))))), lam(_G782, app(_G782, no_head))))) ).
+simple2sem(am(i, body_aches), app(lam(_G527, app(_G527, you)), app(lam(_G413, lam(_G416, app(_G413, _G416))), app(lam(_G659, lam(_G662, app(_G659, lam(_G668, have(_G662, _G668))))), lam(_G794, app(_G794, bodily_pain))))) ).
+simple2sem(am(i, difficulty_breathing),  app(lam(_G527, app(_G527, you)), app(lam(_G413, lam(_G416, app(_G413, _G416))), app(lam(_G659, lam(_G662, app(_G659, lam(_G668, have(_G662, _G668))))), lam(_G794, app(_G794, difficultybreathing))))) ).
+/*
+
+
+
+
+
+simple2sem(, ).
+simple2sem(, ).
+simple2sem(, ).
+simple2sem(, ).
+simple2sem(, ).
+
+am(i, excessive_salivation)
+am(i, itchiness)
+am(i, bad_breath)
+am(i, abdominal_cramps)
+am(i, chest_pain)
+am(i, painful_swallowing)
+am(i, beheaded)
+am(i, body_aches)
+am(i, difficulty_breathing)
+*/
+
+% User declarations
+

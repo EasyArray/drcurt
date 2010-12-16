@@ -69,6 +69,7 @@ curtStart(true):-
 	%in the final case, we'd want the user to be able to enter a sentence such as "I'm coughing."
 	%the use of read() is an abstraction for testing purposes. ideally we'd use something like sendToGrammar()
 	read(Symp),
+	% readLine(Sent), lambda:t([sem:Symp], Sent,[]), % the way it ought to be
 	%sendToGrammar(Input,Symp), %input is sentence, Symp is the returned symptom
 
 	pruneDiseases(Symp, true),
@@ -111,7 +112,8 @@ curtTalk(run):-
 	askAbout(X), %diagnosis logic gives X to ask user about, flag tells us if diagnosis is complete
 	%doYouHave(X), % outputs text,asking user if they suffer from X. below is a simpler non-grammatical case
 	format('~n Curt: Do you experience: ',[]),
-	write(X),
+	diseases:simple2sem(X,Sem), lambda:btq([sem:Sem], Query,[]), !, writeList(Query,que), 
+	% write(X),
 	format('~n',[]),
 	read(Y),
 	(   Y == 'yes'
@@ -131,7 +133,7 @@ curtFinish(false):-
 		
 curtFinish(X):-
 	format('~n Curt: Sorry friend, it would appear that',[]),
-	diseases:simple2sem(X,Sem), lambda:bt([sem:Sem],Diagnosis,[]), writeList(Diagnosis, dcl),
+	diseases:simple2sem(X,Sem), lambda:bt([sem:Sem],Diagnosis,[]), !, writeList(Diagnosis, dcl),
 	format('~n',[]),
 	format('~n Curt: Please note that I am no substitute for real medical advice!',[]),
 	format('~n Curt: Please be sure to see a real doctor to confirm any of my findings!',[]),

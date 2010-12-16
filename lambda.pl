@@ -139,9 +139,9 @@ logicTestSuite.
 
 
 logicCheck(Sem, TrueOrFalse, Variable) :-
-	print('Checking sem '), print(' [stuff] '),
-	 ( lambda:bt([sem:Sem],Variable,[])
-	; lambda:btq([sem:Sem],Variable,[]))
+	print('Checking sem '), print(' ... '),
+	 ( (lambda:bt([sem:Sem],Variable,[])
+	; lambda:btq([sem:Sem],Variable,[]) )
 	-> TrueOrFalse is 1
 	; TrueOrFalse is 0
 	).
@@ -150,7 +150,7 @@ logicCheck(Sem, TrueOrFalse, Variable) :-
 logicTestSuite:-
 	nl, write('>>>>> LAMBDA ON LOGIC TEST SUITE <<<<< '), nl,
         semantics(Sem,_),
-        nl, write('Semantics: '), write(Variable),
+        nl, write('Semantics: '), %write(Variable),
 		
 	
 	
@@ -173,36 +173,10 @@ logicCheck(Sentence, TrueOrFalse, [sem:Sem]) :-
 	).
 	*/
 	
-/*
-logicTestSuite:-
-	nl, write('>>> LAMBDA ON LOGIC TEST SUITE <<<'), nl,
-		s
-	
-	*/
-	
-% the problem with logic test suite is that it needs a predicate 'semantics' 
-% with the same values as 'sentence', except for... the semantics
+
 
 /*
-
-logicTestSuite :-
-	nl, write('>>>>> LAMBDA ON LOGIC TEST SUITE <<<<<'), nl,
-		semantics([sem:Sem],_),
-		nl, write('Sem: '), write(' here '),
-	
-	logicCheck([sem:Sem], TrueOrFalse),
-	(TrueOrFalse =:= 1
-		-> print(' True')
-		;  print(' False')
-	),
-	fail.
-	
-logicTestSuite.
-
-*/
-
-/*
-% this probably does not actually work the way we want it to
+% this probably does not actually work the way we want it to BUT IT WILL
 */
 
 

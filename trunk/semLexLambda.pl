@@ -43,6 +43,7 @@ semLex(noun,M):-
    compose(Formula,Sym,[X]).
 
 /*
+needs if num arg is dragged here
 semLex(noun,M):-
    M = [symbol:Sym, num:pl,
         sem:Formula],

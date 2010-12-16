@@ -4,27 +4,36 @@
 
 There are three test suites included once the file backwardsForwards.pl is loaded:
 1) lambdaTestSuite
+
 --> runs sentences to logic and outputs "True" and the logical representation of the semantics, or "False" if the sentence input does not work with the Grammar
 
 2) logicTestSuite
+
 --> runs the logical representations of all the DECLARATIVE sentences and outputs "True" and the sentence if logic -> sentence works
 
 3) logicTestSuiteq
+
 --> runs the logical representations of all the QUESTIONS
 n.b. there remains some small problem with the logic test suite for questions
 
 = Details =
 
-= User Docs =
+USER DOCS:
 
 In order to run (1), 
+
 a) load backwardsForwards.pl
+
 b) type: lambdaTestSuite.
+
 c) all of the resulting semantics of the sentences and questions we have working (however messy) should appear
 
 In order to run (2),
+
 a) load backwardsForwards.pl
+
 b) type: logicTestSuite.
+
 c) all of the resulting sentences that work in the backwards predicates (logic -> language) should appear
 
 In order to run (3),
@@ -32,7 +41,10 @@ In order to run (3),
 Theoretically,
 
 a) load backwardsForwards.pl
+
 b) type: logicTestSuiteq.
+
+c) ...
 
 HOWEVER:
 
@@ -45,7 +57,7 @@ In order to run backwards questions to test them, see the Backwards Forwards dir
 
 = Behind the Scenes =
 
-#lambdaTestSuite:
+<i>lambdaTestSuite:</i>
 
 Originally, the lambda test suite ran the t() predicate for all of the sentences, which are stored in sentenceTestSuite2.pl. That is where the predicate sentence/2 is defined. sentence takes two arguments: the list of the elements in the sentence, and a number. The number is irrelevant to our project -- it is for the Blackburn & Bos hole semantics, but we decided not to rewrite the predicate because it worked.
 
@@ -55,7 +67,7 @@ Because of the difference between questions and declarative sentences, we found 
 
 
 
-#logicTestSuite:
+<i>logicTestSuite:</i>
 
 The semantics input into the test suite are stored in logicTestSuite.pl. These were gleaned by running lambdaTestSuite forward and extracting everything after the colons in "The semantics are: ", and placing that within the semantics/2 predicate.
 
@@ -64,6 +76,6 @@ semantics/2 is based upon the sentence/2 predicate and functions the same way, e
 logicCheck is based upon sentenceCheck, and checks whether bt() works for each sentence representation stored in logicTestSuite.pl works for logic -> language.
 
 
-#logicTestSuiteq:
+<i>logicTestSuiteq:</i>
 
 logicCheckQuestions is based upon logicCheck, and theoretically checks whether btq() works for each question sentence representation stored in logicTestSuiteq.pl. Currently each outputs false, which is due to some communication error between files. There is probably a way to combine the logicTestSuite-s, but this way there is one that functions fully as a test suite.

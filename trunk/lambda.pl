@@ -40,6 +40,8 @@
 
 :- use_module(sentenceTestSuite2,[sentence/2]).
 
+:- use_module(logicTestSuite, [semantics/2]).
+
 :- [englishGrammar].
 
 :- [englishLexicon].
@@ -80,7 +82,7 @@ sentenceCheck(Sentence, TrueOrFalse, Sem) :-
 
 lambdaTestSuite:-
 	nl, write('>>>>> LAMBDA ON SENTENCE TEST SUITE <<<<< '), nl,
-        sentence(Sentence,_),
+        semantic(Sentence,_),
         nl, write('Sentence: '), write(Sentence),
 		
 	
@@ -96,9 +98,10 @@ lambdaTestSuite.
 
 % for logic test suite:
 
-logicCheck(Sem, TrueOrFalse, Sentence) :-
-	( (lambda:bt([sem:Sem],Sentence,[])
-	; lambda:btq([sem:Sem],Sentence,[]))
+logicCheck(Sem, TrueOrFalse, Variable) :-
+	print('Checking sem '), print(' [stuff] '),
+	( (lambda:bt([sem:Sem],Variable,[])
+	; lambda:btq([sem:Sem],Variable,[]))
 	-> TrueOrFalse is 1
 	; TrueOrFalse is 0
 	).
@@ -106,13 +109,14 @@ logicCheck(Sem, TrueOrFalse, Sentence) :-
 
 logicTestSuite:-
 	nl, write('>>>>> LAMBDA ON LOGIC TEST SUITE <<<<< '), nl,
-        sentence(_,Sem),
-        nl, write('Sentence: '), write(Sem),
+        semantics(Sem,_),
+        nl, write('Semantics: '), write(Variable),
 		
 	
-	logicCheck(Sentence, TrueOrFalse, Sem),
+	
+	logicCheck(Sem, TrueOrFalse, Variable),
 	(TrueOrFalse =:= 1
-		->	print(' True. The sentence is: '), write(Sentence)
+		->	print(' True. The sentence is: '), write(Variable)
 		;	print(' False')
 	),
 	fail.

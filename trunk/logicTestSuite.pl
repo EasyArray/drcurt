@@ -56,6 +56,8 @@ testAll :-
 	semantics(app(lam(_G595, app(_G595, i)), app(lam(_G727, lam(_G730, app(_G727, lam(_G736, feel(_G730, _G736))))), lam(_G862, app(_G862, chest_pain)))),1).
 	semantics(app(lam(_G595, app(_G595, i)), app(lam(_G727, lam(_G730, app(_G727, lam(_G736, feel(_G730, _G736))))), lam(_G862, app(_G862, muscle_pain)))),1).
 	semantics(app(lam(_G592, app(_G592, i)), app(lam(_G724, lam(_G727, app(_G724, lam(_G733, feel(_G727, _G733))))), lam(_G853, app(_G853, nauseated)))),1).
+
+/*
 	semantics(app(lam(_G694, app(_G694, you)), app(lam(_G580, lam(_G583, app(_G580, _G583))), app(lam(_G826, lam(_G829, app(_G826, lam(_G835, have(_G829, _G835))))), lam(_G961, app(_G961, throat_spots))))),1).
 	semantics(app(lam(_G694, app(_G694, you)), app(lam(_G580, lam(_G583, app(_G580, _G583))), app(lam(_G826, lam(_G829, app(_G826, lam(_G835, have(_G829, _G835))))), lam(_G961, app(_G961, neck_pain))))),1).
 	semantics(app(lam(_G694, app(_G694, you)), app(lam(_G580, lam(_G583, app(_G580, _G583))), app(lam(_G826, lam(_G829, app(_G826, lam(_G835, have(_G829, _G835))))), lam(_G961, app(_G961, back_pain))))),1).
@@ -94,7 +96,7 @@ testAll :-
 	semantics(app(lam(_G694, app(_G694, you)), app(lam(_G580, lam(_G583, app(_G580, _G583))), app(lam(_G826, lam(_G829, app(_G826, lam(_G835, feel(_G829, _G835))))), lam(_G961, app(_G961, muscle_pain))))),1).
 	semantics(app(lam(_G691, app(_G691, you)), app(lam(_G577, lam(_G580, app(_G577, _G580))), app(lam(_G823, lam(_G826, app(_G823, lam(_G832, feel(_G826, _G832))))), lam(_G952, app(_G952, nauseated))))),1).
 
-
+*/
 	
 /*
 	semantics(app(lam(_G387, app(_G387, you)), app(lam(_G519, lam(_G522, app(_G519, lam(_G528, have(_G522, _G528))))), lam(_G690, mononucleosis(_G690)))),1).

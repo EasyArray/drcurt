@@ -27,7 +27,8 @@
                   lambda/0,
                   lambda/2,
                   lambdaTestSuite/0,
-				  logicTestSuite/0]).
+				  logicTestSuite/0,
+				  logicTestSuiteq/0]).
 
 :- use_module(readLine,[readLine/1]).
 
@@ -41,6 +42,8 @@
 :- use_module(sentenceTestSuite2,[sentence/2]).
 
 :- use_module(logicTestSuite, [semantics/2]).
+
+:- use_module(logicTestSuiteq, [semantics2/2]).
 
 :- [englishGrammar].
 
@@ -140,11 +143,15 @@ logicTestSuite.
 
 logicCheck(Sem, TrueOrFalse, Variable) :-
 	print('Checking sem '), print(' ... '),
-	 ( (lambda:bt([sem:Sem],Variable,[])
-	; lambda:btq([sem:Sem],Variable,[]) )
+	 ( (lambda:bt([sem:Sem],Variable,[]) )
+%	; lambda:btq([sem:Sem],Variable,[]) )
 	-> TrueOrFalse is 1
 	; TrueOrFalse is 0
 	).
+	
+	% separate into questions and non-questions
+	
+
 
 
 logicTestSuite:-
@@ -159,9 +166,33 @@ logicTestSuite:-
 		->	print(' True. The sentence is: '), write(Variable)
 		;	print(' False')
 	),
-	fail.
+	fail,
+	
+
 
 logicTestSuite.
+
+
+logicCheckQuestions(Sem, TrueOrFalse, Variable) :-
+	print('Checking sem for question '), print(' ... '),
+	( (lambda:btq([sem:Sem],Variable,[]) )
+	-> TrueOrFalse is 1
+	; TrueOrFalse is 0
+	).
+
+
+logicTestSuiteq:-
+		nl, write('>>>>> LAMBDA ON LOGIC TEST SUITE - QUESTIONS <<<<< '), nl,
+	        semantics(Sem,_),
+	        nl, write('Semantics: '), %write(Variable),
+
+	logicCheckQuestions(Sem, TrueOrFalse, Variable),
+	(TrueOrFalse =:= 1
+		-> print('Yes this is a question: '), write(Variable)
+		;  print(' False')
+	),
+	fail.
+
 
 
 
@@ -174,10 +205,6 @@ logicCheck(Sentence, TrueOrFalse, [sem:Sem]) :-
 	*/
 	
 
-
-/*
-% this probably does not actually work the way we want it to BUT IT WILL
-*/
 
 
 

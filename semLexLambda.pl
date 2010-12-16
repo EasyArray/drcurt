@@ -42,6 +42,14 @@ semLex(noun,M):-
         sem:lam(X,Formula)],
    compose(Formula,Sym,[X]).
 
+/*
+semLex(noun,M):-
+   M = [symbol:Sym, num:pl,
+        sem:Formula],
+   compose(Formula,Sym,[X]).
+*/
+
+
 semLex(iv,M):-
    M = [symbol:Sym,
         sem:lam(X,Formula)],

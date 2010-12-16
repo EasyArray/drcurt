@@ -459,11 +459,13 @@ bqnp([mood:M,sem:NP])-->
 noun([num:Num,per:Per,vow:Vow,sem:Sem])-->
   {lexEntry(noun,[symbol:Sym,syntax:Word,num:Num,per:Per,vow:Vow])},
   Word,
-  {semLex(noun,[symbol:Sym,num:Num,sem:Sem])}.
+  {semLex(noun,[symbol:Sym,sem:Sem])}.
   
+%semLexLambda num specification?
+
 bnoun([num:Num,per:Per,vow:Vow,sem:Sem])-->
   {semLex(noun,[symbol:Sym,num:Num,sem:Sem]),
-  lexEntry(noun,[symbol:Sym,syntax:Word,num:Num,per:Per,vow:Vow])},  
+  lexEntry(noun,[symbol:Sym,syntax:Word,per:Per,vow:Vow])},  
   Word.  
 
 

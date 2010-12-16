@@ -1,7 +1,14 @@
-The predicates to use are lambda:s and lambda:bt for declarative sentences and lambda:q and lambda:btq for questions. Each predicate has 3 parts (i.e. lambda:x([sem:Sem],[sentence,of,some,sort],[])).
+There are four (4) predicates to use:
+1) lambda:s which takes a declarative sentence string as an input and outputs the corresponding logical form. 
+2) lambda:bt which takes the logical form of a declarative  sentence as an input and outputs the corresponding sentence string. 
+3)lambda:q which takes a question sentence as an input and outputs the corresponding logical form. 
+4)lambda:btq which takes the logical form of a question sentence as an input and outputs the corresponding sentence string.  
 
+Each predicate has 3 parts (i.e. lambda:x([sem:Sem],[sentence,of,some,sort],[])).
 
-Going from declarative to logic:
+*Examples
+
+Going from declarative to logic:*
 
 {{{
 lambda:s([coord:no,sem:Sem],[i,have,a,headache],[]).

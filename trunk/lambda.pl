@@ -93,7 +93,7 @@ sentenceCheck(Sentence, TrueOrFalse, Sem) :-
 
 	
 	
-	
+% test suite to run sentences and give us semantics	
 
 lambdaTestSuite:-
 	nl, write('>>>>> LAMBDA ON SENTENCE TEST SUITE <<<<< '), nl,
@@ -110,6 +110,9 @@ lambdaTestSuite:-
 
 lambdaTestSuite.
 
+
+% below are pieces of attempts at the logic test suite
+% currently is v 4
 
 % test of the logic test suite
 /*
@@ -175,7 +178,7 @@ logicTestSuite.
 
 logicCheckQuestions(Sem, TrueOrFalse, Variable) :-
 	print('Checking sem for question '), print(' ... '),
-	( (lambda:btq([sem:Sem],Variable,[]) )
+	(lambda:btq([sem:Sem],Variable,[])
 	-> TrueOrFalse is 1
 	; TrueOrFalse is 0
 	).

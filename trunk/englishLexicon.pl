@@ -66,6 +66,13 @@ lexEntry(noun,[symbol:loss_of_appetite,syntax:[loss,of,appetite],num:sg,per:thr,
    Personal Pronouns
 ========================================================================*/
 
+% nouns encoded as pn in order to work backwards
+% adj-noun combinations encoded as nouns in order to work as setup is now
+
+% nouns exist in noun form and adj form
+% step back a few steps (just transl, no Dr. Curt) and all grammatical forms work
+
+
 lexEntry(pn,[symbol:mononucleosis,syntax:[mono],num:sg,per:thr]).
 lexEntry(pn,[symbol:pain,syntax:[pain],num:sg,per:thr]).
 lexEntry(pn,[symbol:bodily_pain,syntax:[bodily,pain],num:sg,per:thr]).
@@ -113,6 +120,15 @@ lexEntry(pn,[symbol:itchiness,syntax:[itchiness],num:pl,per:thr]).
 lexEntry(pn,[symbol:heartburn,syntax:[heartburn],num:pl,per:thr]).
 lexEntry(pn,[symbol:cramps,syntax:[cramps],num:pl,per:thr]).
 lexEntry(pn,[symbol:abdominal_cramps,syntax:[abdominal,cramps],num:pl,per:thr]).
+lexEntry(pn,[symbol:red_eyes,syntax:[red,eyes],num:pl,per:thr]).
+lexEntry(pn,[symbol:sore_throat,syntax:[sore,throat],num:pl,per:thr]).
+lexEntry(pn,[symbol:dry_cough,syntax:[dry,cough],num:pl,per:thr]).
+lexEntry(pn,[symbol:bleeding_gums,syntax:[bleeding,gums],num:pl,per:thr]).
+lexEntry(pn,[symbol:bodily_sores,syntax:[bodily,sores],num:pl,per:thr]).
+lexEntry(pn,[symbol:bloody_stools,syntax:[bloody,stools],num:pl,per:thr]).
+lexEntry(pn,[symbol:urinary_incontinence,syntax:[urinary,incontinence],num:pl,per:thr]).
+lexEntry(pn,[symbol:sensitive_teeth,syntax:[sensitive,teeth],num:pl,per:thr]).
+lexEntry(pn,[symbol:loose_watery_stools,syntax:[loose,watery,stools],num:pl,per:thr]).
 
 lexEntry(pn,[symbol:breath,syntax:[breath],num:pl,per:thr]).
 lexEntry(pn,[symbol:bad_breath,syntax:[bad,breath],num:pl,per:thr]).

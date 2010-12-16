@@ -82,7 +82,7 @@ sentenceCheck(Sentence, TrueOrFalse, Sem) :-
 
 lambdaTestSuite:-
 	nl, write('>>>>> LAMBDA ON SENTENCE TEST SUITE <<<<< '), nl,
-        semantic(Sentence,_),
+        sentence(Sentence,_),
         nl, write('Sentence: '), write(Sentence),
 		
 	

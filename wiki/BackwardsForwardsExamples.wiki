@@ -10,9 +10,9 @@ There are four (4) predicates to use:
 
 Each predicate has 3 parts (i.e. lambda:x([sem:Sem],[sentence,of,some,sort],[])).
 
-*Examples
+*Examples*
 
-Going from declarative to logic:*
+Going from declarative to logic:
 
 {{{
 lambda:s([coord:no,sem:Sem],[i,have,a,headache],[]).

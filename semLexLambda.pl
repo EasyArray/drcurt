@@ -38,17 +38,9 @@ semLex(pn,M):-
         sem:lam(P,app(P,Sym))].
 
 semLex(noun,M):-
-   M = [symbol:Sym,
+   M = [symbol:Sym, 
         sem:lam(X,Formula)],
    compose(Formula,Sym,[X]).
-
-/*
-needs if num arg is dragged here
-semLex(noun,M):-
-   M = [symbol:Sym, num:pl,
-        sem:Formula],
-   compose(Formula,Sym,[X]).
-*/
 
 
 semLex(iv,M):-

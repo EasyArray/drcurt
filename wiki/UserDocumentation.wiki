@@ -38,7 +38,7 @@ Note that if Dr Curt is not familiar with a symptom entered during this phase, h
 
 In this phase, Dr Curt will ask a series of yes or no questions. Any response other than "yes." is considered a negative.
 
-= Dr Curt's use if English =
+= Dr Curt's use of English =
 
 In the Follow-up phase, rather use canned responses, Dr Curt contextually generates questions to determine whether the user has particular symptoms. 
 

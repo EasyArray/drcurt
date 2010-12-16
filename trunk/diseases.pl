@@ -37,3 +37,15 @@ disease(yellow_fever(you), [am(i, fatigue), am(i, fatigue), have(i, fatigue), fe
 % maps from simple logical representation to horrific semantic form
 
 simple2sem(mononucleosis(you), app(lam(_G425, app(_G425, you)), app(lam(_G557, lam(_G560, app(_G557, lam(_G566, have(_G560, _G566))))), lam(_G686, app(_G686, mononucleosis)))) ).
+simple2sem(pertussis(you), app(lam(_G536, app(_G536, you)), app(lam(_G668, lam(_G671, app(_G668, lam(_G677, have(_G671, _G677))))), lam(_G803, app(_G803, pertussis))))).
+simple2sem(swine_flu(you), app(lam(_G536, app(_G536, you)), app(lam(_G668, lam(_G671, app(_G668, lam(_G677, have(_G671, _G677))))), lam(_G803, app(_G803, swineflu))))).
+simple2sem(decapitation(you), app(lam(_G533, app(_G533, you)), app(lam(_G665, lam(_G668, app(_G665, lam(_G674, eq(_G668, _G674))))), lam(_G737, lam(_G740, and(headless(_G740), app(_G737, _G740))))))).
+simple2sem(strep_throat(you), app(lam(_G536, app(_G536, you)), app(lam(_G668, lam(_G671, app(_G668, lam(_G677, have(_G671, _G677))))), lam(_G803, app(_G803, strep))))).
+simple2sem(pulmonary_tuberculosis(you), app(lam(_G536, app(_G536, you)), app(lam(_G668, lam(_G671, app(_G668, lam(_G677, have(_G671, _G677))))), lam(_G803, app(_G803, pulmonarytuberculosis))))).
+simple2sem(diarrhea(you), app(lam(_G533, app(_G533, you)), app(lam(_G665, lam(_G668, app(_G665, lam(_G674, have(_G668, _G674))))), lam(_G794, app(_G794, diarrhea))))).
+simple2sem(tonsilitis(you), app(lam(_G533, app(_G533, you)), app(lam(_G665, lam(_G668, app(_G665, lam(_G674, have(_G668, _G674))))), lam(_G794, app(_G794, tonsilitis))))).
+simple2sem(chickenpox(you), app(lam(_G536, app(_G536, you)), app(lam(_G668, lam(_G671, app(_G668, lam(_G677, have(_G671, _G677))))), lam(_G803, app(_G803, chickenpox))))).
+simple2sem(acid_reflux_disease(you), app(lam(_G539, app(_G539, you)), app(lam(_G671, lam(_G674, app(_G671, lam(_G680, have(_G674, _G680))))), lam(_G812, app(_G812, acidreflux))))).
+simple2sem(common_cold(you), app(lam(_G539, app(_G539, you)), app(lam(_G671, lam(_G674, app(_G671, lam(_G680, have(_G674, _G680))))), app(lam(_G806, lam(_G809, some(_G812, and(app(_G806, _G812), app(_G809, _G812))))), lam(_G941, commoncold(_G941)))))).
+simple2sem(malaria(you), app(lam(_G533, app(_G533, you)), app(lam(_G665, lam(_G668, app(_G665, lam(_G674, have(_G668, _G674))))), lam(_G794, app(_G794, malaria))))).
+simple2sem(yellow_fever(you), app(lam(_G536, app(_G536, you)), app(lam(_G668, lam(_G671, app(_G668, lam(_G677, have(_G671, _G677))))), lam(_G803, app(_G803, yellowfever)))))).

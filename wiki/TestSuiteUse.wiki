@@ -2,7 +2,7 @@
 
 = Introduction =
 
-There are three test suites included once the file backwardsForwards.pl is loaded:
+There are three test suites included once the file <code>backwardsForwards.pl</code> is loaded:
 
 
 1) lambdaTestSuite
@@ -24,17 +24,17 @@ USER DOCS:
 
 In order to run (1), 
 
-a) load backwardsForwards.pl
+a) load: <code>backwardsForwards.pl</code>
 
-b) type: lambdaTestSuite.
+b) do: <code>lambdaTestSuite.</code>
 
 c) all of the resulting semantics of the sentences and questions we have working (however messy) should appear
 
 In order to run (2),
 
-a) load backwardsForwards.pl
+a) load: <code>backwardsForwards.pl</code>
 
-b) type: logicTestSuite.
+b) do: <code>logicTestSuite.</code>
 
 c) all of the resulting sentences that work in the backwards predicates (logic -> language) should appear
 
@@ -42,42 +42,42 @@ In order to run (3),
 
 Theoretically,
 
-a) load backwardsForwards.pl
+a) load: <code>backwardsForwards.pl</code>
 
-b) type: logicTestSuiteq.
+b) do: <code>logicTestSuiteq.</code>
 
 c) ...
 
-HOWEVER:
+However:
 
 The questions and sentences in the logic test suite seemed to work differently -- questions were turning up odd errors, so the files have been separated. The sentences work; the questions test suite currently does not work, though it's close.
 
-Currently, all of the output of logicTestSuiteq returns "False" -- which is not actually the case. 
+Currently, all of the output of <b>logicTestSuiteq</b>> returns "False" -- which is not actually the case. 
 
-In order to run backwards questions to test them, see the Backwards Forwards directions Wiki page.
+In order to run backwards questions to test them, see the "Backwards Forwards" directions Wiki page.
 
 
 = Behind the Scenes =
 
-<i>lambdaTestSuite:</i>
+<code>lambdaTestSuite:</code>
 
-Originally, the lambda test suite ran the t() predicate for all of the sentences, which are stored in sentenceTestSuite2.pl. That is where the predicate sentence/2 is defined. sentence takes two arguments: the list of the elements in the sentence, and a number. The number is irrelevant to our project -- it is for the Blackburn & Bos hole semantics, but we decided not to rewrite the predicate because it worked.
+Originally, the lambda test suite ran the t() predicate for all of the sentences, which are stored in <code>sentenceTestSuite2.pl</code>. That is where the predicate <b>sentence/2</b> is defined. sentence takes two arguments: the list of the elements in the sentence, and a number. The number is irrelevant to our project -- it is for the <i>Blackburn & Bos</i> hole semantics, but we decided not to rewrite the predicate because it worked.
 
-The predicate sentenceCheck is defined in lambda.pl. This checks whether or not a sentence is successfully translated to logic.
+The predicate <code>sentenceCheck</code> is defined in <code>lambda.pl</code>. This checks whether or not a sentence is successfully translated to logic.
 
-Because of the difference between questions and declarative sentences, we found that going all the way up to t() would not work to check for sentence -> logic, so the current sentenceCheck checks whether s() functions true, OR whether q() functions true. If either is true, the variable TrueOrFalse is assigned the value 1, which then causes the test suite predicate to output "True" and the semantics. If neither s() nor q() succeeds, TrueOrFalse is assigned 0 and the test suite outputs "False."
-
-
-
-<i>logicTestSuite:</i>
-
-The semantics input into the test suite are stored in logicTestSuite.pl. These were gleaned by running lambdaTestSuite forward and extracting everything after the colons in "The semantics are: ", and placing that within the semantics/2 predicate.
-
-semantics/2 is based upon the sentence/2 predicate and functions the same way, except for the logical representation rather than the list of words in the sentence.
-
-logicCheck is based upon sentenceCheck, and checks whether bt() works for each sentence representation stored in logicTestSuite.pl works for logic -> language.
+Because of the difference between questions and declarative sentences, we found that going all the way up to <code>t()</code> would not work to check for sentence -> logic, so the current <code>sentenceCheck</code> checks whether s() functions true, OR whether <code>q()</code> functions true. If either is true, the variable <b>TrueOrFalse</b> is assigned the value 1, which then causes the test suite predicate to output "True" and the semantics. If neither <code>s()</code> nor <code>q()</code> succeeds, <b>TrueOrFalse</b> is assigned 0 and the test suite outputs "False."
 
 
-<i>logicTestSuiteq:</i>
 
-logicCheckQuestions is based upon logicCheck, and theoretically checks whether btq() works for each question sentence representation stored in logicTestSuiteq.pl. Currently each outputs false, which is due to some communication error between files. There is probably a way to combine the logicTestSuite-s, but this way there is one that functions fully as a test suite.
+<code>logicTestSuite:</code>
+
+The semantics input into the test suite are stored in logicTestSuite.pl. These were gleaned by running <code>lambdaTestSuite</code> forward and extracting everything after the colons in "The semantics are: ", and placing that within the <b>semantics/2</b> predicate.
+
+<b>semantics/2</b> is based upon the <b>sentence/2</b> predicate and functions the same way, except for the logical representation rather than the list of words in the sentence.
+
+logicCheck is based upon sentenceCheck, and checks whether <code>bt()</code> works for each sentence representation stored in <code>logicTestSuite.pl</code> works for logic -> language.
+
+
+<code>logicTestSuiteq:</code>
+
+<b>logicCheckQuestions</b> is based upon <b>logicCheck</b>, and theoretically checks whether btq() works for each question sentence representation stored in <code>logicTestSuiteq.pl</code>. Currently each outputs false, which is due to some communication error between files. There is probably a way to combine the <b>logicTestSuite-s</b>, but this way there is one that functions fully as a test suite.

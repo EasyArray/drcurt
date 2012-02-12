@@ -75,7 +75,7 @@ The semantics input into the test suite are stored in logicTestSuite.pl. These w
 
 <b>semantics/2</b> is based upon the <b>sentence/2</b> predicate and functions the same way, except for the logical representation rather than the list of words in the sentence.
 
-<b>logicCheck</b> is based upon <b>sentenceCheck</b>, and checks whether <code>bt()</code> works for each sentence representation stored in <code>logicTestSuite.pl</code> works for logic -> language.
+<b>logicCheck</b> is based upon <b>sentenceCheck</b>, and checks whether <b>bt()</b> works for each sentence representation stored in <code>logicTestSuite.pl</code> works for logic -> language.
 
 
 <code>logicTestSuiteq:</code>

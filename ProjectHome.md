@@ -1,0 +1,1 @@
+Diagnosis system based on Blackburn & Bos CURT systems from Representation and Inference in Natural Language.
